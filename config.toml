@@ -1,25 +1,79 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'Hello World'
-theme = "paper"
+baseURL = "https://hugo-paper.vercel.app/"
+# title = "Hugo Themes"
+author = "Steve Francia"
+copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+paginate = 3
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+# prevent build failures when using Hugo's Instagram shortcode due to deprecated Instagram API.
+# See https://github.com/gohugoio/hugo/issues/7228#issuecomment-714490456
+ignoreErrors = ["error-remote-getjson"]
 
-disqusShortname = 'YOUR_DISQUS_SHORTNAME'   # add disqus comments
+# ------------------------------
+theme = "paper"
+title = "TerenceLiu's Blog"
 
 [params]
-  # color style
-  color = 'linen'                 # linen, wheat, gray, light
+  color = 'linen'
 
-  # header social icons
-  #twitter = 'YOUR_TWITTER_ID'     # twitter.com/YOUR_TWITTER_ID
-  github = 'TerenceLiu98'       # github.com/YOUR_GITHUB_ID
-  #instagram = 'YOUR_INSTAGRAM_ID' # instagram.com/YOUR_INSTAGRAM_ID
-  rss = true                      # show rss icon with link
+  #twitter = 'nanxiaobei'
+  github = 'TerenceLiu98'
+  #instagram = 'nan.xiaobei'
 
-  # home page profile
-  avatar = 'https://pic2.zhimg.com/v2-54d4d4d5b007d119e3bc16a1287e4189_xll.jpg'       # Gravatar email or image url(e.g. "https://deno.land/logo.svg")
+  avatar = 'terenceliu1012@gmail.com'
   name = 'Terence Junjie LIU'
-  #bio = 'YOUR_BIO'
+  bio = 'Trivial is the hardest problem in mathematics'
 
-  # misc
-  disableHLJS = false              # disable requesting highlight.js
-  monoDarkIcon = true             # show monochrome dark mode icon
+# ------------------------------
+
+# needed to  render raw HTML (e.g. <sub>, <sup>, <kbd>, <mark>)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[privacy]
+
+  [privacy.vimeo]
+    disabled = false
+    simple = true
+
+  [privacy.twitter]
+    disabled = false
+    enableDNT = true
+    simple = true
+
+  [privacy.instagram]
+    disabled = false
+    simple = true
+
+  [privacy.youtube]
+    disabled = false
+    privacyEnhanced = true
+
+[services]
+
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
