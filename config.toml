@@ -1,7 +1,6 @@
-baseURL = "https://hugo-paper.vercel.app/"
-# title = "Hugo Themes"
-author = "Steve Francia"
-copyright = "Copyright © 2008–2019, Steve Francia and the lee.so; all rights reserved."
+baseURL = "https://blog.cklau.cc"
+author = "Terence Junjie LIU"
+copyright = "Copyright © 2005–2022, Terence Junjie LIU; all rights reserved."
 paginate = 3
 languageCode = "en"
 DefaultContentLanguage = "en"
@@ -17,9 +16,9 @@ title = "TerenceLiu's Blog"
 [params]
   color = 'linen'
 
-  #twitter = 'nanxiaobei'
+  #twitter = ''
   github = 'TerenceLiu98'
-  #instagram = 'nan.xiaobei'
+  #instagram = ''
 
   avatar = 'terenceliu1012@gmail.com'
   name = 'Terence Junjie LIU'
