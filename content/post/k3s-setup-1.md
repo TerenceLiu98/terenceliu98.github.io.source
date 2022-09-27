@@ -1,7 +1,8 @@
 ---
-title: "Set up a K3s Cluster with your VPS"
+title: "Set up a K3s Cluster with your VPS (1)"
 date: 2022-09-26T00:11:21+08:00
 draft: false
+tags: ['k3s', 'kubernetes']
 ---
 
 
@@ -33,18 +34,18 @@ To set up the Master/Server, I follow the instruction from [K3s](https://k3s.io)
 
 ```shell
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="server --node-ip <wg-node-ip> \
-                                                        --advertise-address <node-public-ip> \
-                                                        --node-external-ip <node-public-ip> 
-                                                        --flannel-iface wg0 \
-                                                        --node-name <node-name>" sh -
+                                --advertise-address <node-public-ip> \
+                                --node-external-ip <node-public-ip> 
+                                --flannel-iface wg0 \
+                                --node-name <node-name>" sh -
 ```
+
 where you can see that `--node-ip` is the ip address to advertise for node; `--advertise-address` is the ip address that apiserver user to advertise to members of the cluster; `--node-external-ip` is the external ip address to advertise for node; `--flannel-iface` is to override the default flannel interface.
 
 Notice: if you meet any problem of starting the k3s after run the script, go check the systemd file: `/etc/systemd/system/k3s.service`, you may meet the "quotation mark" problem, where simply delete all the single quotation mark and reform the command like this: 
 
 ```shell
-ExecStart=/usr/local/bin/k3s \
-    server \
+ExecStart=/usr/local/bin/k3s server \
 	--node-ip <wg-node-ip> \
 	--advertise-address <node-public-ip> \
 	--node-external-ip <node-public-ip> \
@@ -58,11 +59,11 @@ For the K3s node, first we need the server's token: `sudo cat /var/lib/rancher/k
 
 ```shell
 curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC="agent --server https://<wg-server-ip>:6443 \
-                                                        --token <server-token> \
-                                                        --node-ip <wg-node-ip> \
-                                                        --node-external-ip <wg-node-ip> \
-                                                        --flannel-iface wg0 \
-                                                        --node-name <node-name>" sh -
+                                --token <server-token> \
+                                --node-ip <wg-node-ip> \
+                                --node-external-ip <wg-node-ip> \
+                                --flannel-iface wg0 \
+                                --node-name <node-name>" sh -
 ```
 
 Again, you may reach the "quotation mark" problem.
