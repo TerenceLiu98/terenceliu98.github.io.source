@@ -4,13 +4,11 @@ date: 2022-09-26T00:11:21+08:00
 draft: false
 ---
 
-> For now, I just post these links here, will complete the description when I have time :)
-
-- [Junde Yhi](https://yhi.moe)
-- [ECWU](https://ecwuuuuu.com/)
-- [Renjie Deng](https://www.drjchn.com/)
-- [Junru Zhong](https://junru.dev/)
-- [Laurence Luo](https://www.lzc.app/)
+- [Junde Yhi](https://yhi.moe)： Linux expert and IoT practitioner
+- [ECWU](https://ecwuuuuu.com/): A full stack developer, and now focusing on NLP(Natrual Language Processing) & Medical imaging research
+- [Renjie Deng](https://www.drjchn.com/): full stack developer
+- [Junru Zhong](https://junru.dev/): MRI expert, transportation enthusiast, PhD candidate in Computer vision (CUHK)
+- [Laurence Luo](https://www.lzc.app/): developer, geek
 
 
 
