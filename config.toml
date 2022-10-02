@@ -18,13 +18,14 @@ title = "TerenceLiu's Blog"
 [params]
   color = 'linen'
 
-  #twitter = ''
+  twitter = 'TerenceLau_ST'
   github = 'TerenceLiu98'
   #instagram = ''
+  rss = 'index.xml'
 
   avatar = 'terenceliu1012@gmail.com'
   name = 'Terence Junjie LIU'
-  bio = 'Trivial is the hardest problem in mathematics'
+  bio = 'Trivial is the hardest problem in all time'
 
 # ------------------------------
 
@@ -40,11 +41,6 @@ title = "TerenceLiu's Blog"
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "contact"
-    name = "Contact"
-    url = "/contact/"
     weight = 10
   [[menu.main]]
     identifier = "Friends"
