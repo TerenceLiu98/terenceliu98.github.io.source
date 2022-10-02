@@ -6,7 +6,7 @@ tags: ['k3s', 'kubernetes']
 ---
 
 
-After generate a basic K3s cluster, now, let try to modify it into High Availability Cluster. Single server cluster can meet a variety of use cases, but for environments where uptime of the Kubenetes control plane is critical, where we need the High Availability configuration. There are two ways for High Availability:
+Generating a basic K3s cluster is quite easy by following the [K3s's Doc](https://doc.k3s.io). let try to modify it into High Availability Cluster. Single server cluster can meet a variety of use cases, but for environments where uptime of the Kubenetes control plane is critical, where we need the High Availability configuration. There are two ways for High Availability:
 
 1. High Availability with an External DB (for example, [PostgreSQL](https://www.postgresql.org/), [MySQL](https://www.mysql.com/),  [MariaDB](https://mariadb.org/))
 2. High Availability with Embedded DB ([etcd](https://etcd.io/))
