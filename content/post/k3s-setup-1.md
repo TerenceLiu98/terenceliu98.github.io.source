@@ -2,7 +2,7 @@
 title: "Set up a K3s Cluster with your VPS (1)"
 date: 2022-09-26T00:11:21+08:00
 draft: false
-tags: ['k3s', 'kubernetes']
+tags: ['k3s', 'kubernetes', 'wireguard']
 ---
 
 
