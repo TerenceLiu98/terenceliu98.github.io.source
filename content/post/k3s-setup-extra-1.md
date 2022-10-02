@@ -56,7 +56,7 @@ server {
 
 server {
     listen 443 ssl;
-    server_name nexus-hub.cklau.cc;  # nexus frontend
+    server_name nexus.example.com;  # nexus frontend
 
     ssl_certificate <path-of-certificate>;
     ssl_certificate_key <path-of-certificate-key>;
