@@ -8,7 +8,7 @@ draft: false
 
 These articles  are inside my projects: My Disbributed HomeLab and My HA K3s cluster 
 
-1. [My Devices](https://blog.cklau.cc/post/my-homelab-1) - Coming soon
+1. [My Devices](https://blog.cklau.cc/post/my-homelab-1)
 2. [My Distributed Homelab](https://blog.cklau.cc/post/my-homelab-2) - Coming soon
 3. [My Network setup](https://blog.cklau.cc/post/my-homelab-3) - Coming soon
 4. [Don't Let the Docker escape from the ufw's control](https://blog.cklau.cc/post/my-home-lab-3) - Coming soon
