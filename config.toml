@@ -43,6 +43,11 @@ title = "TerenceLiu's Blog"
     url = "/about/"
     weight = 10
   [[menu.main]]
+    identifier = "Projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
+  [[menu.main]]
     identifier = "Friends"
     name = "Friends"
     url = "/friends/"

@@ -5,8 +5,8 @@ draft: false
 ---
 
 - [Junde Yhi](https://yhi.moe)： Linux expert and IoT practitioner
-- [ECWU](https://ecwuuuuu.com/): A full stack developer, and now focusing on NLP(Natrual Language Processing) & Medical imaging research
-- [Renjie Deng](https://www.drjchn.com/): full stack developer
+- [ECWU](https://ecwuuuuu.com/): A full-stack developer, and now focusing on NLP(Natrual Language Processing) & Medical imaging research
+- [Renjie Deng](https://www.drjchn.com/): A full-stack developer
 - [Junru Zhong](https://junru.dev/): MRI expert, transportation enthusiast, PhD candidate in Computer vision (CUHK)
 - [Laurence Luo](https://www.lzc.app/): developer, geek
 

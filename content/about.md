@@ -29,5 +29,5 @@ Research Interest:
 * 🚩 High Performance Computing (including CPU & GPU Parallel Algorithm)
 * 🚩 HPC Cluster/Hybrid Cloud maintenance
 
-- 📫 How to reach me: t_lau#uicstat.com
+- 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 📃 For more information: check my [CV](/doc/cv.pdf)
