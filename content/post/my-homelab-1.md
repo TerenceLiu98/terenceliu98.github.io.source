@@ -13,30 +13,30 @@ Since I am wandering around the [big bay area](https://en.wikipedia.org/wiki/Gua
 
 Here is the list of my bare metal device:
 
-| Device | Location | Configuration | Network | 
-| :----: | :------: | :-----------: | :-----: |
-| DELL EMC R730 | Zhuhai, China | E5-2650V4 + 128GB + 240GB SSD + 600GB HDD + NVIDIA TITAN XP | 500Mbps |
-| DELL Precision T1700 | Zhuhai, China | i7-4790 + 16GB + 256GB SSD + 1T SATA HDD + NVIDIA RTX 2060Ti | 500Mbps | 
-| Homebuilt PC | Zhongshan, China | i5-9400f + 16GB + 256GB SSD + 256GB SSD + 2T SATA HDD + NVIDIA TITAN XP | 500Mbps |
-| Homebuilt NAS | Shenzhen, China | AMD A8-5550M + 6G DDR3 + 128G SSD + 3T SATA HDD | 1Gbps |
-| ARM Router | Shenzhen, China | rk3568 + 2GB Mem + 8GB EMMC | 1Gbps |
-| ARM Router | Shenzhen, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | 1Gbps |
-| ARM Router (In future) | Guangzhou, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | 100Mbps |
+| Device | Location | Configuration | System | Network | 
+| :----: | :------: | :-----------: | :----: | :-----: |
+| DELL EMC R730 | Zhuhai, China | E5-2650V4 + 128GB + 240GB SSD + 600GB HDD + NVIDIA TITAN XP | Ubuntu 20.04 LTS | 500Mbps |
+| DELL Precision T1700 | Zhuhai, China | i7-4790 + 16GB + 256GB SSD + 1T SATA HDD + NVIDIA RTX 2060Ti | Arch Linux | 500Mbps | 
+| Homebuilt PC | Zhongshan, China | i5-9400f + 16GB + 256GB SSD + 256GB SSD + 2T SATA HDD + NVIDIA TITAN XP | Arch Linux | 500Mbps |
+| Homebuilt NAS | Shenzhen, China | AMD A8-5550M + 6G DDR3 + 128G SSD + 3T SATA HDD |Ubuntu 20.04 LTS | 1Gbps |
+| ARM Router | Shenzhen, China | rk3568 + 2GB Mem + 8GB EMMC | iStoreOS (based on OpenWrt) | 1Gbps |
+| ARM Router | Shenzhen, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 1Gbps |
+| ARM Router (In future) | Guangzhou, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 100Mbps |
 
 Not only the bare metal, I also own a bunch of VPS/VPC/VM/[Lighthouse](https://www.tencentcloud.com/products/lighthouse), here is the list
 
-| Device | Location | Configuration | Network | 
-| :----: | :------: | :-----------: | :-----: |
-| A Lighthouse server | Tencent Cloud - Guangzhou | 1C2G | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 2C4G | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 4C8G | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 2C2G | 3Mbps |
-| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | 30Mbps |
-| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | 30Mbps |
-| A Lighthouse server | Tencent Cloud - Singapore | 2C2G | 30Mbps |
-| A VM server | Oracle Cloud - Japan | 1C1G | 500Mbps |
-| A VM server | Oracle Cloud - Japan | 1C1G | 500Mbps |
-| A VM server | CubeCloud - HKSAR | 1C512M | 1Gbps |
+| Device | Location | Configuration | System | Network | 
+| :----: | :------: | :-----------: | :----: | :-----: |
+| A Lighthouse server | Tencent Cloud - Guangzhou | 1C2G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 2C4G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 4C8G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 2C2G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
+| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
+| A Lighthouse server | Tencent Cloud - Singapore | 2C2G | Ubuntu 20.04 LTS | 30Mbps |
+| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
+| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
+| A VM server | CubeCloud - HKSAR | 1C512M | Ubuntu 20.04 LTS | 1Gbps |
 
 After the listing, you may know why I need a distributed solution.
 
