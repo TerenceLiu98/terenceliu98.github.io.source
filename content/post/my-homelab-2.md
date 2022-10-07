@@ -71,7 +71,8 @@ sudo docker version
 
 ### MultiMedia
 
-I use Jellyfin as my multimedia server and install it via the `docker-compose.yml`:
+
+There are multiple multimedia software, for istance, [Plex](https://www.plex.tv/), [Emby](https://emby.media), [Jellyfin](https://jellyfin.org), and [KODI](https://kodi.tv/). For some reason, I did not want to pay too much money of the media service as I just want a place that can show the poster and brief introduction of the video, and I don't need too much "fancy" features. By comparison, I choose Jellyfin, the "open-source version of Emby", as me multimedia server and I install it via the `docker-compose.yml`:
 
 ```yaml
 version: "2.1"
@@ -94,7 +95,7 @@ services:
 
 ### Authentication
 
-I use Authentik and Keycloak for the Authentication. The Authentik is for my self-hosted service, and the KeyCloak is for the other serive that I need to provide to other users. Similarly, I use `docker-compose.yml` to set up these services:
+There are many authentication software that support Oauth, for instance, [Authentik](https://goauthentik.io/), [Okta](https://www.okta.com/), [auth0](https://auth0.com/), [Ory Hydra](https://github.com/ory/hydra), [KeyCloak](https://www.keycloak.org/), an there are some authentication cloud services, like [authing.com](https://authing.cn). By comparsion, I choose Authentik and KeyCloak, authentik has a good-looking interface, and KeyCloak is a widely used software, which mean there are more example and solution on the interest. The authentik is used for my self-hosted services, and the KeyCloak is for the other serive that I need to provide to other users. Similarly, I use `docker-compose.yml` to set up these services:
 
 ```yaml
 # Authentik
@@ -217,8 +218,7 @@ services:
 
 ### Working and Coding
 
-Most of the time, I just use the local environment for the documentation and coding, however, sometimes I will re-build the computer and to avoid the data loss. Thus, I choose [outline](https://github.com/outline/outline) for the documentation, [dokuwiki](https://www.dokuwiki.org/dokuwiki) for building the wiki system, [Nexcloud] as my personal Net storage,  and [Gitea](https://gitea.io) as my self-hosted code repository:
-
+Most of the time, I just use the local environment for the documentation and coding, however, sometimes I will re-build the computer and to avoid the data loss. Thus, I choose [outline](https://github.com/outline/outline) for the documentation, [dokuwiki](https://www.dokuwiki.org/dokuwiki) for building the wiki system, [Nexcloud] as my personal Net storage,  and [Gitea](https://gitea.io) as my self-hosted code repository. Outline is a Nation-alternative software which also provide a beatiful, realtime knowledge base, where I can easily store my throught and idea wia the web. Dokuwiki is a well-known wiki system without a database backend, which means I can easily migrate it to any place. Between Gitea and Gitlab, I choose Gitea at last because GitLab's hardware requirement is too high that I don't have enough resources to run a GitLab and I just need a place to store my code, not those extra features.
 ```yaml
 # outline 
 # you need to set up the ENV parameters on other file call `.env`, check https://app.getoutline.com/s/770a97da-13e5-401e-9f8a-37949c19f97e/doc/docker-7pfeLP5a8t for the detail
