@@ -1,7 +1,7 @@
 baseURL = "https://blog.cklau.cc"
 author = "Terence Junjie LIU"
 copyright = "Copyright © 2005–2022, Terence Junjie LIU; all rights reserved."
-paginate = 3
+paginate = 10
 languageCode = "en"
 DefaultContentLanguage = "en"
 enableInlineShortcodes = true
