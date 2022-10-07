@@ -14,4 +14,5 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 4. [Don't Let the Docker escape from the ufw's control](https://blog.cklau.cc/post/my-home-lab-3) - Coming soon
 5. [K3s/Kubernetes - a quick setup for single machine](https://blog.cklau.cc/post/k3s-setup-1)
 6. [K3s/Kubernetes - a quick setup for HA](https://blog.cklau.cc/post/k3s-setup-2)
-7. [K3s/Kubernetes - How GitOps works](https://blog.cklau.cc/post/k3s-setup-3) - Coming soon
+7. [K3s/Kubernetes - a self-hosted registry](https://blog.cklau.cc/post/k3s-setup-extra-1)
+8. [K3s/Kubernetes - How GitOps works](https://blog.cklau.cc/post/k3s-setup-3) - Coming soon

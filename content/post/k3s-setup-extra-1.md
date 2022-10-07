@@ -2,7 +2,7 @@
 title: "Set up a K3s Cluster with your VPS (Extra Story 1)"
 date: 2022-10-02T10:00:00+08:00
 draft: false
-tags: ['k3s', 'kubernetes', 'mirrors', 'docker']
+tags: ['k3s', 'kubernetes', 'docker', 'registry']
 ---
 
 As I have mentioned in [K3s Setup 2]({{< ref "/post/k3s-setup-2" >}} "K3s Setup 2"), usually, it is not easy for the China's user to access `https://gcr.io`, `https://k8s.gcr.io` or `https://ghcr.io`. Thus, under this circumstance, we may set up a server as the registry proxy endpoint.
@@ -125,5 +125,36 @@ sudo docker pull registry.example.com/google-containers/kubernetes-dashboard-amd
 sudo docker pull registry.example.com/coreos/kube-state-metrics:v1.5.0                    # from quay.io
 ```
 
+For the system's `containerd`, you can simply go to `/etc/containerd/containerd/config.toml` and modify the configuration and restart `sudo systemctl restart containered`
 
-[^1]: Before you up the yaml, create the folder first and give the proper permission, for me: `mkdir data && chown -R 200 data` is good enough. The default password is stored in `data/admin.password`.
+```shell
+[plugins.cri.registry.mirrors]
+  [plugins.cri.registry.mirrors."docker.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."quay.io"]
+    endpoint = ["https://mirrors.example.com"]
+    [plugins.cri.registry.mirrors."ghcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."gcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."k8s.gcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+```
+
+For the rancher's `containerd`, k3s will generate config.toml for containerd in `/var/lib/rancher/k3s/agent/etc/containerd/config.toml`, for advanced customization for this file you can create another file called `config.toml.tmpl` in the same directory and it will be used instead. Then, modify the configuration into the file and restart the `sudo systemctl restart k3s` or `sudo systemctl restart k3s-agent`
+
+```shell
+[plugins.cri.registry.mirrors]
+  [plugins.cri.registry.mirrors."docker.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."quay.io"]
+    endpoint = ["https://mirrors.example.com"]
+    [plugins.cri.registry.mirrors."ghcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."gcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+  [plugins.cri.registry.mirrors."k8s.gcr.io"]
+    endpoint = ["https://mirrors.example.com"]
+```
+
+[^1]: Before you up the yaml, create the folder first and give the proper permission, for me: `mkdir data && chmod 777 data` is good enough. The default password is stored in `data/admin.password`.
