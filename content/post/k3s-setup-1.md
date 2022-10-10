@@ -1,6 +1,7 @@
 ---
-title: "Set up a K3s Cluster with your VPS (1)"
-date: 2022-09-26T00:11:21+08:00
+title: "K3s/Kubernetes - Set up a K3s Cluster with your VPS (1)"
+date: 2022-09-24T00:11:21+08:00
+lastmod: 2022-09-26T00:11:21+08:00
 draft: false
 tags: ['k3s', 'kubernetes', 'wireguard']
 ---

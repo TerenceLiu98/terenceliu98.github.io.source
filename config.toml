@@ -84,3 +84,8 @@ series = "series"
 
   [services.twitter]
     disableInlineCSS = true
+
+enableGitInfo = true
+
+[frontmatter]
+  lastmod = ['lastmod']
