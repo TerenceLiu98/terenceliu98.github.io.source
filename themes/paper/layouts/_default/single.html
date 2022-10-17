@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <article>
-  <header class="mb-20">
+  <header class="mb-10">
     <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
 
     {{ if ne .Type "page" }}
@@ -27,15 +27,14 @@
   {{ if .Params.tags }}
     {{ range .Params.tags }} {{ $href := print (absURL "tags/") (urlize .) }}
     <a
-      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-5 py-2 no-underline dark:bg-white/[8%]"
+      class="mr-1.5 mb-1.5 rounded-lg bg-black/[3%] px-2 py-1 no-underline dark:bg-white/[8%]"
       href="{{ $href }}"
-      >{{ . }}
-    </a>
+      >{{ . }}</a>
     {{ end }}
   {{ end }}
-
+  <hr>
   <section>{{ .Content }}</section>
-  
+
   <!--<footer class="mt-12 flex flex-wrap">-->
   <!--</footer>-->
 
