@@ -23,6 +23,4 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 
 These areticles are inside my projects: Build a Experimental Network with your VPS
 
-1. [L-Net: Why do I need a Experimental Network](/post/l-net-1) - Coming soon
-2. [L-Net: How internet works](/post/l-net-2) - Coming soon
-3. [L-Net: Networking](/post/l-net-3) - Coming soon
+1. [L-Net: My Personal Experimental Network](/post/lnet-1) - Coming soon
