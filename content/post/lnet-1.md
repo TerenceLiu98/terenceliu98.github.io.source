@@ -134,8 +134,8 @@ Endpoint = xxx.xxx.xxx.xxx:51821
 
 The reason why we need to set the Address of the Interface to `/24` is that if we want the subnet of `newton` are accessible, which means that `192.168.141.2/32` need to be accessible from both sides as it is the bridge between `sgcn` and `cn` as the `sgcn` the interface is the bridge between the “external” to the “internal”. Here is the setting in `newton`:  
 
-```mermaidjs
-nterface]
+```bash
+[Interface]
 Address = 192.168.141.2/24 # the same reason, this interface is the "bridge" 
 ListenPort = 51821
 PrivateKey = cJgoIHnDfCl+p8D7KE0jCBkRipEwe3K6Jq7FG8OTzlo=
@@ -156,7 +156,7 @@ Similarly, you can modify the Address and Endpoint for `sgjp` and `sghk` .
 
 It is easy to generate the configuration with my tools, or maybe you can generate them manually, which is not the key for the configuration. The important part is that for each node of the “intranet“, you can control which other subnet can access to you. Take `gauss` and `einstein` as an example, if you want `gauss` can access from the `einstein` then you need to add the address of `einstein` in the `newton`’s `AllowedIPs`: 
 
-```mermaidjs
+```bash
 # configuration of gauss
 [Interface]
 Address = 192.168.10.2/32,fd0b:76a0:952b:0:afa3:e03c:fe6d:2e55/128
