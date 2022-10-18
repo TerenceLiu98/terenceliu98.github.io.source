@@ -20,7 +20,7 @@ Under this circumstance, we can connect the nodes inside the `A (a2, a3, …)`  
 
 Here is the topology of my design:
 
- ![](/api/attachments.redirect?id=86a5c454-3316-4d2f-839d-11c58cc21db9)
+ ![toppology](https://bucket.cklau.cc/outline-bucket/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/dc88ca70-d652-4d2b-9360-931c852ea1b3/LNet.drawio.png)
 
 Those bold-colored dotted lines can be seen as the Backbone network, and the slim-colored dotted lines can be seen as the internet/intranet. The slim-black dotted line shows that cross IP range is accessible as long as the client allows the traffic.
 
@@ -110,7 +110,75 @@ Those bold-colored dotted lines can be seen as the Backbone network, and the sli
 |----|----|----|----|----|----|
 | Tencent Cloud | SG | bayes | (secret) | 192.168.141.1 / 192.168.142.1 / 192.168.143.1 | Central Router |
 
+## Configuration
 
+### “Backbone Network”
+
+As usual, I use the tool I wrote [wgtools](https://github.com/TerenceLiu98/wgtools) to generate Wireguard configuration. However, the tool is built for the full-mesh configuration, thus, for the “backbone” network, we need to modify the config, here is an example: in the  `sgcn`  interface, I put the following settings in `bayes`:
+
+```bash
+[Interface]
+Address = 192.168.141.1/24
+ListenPort = 51821
+PrivateKey = <interface-prikey>
+
+Table = off
+
+[Peer]
+# Name = cn-router
+PublicKey = <peer-pubkey>
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25
+Endpoint = xxx.xxx.xxx.xxx:51821
+```
+
+The reason why we need to set the Address of the Interface to `/24` is that if we want the subnet of `newton` are accessible, which means that `192.168.141.2/32` need to be accessible from both sides as it is the bridge between `sgcn` and `cn` as the `sgcn` the interface is the bridge between the “external” to the “internal”. Here is the setting in `newton`:  
+
+```mermaidjs
+nterface]
+Address = 192.168.141.2/24 # the same reason, this interface is the "bridge" 
+ListenPort = 51821
+PrivateKey = cJgoIHnDfCl+p8D7KE0jCBkRipEwe3K6Jq7FG8OTzlo=
+
+Table = off
+
+[Peer]
+# Name = bayes
+PublicKey = FF85tV+bkTWA3rNHpn+sapA/08JV7HO92y/I1P+xsRE=
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 25
+Endpoint = xxx.xxx.xxx.xxx:51821
+```
+
+Similarly, you can modify the Address and Endpoint for `sgjp` and `sghk` .
+
+### “Intranet/Internet”
+
+It is easy to generate the configuration with my tools, or maybe you can generate them manually, which is not the key for the configuration. The important part is that for each node of the “intranet“, you can control which other subnet can access to you. Take `gauss` and `einstein` as an example, if you want `gauss` can access from the `einstein` then you need to add the address of `einstein` in the `newton`’s `AllowedIPs`: 
+
+```mermaidjs
+# configuration of gauss
+[Interface]
+Address = 192.168.10.2/32,fd0b:76a0:952b:0:afa3:e03c:fe6d:2e55/128
+ListenPort = 51820
+PrivateKey = <gauss-privkey>
+
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth0 -j MASQUERADE
+
+[Peer]
+# Name = newton
+PublicKey = <newton-pubkey>
+AllowedIPs = 192.168.20.1/32,192.168.248.1/32,fd0b:76a0:952b:0:e96f:2dae:80a8:b578/128
+PersistentKeepalive = 25
+Endpoint = xxx.xxx.xxx.xxx:51820
+```
+
+This is because `newton` is the bridge between `cn` and `jp` , or more specifically, the `einstein` ‘s traffic needs to go through the `jp → sgjp → sgcn → cn` , and for `sgcn → cn` you need to add the `192.168.20.1/32` in the `AllowedIPs` and `cn` will know that this traffic can be accepted by the `cn` and it’s routed via the `192.168.248.1/32`.   
+
+### Wireguard Site-to-Site Configuration
+
+For intuitive thinking, we need to connect cn-router, hksar-router, jp-router, with three different tunnel, however, from here I choose `OSPF(Open Shortest Path First, an Internal Gateway Protocol, or IGP)` and `iBGP(Interior Border Gateway Protocol)` to resolve the routing problem.
 (To-be continued)
 
 
