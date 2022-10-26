@@ -257,4 +257,51 @@ As you can see, two LAN OSPF can sharing the local routing table to each other v
 
 IBGP is used inside the autonomous systems. It is used to provide information to your internal routers. It requires all the devices in same autonomous systems to form full mesh topology or either of Route reflectors and Confederation for prefix learning.
 
-(to be continued)
+```bash
+# configuration of cn-router
+router id 192.168.199.1;
+define LOCAL_ASN = 4242420100;
+
+protocol device {
+}
+protocol kernel {
+    ipv4 {
+        export where proto = "wg";
+    };
+}
+
+protocol ospf v2 wg {
+    ipv4 {
+        import where net !~ 192.168.141.0/24;
+        export all;
+    };
+    area 192.168.141.0 {
+        interface "sgcn";
+    };
+}
+
+protocol direct {
+    ipv4;
+    interface "cn";
+}
+
+protocol bgp lnet_sgcn {
+    local 192.168.141.2 as 4242420100;
+    neighbor 192.168.141.1 as 4242420100;
+    multihop 1;
+    graceful restart on;
+    rr client;
+
+    ipv4 {
+        import all;
+        export all;
+    };
+}
+```
+
+* `protocal direct` block with the actual name of the roter's LAN interface, for here, my router's LAN interface is `cn`. The `protocal direct` is required as it is used to import the direct interface routes for the LAN interface into BIRD's routing table, so that it can add the correct next hop to the routes from the other site that it will share via BGP. 
+* `protocal bgp lnet` is used to define the BGP section, again, the `lnet_sgnn` is just arbitrary ID for the protocal, you can use any word/number you want. 
+* `export all` directs BIRD to share all the rotes in the routing table with the other iBGP server. `next hop self` directs it to adjust those roures to make the Wireguard router itself the next hop in all those routes. This will share the rotes the Wireguard roter learned from the other site, using the Wireguard router it elf as the link to the site.
+* `local 192.168.141.2 as 424220100` and `neighbor 192.168.141.1 as 424220100` is defining the AS number of local machine and the neighbor. If these two ASN are the same, we are defining a `iBGP` and if there are different we are defining a `eBGP`.
+
+For now, I have tried `OSPF` and `iBGP`. But I just simply follow the instruction and did not dig into the high-level setting. 
