@@ -1296,6 +1296,10 @@ body {
   top: 0px;
 }
 
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .bottom-20 {
   bottom: 5rem;
 }
