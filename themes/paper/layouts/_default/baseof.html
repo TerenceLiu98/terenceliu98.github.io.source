@@ -22,7 +22,7 @@
 {{ $.Scratch.Set "avatar_url" site.Params.avatar }}<!---->
 {{ else }}<!---->
 {{ $md5 := (md5 site.Params.avatar) }}<!---->
-{{ $url := print "https://www.gravatar.com/avatar/" $md5 "?s=160&d=identicon" }}<!---->
+{{ $url := print "https://gravatar.xingez.me/avatar/" $md5 "?s=160&d=identicon" }}<!---->
 {{ $.Scratch.Set "avatar_url" $url }}<!---->
 {{ end }}<!---->
 {{ end }}<!---->
