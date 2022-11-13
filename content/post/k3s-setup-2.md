@@ -31,27 +31,30 @@ To set up the Server, I follow the instruction from [K3s](https://k3s.io) with a
 
 ```shell
 curl -sfL https://get.k3s.io | K3S_TOKEN=<token>  INSTALL_K3S_EXEC="server \
-                            --node-ip <wg-node-ip> \
-                            --advertise-address <node-public-ip> \
-                            --node-external-ip <node-public-ip> \
-                            --flannel-iface wg0   \
-                            --node-name <node-name> \ 
-                            --cluster-init " sh -
+        --node-ip $(ip addr show eth0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}') \
+        --token $(openssl rand --hex 16) \
+        --advertise-address $(ip addr show eth0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}') \
+        --node-external-ip $(ip addr show eth0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}')  \
+        --flannel-iface eth0   \
+        --node-name $HOSTNAME \
+        --cluster-init" sh -
+ ```
 
-# for whom can not access Google and Github fluently, you may try:
-curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn \
-                            K3S_TOKEN=<token>  INSTALL_K3S_EXEC=" \
-                            server https://<server-1-external-ip>:6443\
-                            --node-ip <wg-node-ip> \
-                            --advertise-address <node-public-ip> \
-                            --node-external-ip <node-public-ip> \
-                            --flannel-iface wg0   \
-                            --node-name <node-name> \ 
-                            --cluster-init " sh -
-```
 where you can see that `--node-ip` is the ip address to advertise for node; `--advertise-address` is the ip address that apiserver user to advertise to members of the cluster; `--node-external-ip` is the external ip address to advertise for node; `--flannel-iface` is to override the default flannel interface.
 
 For whom can not access Google and GitHub fluently, you may try:
+
+```shell
+# for whom can not access Google and Github fluently, you may try:
+curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn INSTALL_K3S_EXEC="server \
+        --node-ip $(ip addr show wg0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}') \
+        --token $(openssl rand --hex 16) \
+        --advertise-address $(ip addr show wg0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}') \
+        --node-external-ip $(ip addr show wg0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}')  \
+        --flannel-iface wg0   \
+        --node-name $HOSTNAME \
+        --cluster-init" sh -
+```
 
 To generate the token, I used `openssl rand --hex 16`.
 
@@ -62,12 +65,12 @@ Similarly, for the second server, you can use the same configuration above with 
 For the K3s node, you can simply reuse the above command with a modification: change `server` to `agent`: 
 
 ```shell
-curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn K3S_TOKEN=<TOKEN> INSTALL_K3S_EXEC="agent 
-                    --server https://<server-ip>:6443 
-                    --node-ip <node-wg-ip> 
-                    --node-external-ip <node-wg-ip> 
-                    --flannel-iface wg0 
-                    --node-name <node-name>" sh -
+curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn INSTALL_K3S_EXEC="agent \
+        --server https://<server-ip>:6443 \
+        --token <token> \
+        --node-ip $(ip addr show wg0 | sed -n '/inet /{s/^.*inet \([0-9.]\+\).*$/\1/;p}') \
+        --flannel-iface wg0 \
+        --node-name $HOSTNAME" sh -
 ```
 
 After the installation of the server and node, you may check whether the server can reach the node correctly:
@@ -229,6 +232,6 @@ spec:
 
 After apply the yaml, we may check whether the rancher install properly: `sudo kubectl get pods --namespace cattle-system` and check `rancher.example.com`. 
 
-[^1]: For some reason, I met some problems with helm but they all correlated to the `KUBECONFIG`. Thus, you may copy the `KUBECONFIG` to `~/.kube/config` and this may solve your problem: `sudo cat /etc/rancher/k3s/k3s.ymal > ~/.kube/config`
+[^1]: For some reason, I met some problems with helm but they all correlated to the `KUBECONFIG`. Thus, you may copy the `KUBECONFIG` to `~/.kube/config` and this may solve your problem: `sudo cat /etc/rancher/k3s/k3s.yaml > ~/.kube/config`
 
 
