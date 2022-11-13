@@ -187,7 +187,7 @@ spec:
 EOF
 ```
 
-That's it, you can choose a `ingress-controller` you like and after install it, a K8s (v1.25.3) cluster is configurated :) 
+That's it, you can choose a `ingress-controller` you like and after install it, a K8s (v1.25.3) cluster is configured :) 
 
 [^1]: I think the reason is that I missed the `runc` package.
 
