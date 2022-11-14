@@ -1,68 +1,126 @@
 ---
-title: "Homelab: My Devices"
-date: 2022-07-20T00:11:21+08:00
+title: "Homelab: How to build a AIO home-server"
+date: 2022-10-24T00:11:21+08:00
 draft: false
-tags: ['homelab','networking','hardware']
+tags: ['homelab','hardware']
 ---
 
-For a long time, I held many different digital gadgets, however, I did not consider putting them into a cluster, or more precisely, setting up a platform where I can easily manage them. In this summer vacation, I started thinking of a possibility of setting up a distributed homelab.
+## Before
 
-## Why Distributed
+I buy this machine for multiple reasons, but must importantly, the previous NAS is built on a very old machine and the disk are "second-hand", thus, I am not sure the stability of the old guy. And I got my bonus of the previous project, so I just spent the money on this bunch of hardware. For this time, I don't want it be a pure NAS, and it should be a ALL-IN-ONE machine.  
 
-Since I am wandering around the [big bay area](https://en.wikipedia.org/wiki/Guangdong%E2%80%93Hong_Kong%E2%80%93Macao_Greater_Bay_Area), multiple different devices are scattered.  Thus, I have to build a distributed cluster.
+## Hardware
 
-Here is the list of my bare metal device:
+| Module | Series | Price |
+| ------ | ------ | ----- | 
+| CPU + Motherboard | Intel Xeon D-1581 + [HSGM D1581-R3](https://www.huoshen99.com/) | ¥498 |
+| Memory | second-hand ECC DDR3 1600 16GB $\times$ 4 | ¥79 |
+| Graphic card | Old NVIDIA RTX 2060 | ¥0 |
+| Storage-SSD | DAHUA C900 512GB | ¥245 | 
+| Storage-HDD | TOSHIBA MG04ACA400N 4T $\times$ 4 | ¥1340 |
+| Case | not named | ¥399 |
+｜Total | | ¥2561 
 
-| Device | Location | Configuration | System | Network | 
-| :----: | :------: | :-----------: | :----: | :-----: |
-| DELL EMC R730 | Zhuhai, China | E5-2650V4 + 128GB + 240GB SSD + 600GB HDD + NVIDIA TITAN XP | Ubuntu 20.04 LTS | 500Mbps |
-| DELL Precision T1700 | Zhuhai, China | i7-4790 + 16GB + 256GB SSD + 1T SATA HDD + NVIDIA RTX 2060Ti | Arch Linux | 500Mbps | 
-| Homebuilt PC | Zhongshan, China | i5-9400f + 16GB + 256GB SSD + 256GB SSD + 2T SATA HDD + NVIDIA TITAN XP | Arch Linux | 500Mbps |
-| Homebuilt NAS | Shenzhen, China | AMD A8-5550M + 6G DDR3 + 128G SSD + 3T SATA HDD |Ubuntu 20.04 LTS | 1Gbps |
-| ARM Router | Shenzhen, China | rk3568 + 2GB Mem + 8GB EMMC | iStoreOS (based on OpenWrt) | 1Gbps |
-| ARM Router | Shenzhen, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 1Gbps |
-| ARM Router (In future) | Guangzhou, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 100Mbps |
+The reason I chose Xeon D-1581 is that I do not expect playing games or running some programs that expect high performance of single-core on this machine, instead, I need multiple cores for virtural machine for some experiment, where I don't need to spend money on the VPS. This is also explain why I need 64GB for RAM. For the storage part, I split the 4 hard disk into two group and each group has 2 disk, the group 1 I create a raid 1 for the important file storage, like photos, documentation and my code; the group 2 I create a LVM volume for daily storage, for example, the movie, music, and etc..
 
-Not only the bare metal, I also own a bunch of VPS/VPC/VM/[Lighthouse](https://www.tencentcloud.com/products/lighthouse), here is the list
+## Software
 
-| Device | Location | Configuration | System | Network | 
-| :----: | :------: | :-----------: | :----: | :-----: |
-| A Lighthouse server | Tencent Cloud - Guangzhou | 1C2G | Ubuntu 20.04 LTS | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 2C4G | Ubuntu 20.04 LTS | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 4C8G | Ubuntu 20.04 LTS | 3Mbps |
-| A Lighthouse server | Tencent Cloud - Shuanghai | 2C2G | Ubuntu 20.04 LTS | 3Mbps |
-| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
-| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
-| A Lighthouse server | Tencent Cloud - Singapore | 2C2G | Ubuntu 20.04 LTS | 30Mbps |
-| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
-| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
-| A VM server | CubeCloud - HKSAR | 1C512M | Ubuntu 20.04 LTS | 1Gbps |
+I use Ubuntu 22.04 LTS as my base system, there is no reason/explanation, I familiar with ubuntu and I trust it can do a great job in the long-time task. Here is the configuration I have done on this machine:
 
-After the listing, you may know why I need a distributed solution.
+### NVIDIA DRIVER and CUDA
 
-## Possible solution 
+```bash
+# check PCI 
+sudo lspci -v | grep -i nvidia
+# update 
+sudo apt-get update && sudo apt-get upgrade -y
+# install nv driver
+sudo apt-get install nvidia-driver-510 # for some reason I use 510 as I found it is the most stable in my system
+# install nv cuda toolkit
+sudo apt-get install nvidia-cuda-toolkit
+# install nvidia-container-toolkit
+curl -s -L https://nvidia.github.io/libnvidia-container/gpgkey | sudo apt-key add -
+echo 'deb https://nvidia.github.io/libnvidia-container/stable/ubuntu20.04/$(ARCH) /' | sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+sudo apt-get update && sudo apt-get install nvidia-container-toolkit
+sudo reboot
 
-1. Docker Swarm
-2. Kubernetes
+# after rebooting, verify that the GPU is working or not:
+nvidia-smi && nvcc -V
+```
 
-Docker Swarm refers to a container orchestration tool that allows user to manage multiple containers within multiple nodes (a cluster). The document can be found in [here](https://docs.docker.com/engine/swarm/)
+### Container: LXC and LXD
 
-Kubernetes, a.k. K8s, is an open-source system for automating deployment, scaling and managerment of containerized applications. The introduction can be found in [here](https://kubernetes.io/docs/home/)
+LXC stands for Linux Containers, I choose using the LXC as it can be easily used in PCI passthrough by just follow the above instruction and install the `nvidia-container-toolkit`. 
 
-In general, Kubernetes is more suitable for those complex applications within the complex development/production environment, and the Docker Swarm is designed for ease of use. Based on the introduction and comparison, I design to use them simultaneously, parts of the device will be used in Docker Swarm (Dhe DS cluster) and others will be used in K8s, those who need persistance will be deployed in DS cluster and the K8s cluster is used for studying.
+```bash
+# install lxd
+sudo snap install lxd
+# create a zfs storage pool
+sudo apt install zfsutils-linux
+sudo zpool create -f <pool-name> <your disk>
+## if you need raid 1:
+sudo zpool create -f <pool-name> /dev/<disk-1> /dev/<disk-2>
 
-After the platform architecture, we need a networking solution for putting up these devices into a LAN. Intuitively, I need a VPN(Virtual Private Network) software as these device can be accessed via the WAN. Based on the VPN software, I may develop my own [SD-WAN](https://en.wikipedia.org/wiki/Software-defined_networking). Here are some SDN (Sofware-Defined Networking) solutions:
+# lxd initilization
+sudo lxd init
+# specify the storage pool to the pool that just create before
 
-1. [Zerotier](https://www.zerotier.com/)
-2. [Tailscale](http://tailscale.com/): based on Wireguard
-3. [Nebula](https://github.com/slackhq/nebula): A scalable overlay networking tool by Slack
-4. [n2n](https://github.com/ntop/n2n): peer-to-peer VPN
+# create a template profile check the meaning of the command before you use it
+lxc profile create <template-name>                      # create a template 
+lxc profile device add pgu-template gpu gpu             # add the gpu device      
+lx profile set <template-name> nvidia.runtime=true      # use nvidia-runtime
+lx profile set <template-name> security.nesting=true    # allow nesting runtime (running ctr inside)
 
-After the comparison, for my home devices, I will choose Tailscale as its performance in my experiment, and for those two cluster, I will use Wireguard as I don't need to pay any fee for occupation. 
+# launch a container
+lxc launch ubuntu:22.04 <ctr-name> -p <profile-name> -s <lxc-storage-name>
 
+# run nvidia-smi inside the container
+lxc exec <ctr-name> -- nvidia-smi
+```
+With the above setting, the container will simply use the same `nvidia-driver`, if you want to use the different driver, you can `set <template-name> nvidia.runtime=false` and install the driver inside the container.
 
+## Storage: Raid1 and LVM volume
 
+Assume that we have `/dev/sda`, `/dev/sdb`, `/dev/sdc`, and `/dev/sdd`, we can simply use `mdadm` to create a Raid1:
 
+```bash
+# create raid 1
+sudo mdadm --create --verbose /dev/md0 --level=1 --raid-devices=2 /dev/sda /dev/sdb
+# check the process of creation
+sudo cat /proc/mdstat
+# creaet file system
+sudo mkfs.ext4 -F /dev/md0
+# create a mount point
+sudo mkdir -p /mnt/storage
+# mount the storage (temporary)
+sudo mount /dev/md0 /mnt/storage
+# mount the storage (persistent)
+echo '/dev/md0 /mnt/storage ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
+```
 
+For the LVM volume:
 
+```bash
+# create a physical volumes on the top of the remaining dick
+sudo pvcreate /dev/sdc /dev/sdd && sudo pvs
+# create a volume group named as `lv-storage`
+sudo vgcreate vg-storage /dev/sdc /dev/sdd && sudo vgdisplay vg-storage
+# create two logical volumes 
+## the first one is for the lxd and the remains are for daily storage
+sudo lvcreate -n lxd-tool -L 120G vg-storage && lvs
+sudo lvcreate -n daily-storage -l 100%FREE vg-storage && lvs
+# create zfs pool & ext4 
+sudo zpool create lxdPool /dev/vg-storage/lxd-pool
+sudo mkfs.ext4 -F /dev/vg-storage/daily-storage
+# create a mount point
+sudo mkdir -p /mnt/daily-storage
+# mount the storage (temporary)
+sudo mount /dev/vg-storage/daily-storage /mnt/daily-storage
+# mount the storage (persistent)
+echo '/dev/vg-storage/daily-storage /mnt/daily-storage ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
 
+# create the storage status
+df -h
+```
+
+For the mounting, you can also use the `uuid` to mount the storage. Simply use `blkid` and you can find the disk's uuid.

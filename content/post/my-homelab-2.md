@@ -1,19 +1,115 @@
 ---
-title: "Homelab: My Distributed Homelab"
-date: 2022-07-21T00:11:21+08:00
+title: "家庭实验室: 设备篇"
+date: 2022-07-20T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','hardware']
 ---
 
-## Networking
+长期以来，笔者购买了许多电子产品，有物理存在的主机也有在云上的虚拟服务器，但是，从来都没有想过将他们放在一个集群内。或者更准确地说，是搭建一个可以轻松管理它们的平台。 在这个暑假，我开始思考建立分布式家庭实验室的可能性。通过网络，将我的设备串通在一起，希望可以做到不管我在哪都可以访问到。
 
-For the homelab, I would like to choose a commerical company's product, as the service can be guaranteed by the company reputation. All my devices can connect to the WAN via NAT1 such that I don't need the nat passthrough solution. I choose [Tailscale](https://tailscale.com/) as I mentioned, it performs well under my testing. Just follow the instruction and the networking problem is solved.
+## 为什么是分布式的
 
-## Service
+笔者长期混迹在粤港澳大湾区周边城市，各式各样的设备也散落在不同的城市，所以要想组成一个 Lab，这些设备就必然需要通过网线才能相互访问，也就必然是分布式的了。
 
-For the homelab, I would like to docker as it is very covinence and can set up easily.
+这是我的设备列表
 
-To install the docker, I just follow the intrduction from the [document](https://docs.docker.com/engine/install/ubuntu/):
+| Device | Location | Configuration | System | Network | 
+| :----: | :------: | :-----------: | :----: | :-----: |
+| DELL EMC R730 | Zhuhai, China | E5-2650V4 + 128GB + 240GB SSD + 600GB HDD + NVIDIA TITAN XP | Ubuntu 20.04 LTS | 500Mbps |
+| DELL Precision T1700 | Zhuhai, China | i7-4790 + 16GB + 256GB SSD + 1T SATA HDD + NVIDIA RTX 2060Ti | Arch Linux | 500Mbps | 
+| Homebuilt PC | Zhongshan, China | i5-9400f + 16GB + 256GB SSD + 256GB SSD + 2T SATA HDD + NVIDIA TITAN XP | Arch Linux | 500Mbps |
+| Homebuilt NAS | Shenzhen, China | AMD A8-5550M + 6G DDR3 + 128G SSD + 3T SATA HDD |Ubuntu 20.04 LTS | 1Gbps |
+| ARM Router | Shenzhen, China | rk3568 + 2GB Mem + 8GB EMMC | iStoreOS (based on OpenWrt) | 1Gbps |
+| ARM Router | Shenzhen, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 1Gbps |
+| ARM Router (In future) | Guangzhou, China | rk3399 + 1GB Mem + 1GB + 16GB EMMC | Ubuntu 20.04 LTS | 100Mbps |
+
+不仅有各种物理形态的机器，还有较多的 VM/VPC/VPS/轻量服务器：
+
+| Device | Location | Configuration | System | Network | 
+| :----: | :------: | :-----------: | :----: | :-----: |
+| A Lighthouse server | Tencent Cloud - Guangzhou | 1C2G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 2C4G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 4C8G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - Shuanghai | 2C2G | Ubuntu 20.04 LTS | 3Mbps |
+| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
+| A Lighthouse server | Tencent Cloud - HKSAR | 2C4G | Ubuntu 20.04 LTS | 30Mbps |
+| A Lighthouse server | Tencent Cloud - Singapore | 2C2G | Ubuntu 20.04 LTS | 30Mbps |
+| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
+| A VM server | Oracle Cloud - Japan | 1C1G | Ubuntu 20.04 LTS | 500Mbps |
+| A VM server | CubeCloud - HKSAR | 1C512M | Ubuntu 20.04 LTS | 1Gbps |
+
+列出这部分设备后，你可能知道我为什么需要分布式解决方案了。
+
+## 可能可行的解决方案
+
+目前，经过我的「调研」，可行的方案大概有如下两种，
+
+1. Docker Swarm
+2. Kubernetes
+
+【Docker Swarm](https://docs.docker.com/engine/swarm/) Docker 出的是容器的集群管理工具。它拥有如下主要特性：
+
+1. 集成于Docker Engine的集群管理工具。
+2. 分布式设计：从一个image生成整个集群。一个docker swarm下的不同node，可以分布于同一，或不同的物理设备上。
+3. 灵活调度：按需启动或关闭容器。
+4. 高可用性：支持监控容器状态，如果容器崩溃，可以自动重启容器。
+5. 支持多样的网络配置：支持overlay、macvlan、bridge、host等网络形式。
+6. 服务发现
+7. 负载均衡
+8. 加密传输：默认基于TLS实现容器间的交互，实现加密传输。
+9. 升级回退：支持动态升级容器，如果升级后的容器运行不正常，可自动回退到上一版本。
+
+但 [Docker Swarm](https://github.com/docker-archive/classicswarm) 已经被 Docker 抛弃了，但是，我们依旧可以用时 Docker swarm mode 来组建一个个人容器云。
+
+
+[Kubernetes]((https://kubernetes.io/docs/home/)) 也被称为 K8S, 以容器为中心的管理软件 Kubernetes 已成为部署和操作容器化应用的通行标准。Kubernetes 最初在 Google 开发，然后在 2014 年开源发布。它是基于云的容器编排技术，旨在实现高效资源管理、完全自动化和资源利用率最大化。Kubernetes 具有如下优点：
+1.	自动化运营： Kubernetes 具有许多内置命令，可用于处理应用管理中繁重的工作，从而自动化日常操作，帮助您确保应用始终按照预期的方式运行。
+2.	基础架构抽象：安装 Kubernetes 后，它将代表您的工作负载处理计算、网络和存储。这使开发者可以专注于应用，而不必担心底层环境。
+3.	服务运行状况监控：Kubernetes 会对服务不间断地执行健康检查，重新启动有故障或停滞的容器，且只会在确认服务正常运行时向用户提供服务。
+
+一般来说，Kubernetes 更适合那些复杂的开发/生产环境中的复杂应用，而 Docker Swarm 的设计目的是为了易于使用。 根据介绍和比较，我准备同时部署 K8s 和 Docker swarm，一部分设备在 Docker Swarm（The DS集群）中使用，而其他在K8s中使用，常用的个人服务，如 Git 等会部署在 DS 中，而 K8s 则主要是用来学习。
+
+同时，对于分布式集群，除了框架以外，网络环境也十分重要，如何通过互联网构建属于自己的私人网络呢，如下有几种公开的方案：
+
+1. [Zerotier](https://www.zerotier.com/)
+2. [Tailscale](http://tailscale.com/): based on Wireguard
+3. [Nebula](https://github.com/slackhq/nebula): A scalable overlay networking tool by Slack
+4. [n2n](https://github.com/ntop/n2n): peer-to-peer VPN
+
+对比之后，对于我的家用设备，我会选择 Tailscale 作为我的实验性能，而对于这两个集群内部，我会使用 Wireguard，因为我不需要支付任何费用。
+
+## 部署：网络
+
+我之所以选择 Wireguard，是因为它设计轻巧，速度快，而且安全，因为它使用了最好的加密工具。然而，对于每一次，用户可能需要考虑一个 SUBNET 用于wireguard 和一个 IP 用于每个节点，对我来说，这很烦人，因为我有太多的子网需要配置。因此，我构建了一个小工具：[wgtools](https://github.com/TerenceLiu98/wgtools)
+
+### 如何使用
+
+* prerequest:
+	* clone the code into local directory: `git clone  https://github.com/TerenceLiu98/wgtools.git`
+	* install the requirement: `python -m pip install -r requirements.txt`
+	* install the wireguard before using the tool
+
+* configuration:
+	* new a ipv4 pool: `python add.py network wg0`
+	* new (a) peer(s): `python add.py node wg0 node1` + `python add.py node wg0 node2` + `python add.py node wg0 node3`
+	* check the information: `cat wg0.conf`
+	* modify the endpoint: `python modify.py wg0 node1 Endpoint 1.1.1.1`
+	* generate configuration for each node: `python generate.py wg0 node1` + `python genenrate.py wg0 node2` + `python generate wg0 node3`
+
+* script
+	* copy the configuration to the machine
+	* use `wg-quick` to quick start the wireguard
+	* check the connectivity via `ping
+
+### 为什么不使用广域网
+
+是的，使用公网 IP 很方便，但可能会遇到一些安全问题，因为节点之间的通信需要暴露多个端口（Kubernetes 和 Docker Swarm）。为了避免这种情况，我可以使用 Wireguard 轻松避免这个问题，因此，为什么不呢。
+
+## 部署：服务
+
+### 安装 Docker 
+
+对于homelab，我想使用docker，因为它非常方便并且可以轻松设置。要安装 docker，只需按照步骤操作即可：
 
 ```shell
 # uninstall old versions (if installed) 
@@ -69,10 +165,9 @@ sudo docker version
 #   GitCommit:        de40ad0
 ```
 
-### MultiMedia
+### 多媒体娱乐
 
-
-There are multiple multimedia software, for istance, [Plex](https://www.plex.tv/), [Emby](https://emby.media), [Jellyfin](https://jellyfin.org), and [KODI](https://kodi.tv/). For some reason, I did not want to pay too much money of the media service as I just want a place that can show the poster and brief introduction of the video, and I don't need too much "fancy" features. By comparison, I choose Jellyfin, the "open-source version of Emby", as me multimedia server and I install it via the `docker-compose.yml`:
+有多种多媒体软件，例如，[Plex](https://www.plex.tv/)、[Emby](https://emby.media)、[Jellyfin](https://jellyfin.org) , 和 [KODI](https://kodi.tv/)。 出于某种原因，我不想为媒体服务支付太多钱，因为我只是想要一个可以展示海报和视频简介的地方，我不需要太多“花哨”的功能。 相比之下，我选择 Jellyfin，“Emby 的开源版本”，作为我的多媒体服务器，我通过 `docker-compose.yml` 安装它：
 
 ```yaml
 version: "2.1"
@@ -93,9 +188,9 @@ services:
     restart: always # when docker restart, the docker image will auto restart
 ```
 
-### Authentication
+### 单点认证
 
-There are many authentication software that support Oauth, for instance, [Authentik](https://goauthentik.io/), [Okta](https://www.okta.com/), [auth0](https://auth0.com/), [Ory Hydra](https://github.com/ory/hydra), [KeyCloak](https://www.keycloak.org/), an there are some authentication cloud services, like [authing.com](https://authing.cn). By comparsion, I choose Authentik and KeyCloak, authentik has a good-looking interface, and KeyCloak is a widely used software, which mean there are more example and solution on the interest. The authentik is used for my self-hosted services, and the KeyCloak is for the other serive that I need to provide to other users. Similarly, I use `docker-compose.yml` to set up these services:
+支持Oauth的认证软件有很多，例如[Authentik](https://goauthentik.io/)、[Okta](https://www.okta.com/)、[auth0](https:// auth0.com/)、[Ory Hydra](https://github.com/ory/hydra)、[KeyCloak](https://www.keycloak.org/)，还有一些认证云服务，比如[ authing.com](https://authing.cn)。 相比之下，我选择了Authentik和KeyCloak，authentik界面好看，而且KeyCloak是一个应用广泛的软件，这意味着在兴趣上的例子和解决方案更多。 authentik 用于我的自托管服务，而 KeyCloak 用于我需要提供给内网用户的其他服务。 同样，我使用 `docker-compose.yml` 来设置这些服务：
 
 ```yaml
 # Authentik
@@ -216,9 +311,10 @@ services:
         - postgres
 ```
 
-### Working and Coding
+### 工作相关
 
-Most of the time, I just use the local environment for the documentation and coding, however, sometimes I will re-build the computer and to avoid the data loss. Thus, I choose [outline](https://github.com/outline/outline) for the documentation, [dokuwiki](https://www.dokuwiki.org/dokuwiki) for building the wiki system, [Nexcloud] as my personal Net storage,  and [Gitea](https://gitea.io) as my self-hosted code repository. Outline is a Nation-alternative software which also provide a beatiful, realtime knowledge base, where I can easily store my throught and idea wia the web. Dokuwiki is a well-known wiki system without a database backend, which means I can easily migrate it to any place. Between Gitea and Gitlab, I choose Gitea at last because GitLab's hardware requirement is too high that I don't have enough resources to run a GitLab and I just need a place to store my code, not those extra features.
+大多数时候，我只是使用本地环境进行文档和编码，但有时我会重新构建计算机以避免数据丢失。 因此，我选择 [outline](https://github.com/outline/outline) 作为文档，[dokuwiki](https://www.dokuwiki.org/dokuwiki) 用于构建 wiki 系统，[Nexcloud] 为 我的个人网络存储，以及 [Gitea](https://gitea.io) 作为我的自托管代码存储库。 Outline 是一个国家替代软件，它还提供了一个漂亮的实时知识库，我可以通过网络轻松地存储我的想法和想法。 Dokuwiki 是一个著名的 wiki 系统，没有数据库后端，这意味着我可以轻松地将它迁移到任何地方。 在 Gitea 和 Gitlab 之间，我最后选择了 Gitea，因为 GitLab 的硬件要求太高，我没有足够的资源来运行 GitLab，我只需要一个地方来存储我的代码，而不是那些额外的功能。
+
 ```yaml
 # outline 
 # you need to set up the ENV parameters on other file call `.env`, check https://app.getoutline.com/s/770a97da-13e5-401e-9f8a-37949c19f97e/doc/docker-7pfeLP5a8t for the detail
@@ -404,9 +500,8 @@ services:
     volumes:
       - ./postgres:/var/lib/postgresql/data
 ```
-### RSS Feed Reader
 
-I use Miniflux as my RSS Feed Reader, the reason why I give Tiny Tiny RSS is that Miniflux V2 is written by Go-lang and I don't like PHP.
+### RSS 阅读器
 
 ```yaml
 version: '3.4'
@@ -444,9 +539,9 @@ volumes:
   miniflux-db:
 ```
 
-## Key and Password Management
+## 密钥和密码管理
 
-There are multiple different password manager, Google Password Manager, 1Password, LastPass, etc.. But I choose Bitwarden as I can self-host the software on my own machine and I don't need to worry about the data leakage.
+有多种不同的密码管理器，谷歌密码管理器，1Password，LastPass等。但我选择了Bitwarden，因为我可以在自己的机器上自行托管软件，我不需要担心数据泄露。
 
 ```yaml
 version: "3"
