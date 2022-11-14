@@ -6,7 +6,7 @@ draft: false
 
 ### 你好 👋
 
-通常我会说我的名字是 Terence Lau, 阿卡啊:
+通常我会说我的名字是 Terence Lau, 阿.卡.阿:
 
 - Terry Lau/Liu
 - Terence Liu
