@@ -1,7 +1,7 @@
 ---
 title: "K3s/Kubernetes - From K3s to Kubernetes: Set up a Kubernetes in a nutshell (1)"
-date: 2022-09-24T00:11:21+08:00
-lastmod: 2022-09-26T00:11:21+08:00
+date: 2022-10-23T00:11:21+08:00
+lastmod: 2022-10-23T00:11:21+08:00
 draft: false
 tags: ['k3s', 'kubernetes', 'containerd', 'docker']
 ---

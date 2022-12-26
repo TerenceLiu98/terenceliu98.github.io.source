@@ -2,6 +2,7 @@
 title: "Homelab: How to build a AIO home-server"
 date: 2022-10-24T00:11:21+08:00
 draft: false
+math: true
 tags: ['homelab','hardware']
 ---
 
@@ -19,7 +20,7 @@ I buy this machine for multiple reasons, but must importantly, the previous NAS 
 | Storage-SSD | DAHUA C900 512GB | ¥245 | 
 | Storage-HDD | TOSHIBA MG04ACA400N 4T $\times$ 4 | ¥1340 |
 | Case | not named | ¥399 |
-｜Total | | ¥2561 
+| Total | | ¥2561 
 
 The reason I chose Xeon D-1581 is that I do not expect playing games or running some programs that expect high performance of single-core on this machine, instead, I need multiple cores for virtural machine for some experiment, where I don't need to spend money on the VPS. This is also explain why I need 64GB for RAM. For the storage part, I split the 4 hard disk into two group and each group has 2 disk, the group 1 I create a raid 1 for the important file storage, like photos, documentation and my code; the group 2 I create a LVM volume for daily storage, for example, the movie, music, and etc..
 

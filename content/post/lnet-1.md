@@ -2,6 +2,7 @@
 title: "👨‍💻 My Personal Experimental Network: L-Net"
 date: 2022-10-18T00:11:21+08:00
 draft: false
+math: true
 tags: ['networking', 'wireguard', 'experimental network']
 ---
 
@@ -20,7 +21,7 @@ Under this circumstance, we can connect the nodes inside the `A (a2, a3, …)`  
 
 Here is the topology of my design:
 
- ![toppology](https://bucket.cklau.cc/outline-bucket/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/dc88ca70-d652-4d2b-9360-931c852ea1b3/LNet.drawio.png)
+ ![topology](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/dc88ca70-d652-4d2b-9360-931c852ea1b3/LNet.drawio.png)
 
 Those bold-colored dotted lines can be seen as the Backbone network, and the slim-colored dotted lines can be seen as the internet/intranet. The slim-black dotted line shows that cross IP range is accessible as long as the client allows the traffic.
 
@@ -249,7 +250,7 @@ sudo birdc show route
 
 With the above configuration, `cn-router` and `sg-router` can communicate and exchange routing table, the next step is to propagate `cn` and to `sg`'s node. We can still use `OSPF` for routing. 
 
-![ospf routing](https://bucket.cklau.cc/outline-bucket/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/18362fae-26e4-403b-9c54-79b1fe7539e9/ospf-lnet.png)
+![ospf routing](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/18362fae-26e4-403b-9c54-79b1fe7539e9/ospf-lnet.png)
 
 As you can see, two LAN OSPF can sharing the local routing table to each other via the `sgcn` and `sgjp`.
 
@@ -305,3 +306,6 @@ protocol bgp lnet_sgcn {
 * `local 192.168.141.2 as 424220100` and `neighbor 192.168.141.1 as 424220100` is defining the AS number of local machine and the neighbor. If these two ASN are the same, we are defining a `iBGP` and if there are different we are defining a `eBGP`.
 
 For now, I have tried `OSPF` and `iBGP`. But I just simply follow the instruction and did not dig into the high-level setting. 
+
+
+ is supported $\frac{1}{2}$
