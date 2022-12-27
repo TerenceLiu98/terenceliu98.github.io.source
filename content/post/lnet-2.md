@@ -19,7 +19,7 @@ Here, as usual, I made three network areas, “East-Asia-CN” is `192.168.101.0
 
 ## Wireguard
 
-Yes, I still use my script wgtools to generate the Wireguard configuration. However, if we try to use iBGP inside the network area, we need to create a star-shaped network and disable changing the routing table. Here is an example:
+Yes, I still use my script [wgtools](https://github.com/TerenceLiu98/wgtools) to generate the Wireguard configuration. However, if we try to use iBGP inside the network area, we need to create a star-shaped network and disable changing the routing table. Here is an example:
 
 ```bash
 #################################
@@ -262,3 +262,45 @@ Here are some points you may concern about:
 
 1. If your router is needed to be attached, the backbone network’s CIDR needs to be accepted by the BGP, I try multiple times but I did not fix this issue.
 2. Inside a network area, all nodes are in a  star topology network and the router is the root node. This means if the router is down, the connections between nodes are also down. You may use wgsd to establish a direct connection inside the network area.
+
+
+## Wireguard multiplexing?
+
+In the standard Wireguard, each interface corresponds to one port and if we have multiple different settings configuration we may lost in the port selection or just do not remember the which port percisely link to the interface. Under this circumstance, I use [gost](https://github.com/ginuerzh/gost) to aggregate the interfaces' ports into one port.
+
+```bash
+# download the latest version from github
+wget https://github.com/ginuerzh/gost/releases/download/v2.11.4/gost-linux-amd64-2.11.4.gz
+gzip -d gost-linux-amd64-2.11.4.gz
+sudo mv gost-linux-amd64-2.11.4 /usr/local/bin/gost && sudo chmow +x /usr/local/bin/gost
+
+sudo cat > /etc/systemd/system/gost.service << EOF
+[Unit]
+Description=Gost Proxy
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/gost -C /etc/gost/config.json
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+mkdir /etc/gost
+cat > /etc/gost/config.json << EOF
+{
+    "Debug": true,
+    "Retries": 0,
+    "ServeNodes": [
+        "udp://:51820/127.0.0.1:51821,127.0.0.1:51822,127.0.0.1:21823"
+    ]
+}
+EOF
+
+sudo systemctl enable --now gost
+```
+
+Then, we can use `51820` for all three interface's connection.
