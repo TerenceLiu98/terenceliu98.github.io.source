@@ -25,5 +25,6 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 
 These areticles are inside my projects: Build a Experimental Network with your VPS
 
-1. [L-Net: My Personal Experimental Network](/post/lnet-1)
-2. [L-Net: My Personal Experimental Network v1.1](/post/lnet-2)
+1. [L-Net: My Experimental Network V1.0 - BGP and OSPF](/post/lnet-1)
+2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/lnet-2)
+3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/lnet-3)
