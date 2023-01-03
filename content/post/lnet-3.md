@@ -1,7 +1,7 @@
 ---
 title: "👨‍💻 My Personal Experimental Network: L-Net 1.2"
-date: 2022-12-26T00:16:21+08:00
-draft: true
+date: 2023-01-03T00:16:21+08:00
+draft: false
 math: true
 tags: ['networking', 'wireguard', 'BGP', 'experimental network']
 ---
