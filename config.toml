@@ -13,7 +13,7 @@ disqusShortname = 'blog-cklau-cc'
 
 # ------------------------------
 theme = "paper"
-title = "Terence Lau"
+title = "若如笔记"
 
 [params]
   color = 'linen'
@@ -38,17 +38,17 @@ title = "Terence Lau"
 
   [[menu.main]]
     identifier = "about"
-    name = "About"
+    name = "关于我"
     url = "/about/"
     weight = 10
   [[menu.main]]
     identifier = "Projects"
-    name = "Projects"
+    name = "项目"
     url = "/projects/"
     weight = 10
   [[menu.main]]
     identifier = "Friends"
-    name = "Friends"
+    name = "朋友们"
     url = "/friends/"
     weight = 10
 
