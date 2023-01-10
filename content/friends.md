@@ -9,7 +9,7 @@ draft: false
 - [Renjie Deng](https://www.drjchn.com/): A full-stack developer
 - [Junru Zhong](https://junru.dev/): MRI expert, transportation enthusiast, PhD candidate in Computer vision (CUHK)
 - [Laurence Luo](https://www.lzc.app/): developer, geek
-- [KirinBaka](9baka.moe): New generation UICHCC bellwether
+- [KirinBaka](https://9baka.moe): New generation UICHCC bellwether
 
 
 
