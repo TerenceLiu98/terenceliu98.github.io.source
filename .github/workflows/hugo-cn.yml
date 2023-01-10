@@ -30,3 +30,24 @@ jobs:
           publish_dir: ./public
           publish_branch: cn
           # keep_files: false
+      
+      - name: Sync
+        uses: AEnterprise/rsync-deploy@v1.0
+        env:
+          DEPLOY_KEY: ${{ secrets.SSH_KEY }} 
+          ARGS: -avz --delete --exclude='*.pyc'
+          SERVER_PORT: '22'
+          FOLDER: ./ 
+          SERVER_IP: ${{ secrets.SSH_HOST }}
+          USERNAME: ${{ secrets.SSH_USERNAME }}
+          SERVER_DESTINATION: /home/ubuntu/test/
+
+      - name: Restart server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }} 
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          script: |
+            cd /home/ubuntu/terenceliu98.github.io
+            git checkout cn
