@@ -9,7 +9,7 @@ draft: false
 - [Renjie Deng](https://www.drjchn.com/): 全栈开发者
 - [Junru Zhong](https://junru.dev/): MRI 医疗图像顶级研究人员，公共交通狂热爱好者，CUHK Computer vision PhD 候选人
 - [Laurence Luo](https://www.lzc.app/): 开发者，极客
-- [KirinBaka] UICHCC 新生代领导人
+- [KirinBaka](https://9baka.moe/zh/) UICHCC 新生代领导人
 
 ## 添加友链
 

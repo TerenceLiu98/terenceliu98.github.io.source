@@ -41,13 +41,3 @@ jobs:
           SERVER_IP: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
           SERVER_DESTINATION: /home/ubuntu/terenceliu98.github.io
-
-      - name: Restart server
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.SSH_HOST }} 
-          username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          script: |
-            cd /home/ubuntu/terenceliu98.github.io
-            git checkout cn
