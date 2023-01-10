@@ -40,7 +40,7 @@ jobs:
           FOLDER: ./public
           SERVER_IP: ${{ secrets.SSH_HOST }}
           USERNAME: ${{ secrets.SSH_USERNAME }}
-          SERVER_DESTINATION: /home/ubuntu/terenceliu98.github.ioc
+          SERVER_DESTINATION: /home/ubuntu/terenceliu98.github.io
 
       - name: Restart server
         uses: appleboy/ssh-action@master
