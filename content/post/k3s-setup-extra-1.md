@@ -2,22 +2,27 @@
 title: "K3s/Kubernetes - 番外：自建 Docker 镜像站"
 date: 2022-10-02T10:00:00+08:00
 draft: false
+keywords:
+  - kubernetes
+  - docker
+  - registry
 tags: ['k3s', 'kubernetes', 'docker', 'registry']
+description: "K3s/Kubernetes - 番外：自建 Docker 镜像站"
 ---
 
-As I have mentioned in [K3s Setup 2]({{< ref "/post/k3s-setup-2" >}} "K3s Setup 2"), usually, it is not easy for the China's user to access `https://gcr.io`, `https://k8s.gcr.io` or `https://ghcr.io`. Thus, under this circumstance, we may set up a server as the registry proxy endpoint.
+正如我在[K3s Setup 2]({{< ref "/post/k3s-setup-2" >}} "K3s Setup 2")中提到的，通常中国用户访问`https: //gcr.io`、`https://k8s.gcr.io` 或 `https://ghcr.io`。 因此，在这种情况下，我们可以设置一个服务器作为注册代理端点。
 
-## Some options
+## 一些选项
 
-DockerHub provide a "offical" package called [Docker Registry](https://docs.docker.com/registry/) where it is a stateless, hightly scalable server side application that stores and lets users distribute Docker images. 
+DockerHub 提供了一个名为 [Docker Registry](https://docs.docker.com/registry/) 的“官方”包，它是一个无状态、高度可扩展的服务器端应用程序，可以存储并让用户分发 Docker 镜像。
 
-Nexus Repository OSS, provided by Sonatype, is an open source repository that supports many artifact formats, including Docker, Java™, and npm.
+Nexus Repository OSS，由 Sonatype 提供，是一个开源存储库，支持多种工件格式，包括 Docker、Java™ 和 npm。
 
-Harbor, provided by VMWare,  is an opensource registry that secure artifacts with policies and role-based access control, ensures images are scanned and free from vulnerabilities, and signs images as trusted. 
+由 VMWare 提供的 Harbor 是一个开源注册表，它通过策略和基于角色的访问控制来保护工件，确保图像被扫描并且没有漏洞，并将图像签名为可信的。
 
-## Nexus as registry proxy
+## Nexus 作为 Registry 代理
 
-It is easy for us to build the Nexus repositry, simply with the `docker-compose.yml`:
+我们很容易构建 Nexus，只需使用 `docker-compose.yml`：
 
 ```yaml
 version: "3.7"
@@ -107,7 +112,7 @@ server {
 }
 ```
 
-After setting up the nexus and nginx, we can go to `https://nexus.example.com` to set up the proxy rules.
+设置完nexus和nginx后，我们可以去 `https://nexus.example.com` 设置代理规则。
 
 1. For Docker: `Creat Repository` -> Choose `docker(proxy)` ->  `Remote storage = https://registry-1.docker.io` and `Docker Index = Use Docker Hub`
 2. For [ghcr.io](https://ghcr.io):  Creat Repository` -> Choose `docker(proxy)` ->  `Remote storage = https://ghcr.io` 
@@ -141,7 +146,7 @@ For the system's `containerd`, you can simply go to `/etc/containerd/containerd/
     endpoint = ["https://mirrors.example.com"]
 ```
 
-For the rancher's `containerd`, k3s will generate config.toml for containerd in `/var/lib/rancher/k3s/agent/etc/containerd/config.toml`, for advanced customization for this file you can create another file called `config.toml.tmpl` in the same directory and it will be used instead. Then, modify the configuration into the file and restart the `sudo systemctl restart k3s` or `sudo systemctl restart k3s-agent`
+对于 rancher 的 `containerd`，k3s 将在 `/var/lib/rancher/k3s/agent/etc/containerd/config.toml` 中为 containerd 生成 config.toml，对于此文件的高级定制，您可以创建另一个名为 ` config.toml.tmpl` 在同一目录中，它将被使用。 然后，修改配置到文件中，重启`sudo systemctl restart k3s`或`sudo systemctl restart k3s-agent`
 
 ```shell
 [plugins.cri.registry.mirrors]
@@ -157,4 +162,4 @@ For the rancher's `containerd`, k3s will generate config.toml for containerd in 
     endpoint = ["https://mirrors.example.com"]
 ```
 
-[^1]: Before you up the yaml, create the folder first and give the proper permission, for me: `mkdir data && chmod 777 data` is good enough. The default password is stored in `data/admin.password`.
+[^1]：在启动 yaml 之前，先创建文件夹并授予适当的权限，对我来说：`mkdir data && chmod 777 data` 就足够了。 默认密码存储在 data/admin.password 中。

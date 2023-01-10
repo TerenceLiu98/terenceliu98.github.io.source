@@ -2,7 +2,11 @@
 title: "K3s/Kubernetes - 配置高可用 K3s 集群"
 date: 2022-09-26T00:11:21+08:00
 draft: false
+keywords:
+  - k3s
+  - kubernetes
 tags: ['k3s', 'kubernetes']
+description: "K3s/Kubernetes - 配置高可用 K3s 集群"
 ---
 
 #  在此之前

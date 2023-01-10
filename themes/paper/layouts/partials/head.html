@@ -11,6 +11,7 @@
   {{ if eq .Kind "page" }}
   <meta name="description" content="{{ .Summary }}" />
   <meta name="author" content="{{ .Params.Author | default site.Author.name }}" />
+<meta content="{{ delimit .Keywords ", " }}" name="keywords">
   {{ else }}
   <meta name="description" content="{{ site.Params.description }}" />
   <meta name="author" content="{{ site.Author.name }}" />

@@ -3,7 +3,12 @@ title: "K3s/Kubernetes - 快速启动 K3s 服务"
 date: 2022-09-24T00:11:21+08:00
 lastmod: 2022-09-26T00:11:21+08:00
 draft: false
+keywords:
+  - k3s
+  - kubernetes
+  - wireguard
 tags: ['k3s', 'kubernetes', 'wireguard']
+description: "K3s/Kubernetes - 快速启动 K3s 服务"
 ---
 
 
