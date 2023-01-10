@@ -7,25 +7,25 @@ tags: ['k3s', 'kubernetes', 'wireguard']
 ---
 
 
-## Before
+## 在此之前
 
-K3s is a lightweight Kubernetes which is more suitable for the Edge/IoT/CI/ARM scenario/devices. Usually, for person, we do not have multiple high-performance device like 24c server or even higher. Hence, K3s is a way we can learn how to set up a kubernetes cluster.
+K3s是一个更适合 Edge/IoT/CI/ARM 场景/设备的轻量级 Kubernetes。 通常，对于人来说，我们没有像 24c 服务器甚至更高的多个高性能设备。 因此，K3s 是我们学习如何设置 kubernetes 集群的一种方式。
 
-For me, I am a bare metal fanatic many year ago, but I changed into a Docker user after I know more about virtualization and containers.  These OS-level virtualization is more convenient when we are trying to migrate our service, like blog migration, authentication migration, etc.
+对我来说，多年前我是一个裸机狂热者，但是当我对虚拟化和容器有了更多的了解后，我变成了一个 Docker 用户。 这些操作系统级别的虚拟化在我们尝试迁移我们的服务时更加方便，例如博客迁移、身份验证迁移等。
 
-## Environment
+## 部署环境
 
-Here is the list of my device:
+这是我的设备列表：
 
-| Node Name | Location | Specification | OS | Network | IP |
+| 设备名称 | 设备所在地 | 设备规格 | OS | Network | IP |
 | :-------: | :------: | :-----------: | :--: | :-----: | :--: |
 | hilbert(server) | Tencent Cloud (SH-CN) | 4C8G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 1.xx.xx.xx + 192.168.36.1 | 
 | cantor(server) | Tencent Cloud (SH-CN) | 2C4G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 110.xx.xx.xx + 192.168.36.2 |
 | newton(worker) | Tencent Cloud (GZ-CN) | 1C2G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 119.xx.xx.xx + 192.168.36.3 |
 
-The reason I would like to setup K3s over Wireguard is because of the expandability. Once over the wireguard, I could add other VPS/Server into the LAN and as a node of the K3s cluster easily even if the node does not has a networking problem and as the Wireguard is safe enough I do not have to consider the security issues of nodes' interconnection.
+我想通过 Wireguard 设置 K3s 的原因是因为可扩展性。 一旦通过 Wireguard，我可以轻松地将其他服务器添加到 LAN 中并作为 K3s 集群的节点，即使该节点没有网络问题，而且 Wireguard 足够安全（我认为），我不必考虑节点的互连时导致的安全问题。
 
-Change servers' name:
+更改服务器名称：
 
 ```shell
 sudo hostnamectl --static set-hostname node1 && sudo hostnamectl  set-hostname node1
@@ -33,18 +33,18 @@ sudo hostnamectl --static set-hostname node2 && sudo hostnamectl  set-hostname n
 sudo hostnamectl --static set-hostname node3 && sudo hostnamectl  set-hostname node3
 ```
 
-### Set up Wireguard
+### 设置 Wireguard
 
-I write a [tool](https://github.com/TerenceLiu98/wgtools) which can help me set up the Wireguard configuration (you can also try this tool, and any issue or pull request is welcomed)
+我写了一个[工具](https://github.com/TerenceLiu98/wgtools) 可以帮助我设置 Wireguard 配置（你也可以试试这个工具，欢迎任何问题或拉取请求）
 
-1. Generate a network interface: `python add.py network wg0`
-2. Add peers: `python add.py node wg0 node1` & `python add.py node wg0 node2` & `python ad.py node wg0 node3`
-3. Modify the endpoint: `python modify wg0 node1 Endpoint 1.xxx.xxx.xxx` & `python modify wg0 node2 Endpoint 110.xxx.xxx.xxx` `python modify wg0 node3 Endpoint 119.xxx.xxx.xxx`
-4. Generata Wireguard configuration: `python generate.py wg0 node1` & `python generate.py wg0 node2` & `python generate.py wg0 node3`
-5. Copy the Wireguard config to each node: `scp node1.conf user_name@node1:~/wg0.conf` & `scp node2.conf user_name@node2:~/wg0.conf` & `scp node2.conf user_name@node2:~/wg0.conf`
+1. 创建网域: `python add.py network wg0`
+2. 添加节点: `python add.py node wg0 node1` & `python add.py node wg0 node2` & `python ad.py node wg0 node3`
+3. 修改节点 Endpoint: `python modify wg0 node1 Endpoint 1.xxx.xxx.xxx` & `python modify wg0 node2 Endpoint 110.xxx.xxx.xxx` `python modify wg0 node3 Endpoint 119.xxx.xxx.xxx`
+4. 生成配置: `python generate.py wg0 node1` & `python generate.py wg0 node2` & `python generate.py wg0 node3`
+5. 将 Wireguard 配置复制到每个节点: `scp node1.conf user_name@node1:~/wg0.conf` & `scp node2.conf user_name@node2:~/wg0.conf` & `scp node2.conf user_name@node2:~/wg0.conf`
 
 
-Add static entry to the hosts file:
+将静态条目添加到 `/etc/hosts`：
 
 ```shell
 sudo cat > /etc/hosts <<EOF

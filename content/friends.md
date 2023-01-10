@@ -9,7 +9,8 @@ draft: false
 - [Renjie Deng](https://www.drjchn.com/): 全栈开发者
 - [Junru Zhong](https://junru.dev/): MRI 医疗图像顶级研究人员，公共交通狂热爱好者，CUHK Computer vision PhD 候选人
 - [Laurence Luo](https://www.lzc.app/): 开发者，极客
+- [KirinBaka] UICHCC 新生代领导人
 
-## Propose New Link
+## 添加友链
 
-If you want me to append you to the friend page, just comment below!
+如果您想让我将您添加到朋友页面，请在下面发表评论！

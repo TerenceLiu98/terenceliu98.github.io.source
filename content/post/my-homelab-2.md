@@ -5,29 +5,29 @@ draft: false
 tags: ['homelab','hardware']
 ---
 
-## Before
+## 在此之前
 
-I buy this machine for multiple reasons, but must importantly, the previous NAS is built on a very old machine and the disk are "second-hand", thus, I am not sure the stability of the old guy. And I got my bonus of the previous project, so I just spent the money on this bunch of hardware. For this time, I don't want it be a pure NAS, and it should be a ALL-IN-ONE machine.  
+买这台机器的原因有很多，但最重要的是，之前的 NAS 是建立在一台很老的机器上，而且磁盘都是“二手”的，所以我不确定这个老家伙的稳定性。 而我拿到了之前项目的奖金，所以该花就花 :)。 这一次，我不希望它是一个纯粹的 NAS，它应该是一个ALL-IN-ONE机器。 
 
-## Hardware
+## 硬件
 
 | Module | Series | Price |
 | ------ | ------ | ----- | 
-| CPU + Motherboard | Intel Xeon D-1581 + [HSGM D1581-R3](https://www.huoshen99.com/) | ¥498 |
-| Memory | second-hand ECC DDR3 1600 16GB $\times$ 4 | ¥79 |
-| Graphic card | Old NVIDIA RTX 2060 | ¥0 |
-| Storage-SSD | DAHUA C900 512GB | ¥245 | 
-| Storage-HDD | TOSHIBA MG04ACA400N 4T $\times$ 4 | ¥1340 |
-| Case | not named | ¥399 |
-｜Total | | ¥2561 
+| CPU + 主板 | Intel Xeon D-1581 + [HSGM D1581-R3](https://www.huoshen99.com/) | ¥498 |
+| 内存 | 二手 ECC DDR3 1600 16GB $\times$ 4 | ¥79 |
+| 显卡 | 自用 NVIDIA RTX 2060 | ¥0 |
+| SSD 存储 | DAHUA C900 512GB | ¥245 | 
+| HDD 存储 | TOSHIBA MG04ACA400N 4T $\times$ 4 | ¥1340 |
+| 机箱 | not named | ¥399 |
+｜总价 | | ¥2561 
 
-The reason I chose Xeon D-1581 is that I do not expect playing games or running some programs that expect high performance of single-core on this machine, instead, I need multiple cores for virtural machine for some experiment, where I don't need to spend money on the VPS. This is also explain why I need 64GB for RAM. For the storage part, I split the 4 hard disk into two group and each group has 2 disk, the group 1 I create a raid 1 for the important file storage, like photos, documentation and my code; the group 2 I create a LVM volume for daily storage, for example, the movie, music, and etc..
+我选择 Xeon D-1581 这个芯片组的原因是我不希望在这台机器上玩游戏或运行一些期望单核高性能的程序，而是我需要多核用于虚拟机进行一些实验，这样，我就可以省去一些在 VPS 上的花费。 这也解释了为什么我需要 64GB 的内存。 对于存储部分，我将 4个硬盘分成两组，每组 2 个磁盘，第 1 组我创建一个 raid 1 用于重要文件存储，如照片，文档和我的代码； 第 2 组我创建一个LVM卷用于日常存储，例如电影，音乐等。
 
-## Software
+## 软件
 
-I use Ubuntu 22.04 LTS as my base system, there is no reason/explanation, I familiar with ubuntu and I trust it can do a great job in the long-time task. Here is the configuration I have done on this machine:
+我使用 Ubuntu 22.04 LTS 作为我的基础系统， 是我熟悉 Ubuntu，我相信它可以在长期任务中做得很好。虽然在此之前，我是打算使用 ArchLinux 的，但是因为种种原因，比如我的 Linux 基础并不好，不一定可以胜任维护 ArchLinux 和骚操作的维护。这是我在这台机器上完成的配置：
 
-### NVIDIA DRIVER and CUDA
+### 显卡驱动和 CUDA 安装
 
 ```bash
 # check PCI 
@@ -48,9 +48,9 @@ sudo reboot
 nvidia-smi && nvcc -V
 ```
 
-### Container: LXC and LXD
+### Linux 容器：LXC
 
-LXC stands for Linux Containers, I choose using the LXC as it can be easily used in PCI passthrough by just follow the above instruction and install the `nvidia-container-toolkit`. 
+LXC 代表 Linux 容器，我选择使用 LXC，因为它可以很容易地用于 PCI 直通，只需按照上面的说明安装 `nvidia-container-toolkit`. 
 
 ```bash
 # install lxd
@@ -79,9 +79,9 @@ lxc exec <ctr-name> -- nvidia-smi
 ```
 With the above setting, the container will simply use the same `nvidia-driver`, if you want to use the different driver, you can `set <template-name> nvidia.runtime=false` and install the driver inside the container.
 
-## Storage: Raid1 and LVM volume
+## 存储：软 Raid 和 LVM 卷的使用
 
-Assume that we have `/dev/sda`, `/dev/sdb`, `/dev/sdc`, and `/dev/sdd`, we can simply use `mdadm` to create a Raid1:
+假设我们有这四个硬盘： `/dev/sda`, `/dev/sdb`, `/dev/sdc`, and `/dev/sdd`, 我们可以用 `mdadm` 来创建 Raid:
 
 ```bash
 # create raid 1
@@ -98,7 +98,7 @@ sudo mount /dev/md0 /mnt/storage
 echo '/dev/md0 /mnt/storage ext4 defaults,nofail,discard 0 0' | sudo tee -a /etc/fstab
 ```
 
-For the LVM volume:
+对于常见 LVM 卷:
 
 ```bash
 # create a physical volumes on the top of the remaining dick
@@ -123,4 +123,4 @@ echo '/dev/vg-storage/daily-storage /mnt/daily-storage ext4 defaults,nofail,disc
 df -h
 ```
 
-For the mounting, you can also use the `uuid` to mount the storage. Simply use `blkid` and you can find the disk's uuid.
+对于自动挂载，我一般会选择可以使用 `uuid` 来进行挂在。 通过 `blkid` 我门很容易的可以找到磁盘的 `uuid`，然后写入到 `/etc/fstab` 里即可。

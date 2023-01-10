@@ -5,29 +5,20 @@ draft: false
 tags: ['k3s', 'kubernetes']
 ---
 
+#  在此之前
 
-Generating a basic K3s cluster is quite easy by following the [K3s's Doc](https://doc.k3s.io). let try to modify it into High Availability Cluster. Single server cluster can meet a variety of use cases, but for environments where uptime of the Kubenetes control plane is critical, where we need the High Availability configuration. There are two ways for High Availability:
+按照 [K3s 的文档](https://doc.k3s.io) 生成基本的 K3s 集群非常容易。 让我们尝试将其修改为 High Availability Cluster。 单个服务器集群可以满足各种用例，但对于 Kubenetes 控制平面的正常运行时间至关重要的环境，我们需要高可用性配置。 高可用性有两种方式：
 
 1. High Availability with an External DB (for example, [PostgreSQL](https://www.postgresql.org/), [MySQL](https://www.mysql.com/),  [MariaDB](https://mariadb.org/))
 2. High Availability with Embedded DB ([etcd](https://etcd.io/))
 
-I chose the second one - with Embedded DB.
+我选择了第二个——带有嵌入式数据库:
 
-## Enviornment
+## K3s 安装
 
-Here is the list of my device:
+### K3s 控制节点
 
-| Node Name | Location | Specification | OS | Network | IP |
-| :-------: | :------: | :-----------: | :--: | :-----: | :--: |
-| hilbert(master) | Tencent Cloud (SH-CN) | 4C8G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 1.xx.xx.xx + 192.168.36.1 | 
-| cantor(master) | Tencent Cloud (SH-CN) | 2C4G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 110.xx.xx.xx + 192.168.36.2 |
-| newton(agent) | Tencent Cloud (GZ-CN) | 1C2G | Ubuntu 20.04 LTS | Pbulic IP + Wireguard | 119.xx.xx.xx + 192.168.36.3 |
-
-## K3s Installation
-
-### K3s Server Node 
-
-To set up the Server, I follow the instruction from [K3s](https://k3s.io) with a little modification, since I want to customize the network and node name. Here is the command I used for server-installation:
+为了设置服务器，我按照 [K3s](https://k3s.io) 的说明稍作修改，因为我想自定义网络和节点名称。 这是我用于服务器安装的命令：
 
 ```shell
 curl -sfL https://get.k3s.io | K3S_TOKEN=<token>  INSTALL_K3S_EXEC="server \
@@ -49,17 +40,15 @@ curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh 
                             --node-name <node-name> \ 
                             --cluster-init " sh -
 ```
-where you can see that `--node-ip` is the ip address to advertise for node; `--advertise-address` is the ip address that apiserver user to advertise to members of the cluster; `--node-external-ip` is the external ip address to advertise for node; `--flannel-iface` is to override the default flannel interface.
+您可以在其中看到 `--node-ip` 是为节点的 IP 地址； `--advertise-address` 是 apiserver 用户向集群其他节点发布的 ip 地址； `--node-external-ip` 是为节点宣告的外部 ip 地址； `--flannel-iface`  是 flannel 所使用的网卡设备。
 
-For whom can not access Google and GitHub fluently, you may try:
+为了生成令牌，我使用了 `openssl rand --hex 16`.
 
-To generate the token, I used `openssl rand --hex 16`.
+同样，对于第二台服务器，您可以使用上面相同的配置和 IP 替换。
 
-Similarly, for the second server, you can use the same configuration above with IPs' substitution. 
+### K3s 计算节点
 
-### K3s node
-
-For the K3s node, you can simply reuse the above command with a modification: change `server` to `agent`: 
+对于 K3s 计算节点，您可以简单地重用上述命令并进行修改：将 `server` 更改为 `agent`：
 
 ```shell
 curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh | INSTALL_K3S_MIRROR=cn K3S_TOKEN=<TOKEN> INSTALL_K3S_EXEC="agent 
@@ -70,7 +59,8 @@ curl -sfL https://rancher-mirror.oss-cn-beijing.aliyuncs.com/k3s/k3s-install.sh 
                     --node-name <node-name>" sh -
 ```
 
-After the installation of the server and node, you may check whether the server can reach the node correctly:
+在服务端和节点安装完成后，可以检查服务端是否能正确到达节点：
+
 ```shell
 sudo kubectl get nodes -o wide
 # NAME      STATUS   ROLES                       AGE   VERSION        INTERNAL-IP    EXTERNAL-IP     OS-IMAGE           KERNEL-VERSION      CONTAINER-RUNTIME
@@ -85,9 +75,9 @@ sudo kubectl top nodes
 # newton    90m          9%     1118Mi          56%
 ```
 
-## Helm Installlation
+## Helm 安装
 
-[Helm](https://helm.sh) is the package manager of kubernetes, where usually we can use it to download and install pre-packed applications to our cluster. To install it, we can go to helm's GitHub release to find the compiled binary file and download it. Here is an example for the Linux amd64:
+[Helm](https://helm.sh) 是的包管理器，通常我们可以使用它来下载并安装预打包的应用程序到我们的集群。 要安装它，我们可以去 hel m的 GitHub release 找到编译好的二进制文件并下载。 以下是 Linux amd64 的示例：
 
 ```shell
 wget https://get.helm.sh/helm-v3.10.0-linux-amd64.tar.gz -O helm.tar.gz
@@ -99,23 +89,23 @@ helm version
 # version.BuildInfo{Version:"v3.10.0", GitCommit:"ce66412a723e4d89555dc67217607c6579ffcb21", GitTreeState:"clean", GoVersion:"go1.18.6"}
 ```
 
-## Change the mirrors for Containerd (Optional)
+## 更改 Containerd 的镜像（可选）
 
-For some reason, the China region's network may be stuck and cannot connect (or very slow) to some of the website, sadly, gcr.io` and `quay.io` are inside the list. Thus, we may need to change to the China's mirrors.
+由于某些原因，某些地区的网络可能会卡在「拉镜像」这一步，无法连接（或非常慢）某些网站，遗憾的是，gcr.io`和`quay.io`都在列表中。 因此，我们可能需要换成物理位置更近的镜像。
 
-For example: we can subsitute the `quay.io` with `https://quay-mirror.qiniu.com` and `gcr.io` we can use `https://registry.aliyuncs.com`. For the docker, we can use the [Daocloud](https://www.daocloud.io/)'s script to update the mirrors. This may help speeding up the installication process in the after step.
+例如：我们可以将 `quay.io` 替换为 `https://quay-mirror.qiniu.com` 和 `gcr.io` 我们可以使用 `https://registry.aliyuncs.com`。 对于docker，我们可以使用 [Daocloud](https://www.daocloud.io/) 的脚本来更新镜像。 这可能有助于加快后续步骤中的安装过程。
 
-## Cert-Manager Installation and Configuration
+## Cert-Manager 安装和配置
 
-[Cert-Manager](https://cert-manager.io/) is a cloud-native certificate management tool which can help us automatically sign SSL/TLC certificate from Let's Encrypt with ACME. Typically, Cert-Manager offers two challenge validations - HTTP01 and DNS01 challenges. In here, we use DNS01, but for now, let us install the Cert-Manager first.
+[Cert-Manager](https://cert-manager.io/) 是一个云原生的证书管理工具，可以帮助我们自动签署 Let's Encrypt with ACME 的 SSL/TLC 证书。 通常，Cert-Manager 提供两种质询验证 - HTTP01 和 DNS01 质询。 在这里，我们使用 DNS01，但现在，让我们先安装 Cert-Manager。
 
-1. Add the helm repository and update repo: `sudo helm repo add jetstack https://charts.jetstack.io && sudo helm repo update` [^1]
-2. Install the cert-manager: `helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.9.1 --set installCRDs=true` (create a NS; cert-manager's version is v1.9.1; install the CRD resources)
-3. Check the cert-manager's status: `sudo kubectl get pods --namespace cert-manager`
+1. 添加 helm 存储库并更新 repo：`sudo helm repo add jetstack https://charts.jetstack.io && sudo helm repo update` [^1]
+2. 安装证书管理器：`helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --version v1.9.1 --set installCRDs=true`（创建一个 namespace，并指定 cert-manager 的版本是 v1.9.1；安装CRD资源）
+3. 检查证书管理器的状态：`sudo kubectl get pods --namespace cert-manager`
 
-After installing the cert-manager, we need to go to [Cloudflare's dashboard(https://dash.cloudflare.com/profile) to create a API token with "Edit zone DNS" template, set permission: `Zone - DNS - Edit` and `Zone - Zone - Read`, other can be default. Remember that the API will only show onee, you may need to copy it before turn of the tab.
+安装 cert-manager 后，我们需要去 [Cloudflare 的仪表板](https://dash.cloudflare.com/profile) 创建一个带有“编辑区域 DNS”模板的 API 令牌，设置权限：`Zone - DNS - Edit `和`Zone-Zone-Read`，其他可以默认。 请记住，API 只会显示一个，您可能需要在打开选项卡之前复制它。
 
-Create a yaml (`cloudflare-api-token-secret.yaml` and you may change the file name) and start a new Issuer:
+创建一个 yaml（`cloudflare-api-token-secret.yaml`，您可以更改文件名）并启动一个新的 Issuer：
 
 ```yaml
 apiVersion: v1
@@ -128,7 +118,7 @@ stringData:
   api-token: <CF-API-TOKEN>
 ```
 
-Create another yaml (`ClusterIssuer.yaml`):
+创建另一个 yaml (`ClusterIssuer.yaml`):
 ```yaml
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -149,7 +139,7 @@ spec:
             key: api-token
 ```
 
-Create the third yaml (`Certificate.yaml`):
+创建第三个 yaml (`Certificate.yaml`):
 ```yaml
 apiVersion: cert-manager.io/v1
 kind: Certificate
@@ -166,27 +156,27 @@ spec:
  secretName: <secret-name> # the certificate with store in this cecret and you may change it 
 ```
 
-Then, apply these three yaml file, and wait for a while. Use `sudo kubectl describe certificate` to check the status.
+然后，应用这三个yaml文件，稍等片刻。 使用 `sudo kubectl describe certificate` 检查状态。
 
 ```shell
 sudo kubectl describe certificate
 NAME           READY    SECRET       AGE
 <domain-name>   True    <secret>      1m
 ```
-If it is ready, it means that the certificate is Issued.
+如果准备就绪，则表示证书已颁发。
 
-## Rancher Installation
+## Rancher 安装
 
-It is easy to install the Rancher, Rancher is a complete software stack for teams adopting containers. It addresses the operational and security challenges of managing multiple Kubernetes clusters, while providing DevOps teams with integrated tools for running containerized workloads.
+安装 Rancher 很容易，Rancher 是一个完整的软件堆栈，适用于采用容器的团队。 它解决了管理多个 Kubernetes 集群的操作和安全挑战，同时为 DevOps 团队提供了用于运行容器化工作负载的集成工具。
 
-Similar to the installation of Cert-Manager:
+类似于 Cert-Manager 的安装：
 
 ```shell
 sudo helm repo add rancher-latest https://releases.rancher.com/server-charts/latest # add 
 sudo helm install rancher rancher-latest/rancher --namespace cattle-system --create-namespace --set hostname=rancher.k3s.cklau.ml --set bootstrapPassword=admin --set ingress.tls.source=secret
 ```
 
-Then, we need to create a certificate and an ingress for Rancher where we can use our domain to access:
+然后，我们需要为 Rancher 创建一个证书和一个入口，我们可以在其中使用我们的域访问：
 
 ```yaml
 apiVersion: cert-manager.io/v1
@@ -227,8 +217,6 @@ spec:
     secretName: <secret-name>
 ```
 
-After apply the yaml, we may check whether the rancher install properly: `sudo kubectl get pods --namespace cattle-system` and check `rancher.example.com`. 
+应用 yaml 后，我们可以检查 rancher 是否正确安装：`sudo kubectl get pods --namespace cattle-system` 并检查 `rancher.example.com`。
 
-[^1]: For some reason, I met some problems with helm but they all correlated to the `KUBECONFIG`. Thus, you may copy the `KUBECONFIG` to `~/.kube/config` and this may solve your problem: `sudo cat /etc/rancher/k3s/k3s.ymal > ~/.kube/config`
-
-
+[^1]：出于某种原因，我遇到了 helm 的一些问题，但它们都与 `KUBECONFIG` 相关。 因此，您可以将 `KUBECONFIG` 复制到 `~/.kube/config`，这可能会解决您的问题：`sudo cat /etc/rancher/k3s/k3s.yaml > ~/.kube/config`
