@@ -1,5 +1,5 @@
 ---
-title: "👨‍💻 My Personal Experimental Network: L-Net"
+title: "👨‍💻 个人实验性网络的搭建（一）"
 date: 2022-10-18T00:11:21+08:00
 draft: false
 tags: ['networking', 'wireguard', 'experimental network']
