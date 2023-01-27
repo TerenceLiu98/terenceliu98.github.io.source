@@ -3,8 +3,10 @@ title: "Homelab: My Network setup"
 date: 2022-07-21T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','wireguard']
+series: ['homelab']
 ---
 
+<!--more-->
 
 ## In General
 

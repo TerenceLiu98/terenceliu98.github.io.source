@@ -3,7 +3,10 @@ title: "Homelab: My Devices"
 date: 2022-07-20T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','hardware']
+series: ['homelab']
 ---
+
+<!--more-->
 
 For a long time, I held many different digital gadgets, however, I did not consider putting them into a cluster, or more precisely, setting up a platform where I can easily manage them. In this summer vacation, I started thinking of a possibility of setting up a distributed homelab.
 

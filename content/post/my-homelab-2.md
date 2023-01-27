@@ -3,8 +3,10 @@ title: "Homelab: My Distributed Homelab"
 date: 2022-07-21T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','hardware']
+series: ['homelab']
 ---
 
+<!--more-->
 ## Networking
 
 For the homelab, I would like to choose a commerical company's product, as the service can be guaranteed by the company reputation. All my devices can connect to the WAN via NAT1 such that I don't need the nat passthrough solution. I choose [Tailscale](https://tailscale.com/) as I mentioned, it performs well under my testing. Just follow the instruction and the networking problem is solved.

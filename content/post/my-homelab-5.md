@@ -4,7 +4,10 @@ date: 2022-10-24T00:11:21+08:00
 draft: false
 math: true
 tags: ['homelab','hardware']
+series: ['homelab']
 ---
+
+<!--more-->
 
 ## Before
 

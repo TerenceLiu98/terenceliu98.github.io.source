@@ -3,8 +3,11 @@ title: "Homelab: Don't Let the Docker escape from the ufw's control"
 date: 2022-07-21T00:11:21+08:00
 draft: false
 tags: ['homelab','networking', 'docker', 'ufw']
+series: ['homelab']
 ---
 
+
+<!--more-->
 
 "Uncomplicated firewall", a.k.a, UFW, is the new/next-generation of firewall of Linux system. As says in its name, "uncomplicated" is the feature. However, in some situation, it is still complicated, for example, works with Docker.
 

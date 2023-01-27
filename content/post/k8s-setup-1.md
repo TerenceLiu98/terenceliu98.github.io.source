@@ -4,7 +4,10 @@ date: 2022-10-23T00:11:21+08:00
 lastmod: 2022-10-23T00:11:21+08:00
 draft: false
 tags: ['k3s', 'kubernetes', 'containerd', 'docker']
+series: ['kubernetes']
 ---
+
+<!--more-->
 
 # Before
 

@@ -3,8 +3,10 @@ title: "K3s/Kubernetes - Set up a K3s Cluster with your VPS (2)"
 date: 2022-09-26T00:11:21+08:00
 draft: false
 tags: ['k3s', 'kubernetes']
+series: ['kubernetes']
 ---
 
+<!--more-->
 
 Generating a basic K3s cluster is quite easy by following the [K3s's Doc](https://doc.k3s.io). let try to modify it into High Availability Cluster. Single server cluster can meet a variety of use cases, but for environments where uptime of the Kubenetes control plane is critical, where we need the High Availability configuration. There are two ways for High Availability:
 

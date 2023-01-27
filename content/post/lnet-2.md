@@ -4,7 +4,10 @@ date: 2022-12-26T00:16:21+08:00
 draft: false
 math: true
 tags: ['networking', 'wireguard', 'BGP', 'experimental network']
+series: ['networking']
 ---
+
+<!--more-->
 
 ## Before
 

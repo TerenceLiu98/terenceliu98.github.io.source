@@ -4,8 +4,11 @@ date: 2022-10-18T00:11:21+08:00
 draft: false
 math: true
 tags: ['networking', 'wireguard', 'experimental network']
+series: ['networking']
 ---
 
+<!--more-->
+ 
 ## Before
 
 In the previous project: [Homelab]({{< ref "/post/my-homelab-1" >}} "My Homelab 2"), I listed all my devices and VPS on a table, where all the VPS own a specific public IP, and I tried to use the Wireguard to connect them into a Full-mesh intranet.

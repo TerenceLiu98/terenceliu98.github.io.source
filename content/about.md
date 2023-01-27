@@ -1,13 +1,14 @@
 ---
-title: "Hello World"
+title: "👋 Hello World"
 date: 2022-09-26T00:11:21+08:00
 draft: false
+featured: true
 ---
-
-### Hi there 👋
 
 
 My name is Terence Lau, AKA:
+
+<!--more-->
 
 - Terry Lau/Liu
 - Terence Liu
