@@ -127,6 +127,6 @@ git			IN	A	192.168.101.3
 
 I just follow the instructure from [Debian 11 / Ubuntu 22.04 安装 PowerDNS 和 PowerDNS-Admin 自建权威 DNS 教程](https://u.sb/debian-install-powerdns/)
 
-## Distributed Storage
+## Storage and File system
 
-Since 
+Previously, I use Nextcloud as my webdrive, however, since there is a uploading limition in Cloudflare's TOS, the Nextcloud is not suitable for using CDN. I replaced it with [Seafile](https://www.seafile.com/en/home/) as it can be 
