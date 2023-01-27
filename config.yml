@@ -6,7 +6,6 @@ licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICE
 description: "CKLAU's Blog"
 homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
-googleAnalytics: G-B5D427G9NW
 paginate: 10
 menu:
   main:
