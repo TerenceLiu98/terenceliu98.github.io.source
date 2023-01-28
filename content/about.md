@@ -5,10 +5,9 @@ draft: false
 featured: true
 ---
 
+<!--more-->
 
 My name is Terence Lau, AKA:
-
-<!--more-->
 
 - Terry Lau/Liu
 - Terence Liu
