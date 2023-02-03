@@ -123,10 +123,71 @@ auth		IN	A	192.168.100.46
 git			IN	A	192.168.101.3
 ```
 
-### PowerDNS 
+### PowerDNS and Adguard Home
 
 I just follow the instructure from [Debian 11 / Ubuntu 22.04 安装 PowerDNS 和 PowerDNS-Admin 自建权威 DNS 教程](https://u.sb/debian-install-powerdns/)
 
+As soon as I set up the PowerDNS, I use as as one of the upstream DNS servers of my Adguard Home. With the PowerDNS, I can easily control the domain resolution inside the intranet. Here is the example of DNS setting in Adg:
+
+```bash
+[/cloud.cklau.cc/]192.168.101.2
+1.1.1.1
+1.0.0.1
+```
+
 ## Storage and File system
 
-Previously, I use Nextcloud as my webdrive, however, since there is a uploading limition in Cloudflare's TOS, the Nextcloud is not suitable for using CDN. I replaced it with [Seafile](https://www.seafile.com/en/home/) as it can be 
+Previously, I use Nextcloud as my webdrive, however, since there is a uploading limition in Cloudflare's TOS, the Nextcloud is not suitable for using CDN. I replaced it with [Seafile](https://www.seafile.com/en/home/) as it is fast and simple. Yes, NextCloud can provide more features, but its performance is not good enough, sometimes the web interface take around 5-10sec to load for each action you perform. I am not familiar with PHP thus, I just kept the default settings of the page response, which may cause the performance issue.
+
+I migrated the storage to Seafile, which natively support block storage and end-to-end encryption. The Chunk uploading mechanism may bypass the uploading limit of Cloudflare. I test it several time by uploading cuple large files and all of them passed. (Some intrstruction says it may not, but in my case it does)
+
+```yaml
+version: '2.0'
+services:
+  db:
+    image: mariadb:10.1
+    container_name: seafile-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=seafile
+      - MYSQL_LOG_CONSOLE=true
+    volumes:
+      - ./mysql:/var/lib/mysql
+    networks:
+      - seafile-net
+    restart: always
+
+  memcached:
+    image: memcached:1.6
+    container_name: seafile-memcached
+    entrypoint: memcached -m 256
+    networks:
+      - seafile-net
+    restart: always
+
+  seafile:
+    image: seafileltd/seafile-mc:latest
+    container_name: seafile
+      #command: pip install requests_oauthlib
+    ports:
+      - "9999:80"
+    volumes:
+      - /mnt/storage/seafile:/shared
+    environment:
+      - DB_HOST=db
+      - DB_ROOT_PASSWD=seafile
+      - TIME_ZONE=Etc/UTC
+      - SEAFILE_ADMIN_EMAIL=<admin-email>
+      - SEAFILE_ADMIN_PASSWORD=<admin-password>
+      - SEAFILE_SERVER_LETSENCRYPT=false
+      - SEAFILE_SERVER_HOSTNAME=seafile.example.com
+    depends_on:
+      - db
+      - memcached
+    networks:
+      - seafile-net
+    restart: always
+networks:
+  seafile-net:
+```
+
+Also, seafile natively support Single-Sign-on with LDAP and OAuth2, by following the [Manual](https://manual.seafile.com/deploy/oauth/)'s instruction. The configuration path is: `/opt/seafile/conf/seahub_settings.py`.
