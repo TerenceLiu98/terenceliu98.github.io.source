@@ -20,7 +20,7 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 9. [K3s/Kubernetes - A self-hosted registry](/post/k3s-setup-extra-1)
 10. [K3s/Kubernetes - How GitOps works](/post/k3s-setup-3) - Coming soon
 11. [K3s/Kubernetes - From K3s to Kubernetes: Set up a Kubernetes in a nutshell](/post/k8s-setup-1)
-12. [K3s/Kubernetes - Build a High availability Kubernetes Cluster with Kubeadm](/post/k8s-setup-2) -- Coming soon
+12. [K3s/Kubernetes - Build a High availability Kubernetes Cluster with Kubeadm](/post/k8s-setup-2)
 
 ## Personal Project: Personal Experimental Network: L-Net
 

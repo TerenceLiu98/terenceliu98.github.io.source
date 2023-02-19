@@ -18,6 +18,9 @@ menu:
     - name: Project
       url: /projects
       weight: 3
+    - name: Friends
+      url: /friends
+      weight: 3
 params:
   brand: CKLAU's Blog
   avatarURL: /images/avatar.jpeg
