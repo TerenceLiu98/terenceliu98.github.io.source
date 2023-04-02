@@ -3,7 +3,7 @@ title: "👨🏿‍⚕️ RetiGAN: A GAN-based model on retinal Image synthesis"
 date: 2023-04-02T00:13:00+08:00
 draft: false
 math: true
-tags: ['Irtificial Intelligence', 'Medical Image', 'Fundus Image']
+tags: ['Artificial Intelligence', 'Medical Image', 'Fundus Image']
 series: ['MedCV']
 ---
 
@@ -134,7 +134,7 @@ The gneerator is is a standard encoder-decoder architecture, which can be sepera
 2. residual blocks
 3. up-sampling module
 
-where it is the *GlobalGenerator* in pix2pixHD model, focusing on the coarse high-resolution image. In pix2pixHD, they have seconde generator called *LocalEnhancer*, focusing on the feature encoding and decoding enhancement. The *LocalEnhancer* is used to refine the image by adding more details to improve the image quality. The input of the *GlobalGenerator* in pix2pixHD is the downsampled label map $s_{\text{down}}$, and the output is the corse generated image $\hat{x}_{\text{down}}$. With the addition operation with the feature map $Enc_{\text{L}}(s)$: $(Enc_{\text{L}}(s) + \hat{x}_{\text{down}})$, the *LocalEnhancer* output the final $\hat{x}$.
+where it is the *GlobalGenerator* in pix2pixHD model, focusing on the coarse high-resolution image. In pix2pixHD, they have seconde generator called *LocalEnhancer*, focusing on the feature encoding and decoding enhancement. The *LocalEnhancer* is used to refine the image by adding more details to improve the image quality. The input of the *GlobalGenerator* in pix2pixHD is the downsampled label map $s_{\text{down}}$, and the output is the corse generated image $\hat{x}\_{\text{down}}$. With the addition operation with the feature map $Enc_{\text{L}}(s)$: $(Enc_{\text{L}}(s) + \hat{x}\_{\text{down}})$, the *LocalEnhancer* output the final $\hat{x}$.
 
 In RetiGAN, the simply using the *GlobalGenerator* as the generator, since the retinal image are more simplier than the image using in pix2pixHD, where the fundus image are all indomain information, thus, using one generator can reduce model complexity.
 
