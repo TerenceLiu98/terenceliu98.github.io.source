@@ -24,8 +24,14 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 
 ## Personal Project: Personal Experimental Network: L-Net
 
-These areticles are inside my projects: Build a Experimental Network with your VPS
+These articles are inside my projects: Build a Experimental Network with your VPS
 
 1. [L-Net: My Experimental Network V1.0 - BGP and OSPF](/post/lnet-1)
 2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/lnet-2)
 3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/lnet-3)
+
+## Medical Image arounds Us: Deep Learning with Medical Image Processing
+
+These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing
+
+1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/MedCV-retigan-1)
