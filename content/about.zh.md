@@ -5,6 +5,7 @@ draft: false
 featured: true
 ---
 
+想看更多我的博文，请点击[「这里」](/post/)
 
 <!--more-->
 
@@ -28,5 +29,6 @@ I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 * 🚩 Spatio-Temporal Model
 * 🚩 Multi-Modal and Graph Model 
 
+🫡 更多信息：
 - 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 📃 简历 [CV](/doc/cv.pdf)

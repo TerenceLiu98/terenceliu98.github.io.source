@@ -29,5 +29,6 @@ I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 * 🚩 Spatio-Temporal Model
 * 🚩 Multi-Modal and Graph Model 
 
+🫡 For more information: 
 - 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 📃 For more information: check my [CV](/doc/cv.pdf)
