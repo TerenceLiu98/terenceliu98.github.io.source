@@ -8,6 +8,8 @@ series: ['学业']
 
 2023 Fall 申请算是落下帷幕，从一开始打算留在 UIC/HKBU 继续做 Medical Image 和 Mathematical Modelling 到现在准备前往 Trinity College Dublin 做 Political Science，也在此总结一下这一年的流程。
 
+<!--more-->
+
 ## 套磁和邮件
 
 其实笔者在一开始读 MPhil 的时候，就有在看一些可能的 PhD 机会，在一次偶然的机会看到了 CMU Heinz College 的一个 joint PhD programmme, 突然直接激发了我的文科心，同时感受到了美国文科的「科学主义」盛行，国内或者欧洲是否也会通过量化方法对社会学/政治学进行研究呢。我认为更大的思考来说，不论是文科还是理科都一定需要数学方法，理科毋庸置疑，数学十分的重要；对于文科特别是社会科学来说，最直接的一个例子来说，社交网络和复杂网络理论就已经“混为一谈”了；那比如政治相关的一些题目：比较政治学中的变量选择、不同政治体系的治理对比等等我认为都可以通过一些量化的方式进行研究。所以也开始关注了这种 interdisciplinary 相关的 topic。所以，在了解到相关的一些老师也在做这些课题的时候，就毫不犹豫的去套磁了，大概套磁了大概 10 个老师左右，主要围绕着 Social Science 和 Information Science 这两个专业，包括了如下的几个大学：
