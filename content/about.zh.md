@@ -16,19 +16,17 @@ My name is Terence Lau, AKA:
 
 I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 
-Got my Bacholer degree from BNU-HKBU UIC Statistics deparment and going to be a Mphil student in Hong Kong Baptist Univeristy. <br>
-One of the co-founders of [@UICHCC](https://uichcc.com) (UIC Homebrew Computer Club) and Cyclododecene, a data analysis group(no long exists);<br>
+👨🏿‍🏫 教育背景：
+* 香港浸会大学统计（荣誉）学士 （北京师范大学-香港浸会大学联合国际学院）
+* 香港浸会大学哲学硕士（在读）- 概率与数理统计， 导师：[Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en)
+* 都柏林圣三一大学博士未在读 （2023 Fall）- 政治科学， 导师：[Prof.Thomas Chadefaux](https://chadefaux.github.io/)
 
-🔭  I am now focusing on 
-  1. Financical Data Analsis (the data correlated to the finance market, not just finance data)
-  2. Maintenance of UIC-STAT first generation Computing Cluster (USBC); for more information, please check: [USBC-WIKI](https://yuque.com/usbc/usbc-wiki/) & [@Bayes-Cluster](https://github.com/Bayes-Cluster)
-
-Research Interest:
+🔭 Research Interest:
 * 🚩 Statistical Inference (Bayesian)
 * 🚩 Computational Statistics
 * 🚩 Stochastic Process, Markov-related
-* 🚩 High Performance Computing (including CPU & GPU Parallel Algorithm)
-* 🚩 HPC Cluster/Hybrid Cloud maintenance
+* 🚩 Spatio-Temporal Model
+* 🚩 Multi-Modal and Graph Model 
 
-- 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
-- 📃 For more information: check my [CV](/doc/cv.pdf)
+- 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+- 📃 简历 [CV](/doc/cv.pdf)

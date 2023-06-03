@@ -5,6 +5,8 @@ draft: false
 featured: true
 ---
 
+If you want to check my post, click [here](/post/)
+
 <!--more-->
 
 My name is Terence Lau, AKA:
@@ -15,19 +17,17 @@ My name is Terence Lau, AKA:
 
 I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 
-Got my Bacholer degree from BNU-HKBU UIC Statistics deparment and going to be a Mphil student in Hong Kong Baptist Univeristy. <br>
-One of the co-founders of [@UICHCC](https://uichcc.com) (UIC Homebrew Computer Club) and Cyclododecene, a data analysis group(no long exists);<br>
+👨🏿‍🏫 For education:
+* BSc (Honors) in Statistics from Hong Kong Baptist University (BNU-HKBU United International College) 
+* MPhil in Statistics from Hong Kong Baptist University (BNU-HKBU United International College) under [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en)'s supervision.
+* Incoming PhD Student in Political Science at Trinity College Dublin under [Prof.Thomas Chadefaux](https://chadefaux.github.io/)'s supervision.
 
-🔭  I am now focusing on 
-  1. Financical Data Analsis (the data correlated to the finance market, not just finance data)
-  2. Maintenance of UIC-STAT first generation Computing Cluster (USBC); for more information, please check: [USBC-WIKI](https://yuque.com/usbc/usbc-wiki/) & [@Bayes-Cluster](https://github.com/Bayes-Cluster)
-
-Research Interest:
+🔭 Research Interest:
 * 🚩 Statistical Inference (Bayesian)
 * 🚩 Computational Statistics
 * 🚩 Stochastic Process, Markov-related
-* 🚩 High Performance Computing (including CPU & GPU Parallel Algorithm)
-* 🚩 HPC Cluster/Hybrid Cloud maintenance
+* 🚩 Spatio-Temporal Model
+* 🚩 Multi-Modal and Graph Model 
 
 - 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 📃 For more information: check my [CV](/doc/cv.pdf)
