@@ -1,6 +1,6 @@
 ---
-title: Friends
-date: 2022-09-26T00:11:21+08:00
+title: 👯 Friends
+date: 2023-06-03T00:11:21+08:00
 draft: false
 ---
 
@@ -10,9 +10,10 @@ draft: false
 - [Junru Zhong](https://junru.dev/): MRI expert, transportation enthusiast, PhD candidate in Computer vision (CUHK)
 - [Laurence Luo](https://www.lzc.app/): developer, geek
 - [KirinBaka](https://9baka.moe): New generation UICHCC bellwether
+- [Yifu Qiu](https://yfqiu.netlify.app/) PhD Student in The University of Edinburgh and Cambridge University, 2023 Apple Scholars, Fans of Liverpool
 
 
 
 ## Propose New Link
 
-If you want me to append you to the friend page, just comment below!
+If you want me to append you to the friend page, email me!

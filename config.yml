@@ -74,6 +74,9 @@ languages:
         - name: 项目
           url: /projects
           weight: 3
+        - name: 朋辈
+          url: /friends
+          weight: 4
 taxonomies:
   series: series
   tag: tags
