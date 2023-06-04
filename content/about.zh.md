@@ -5,7 +5,7 @@ draft: false
 featured: true
 ---
 
-想看更多我的博文，请点击[「这里」](/post/)
+想看更多我的博文，请点击[「这里」](/zh/post/)
 
 <!--more-->
 
