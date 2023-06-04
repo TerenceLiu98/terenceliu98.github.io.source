@@ -9,20 +9,20 @@ featured: true
 
 <!--more-->
 
-My name is Terence Lau, AKA:
 
+👨‍💻 个人常用的用户名：
 - Terry Lau/Liu
 - Terence Liu
 - JunJie LIU
 
-I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
+当上述用户名被占用时，我也会选择使用 *TerenceCKLau* 
 
 👨🏿‍🏫 教育背景：
 * 香港浸会大学统计（荣誉）学士 （北京师范大学-香港浸会大学联合国际学院）
-* 香港浸会大学哲学硕士（在读）- 概率与数理统计， 导师：[Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en)
+* 香港浸会大学哲学硕士（在读）- 概率与数理统计， 导师：[Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en), 
 * 都柏林圣三一大学博士未在读 （2023 Fall）- 政治科学， 导师：[Prof.Thomas Chadefaux](https://chadefaux.github.io/)
 
-🔭 Research Interest:
+🔭 研究兴趣和方向:
 * 🚩 Statistical Inference (Bayesian)
 * 🚩 Computational Statistics
 * 🚩 Stochastic Process, Markov-related

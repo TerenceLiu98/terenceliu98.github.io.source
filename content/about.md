@@ -18,9 +18,9 @@ My name is Terence Lau, AKA:
 I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 
 👨🏿‍🏫 For education:
-* BSc (Honors) in Statistics from Hong Kong Baptist University (BNU-HKBU United International College) 
-* MPhil in Statistics from Hong Kong Baptist University (BNU-HKBU United International College) under [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en)'s supervision.
-* Incoming PhD Student in Political Science at Trinity College Dublin under [Prof.Thomas Chadefaux](https://chadefaux.github.io/)'s supervision.
+* BSc (Honors) in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) 
+* MPhil in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) under [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en)'s supervision, working in "Multiscale-Multiregional Computable Model of Microcirculation and Its Application in Retinopathy", supported by the Key Program of the National Natural Science Foundation of China.
+* Incoming PhD Student in Political Science at Trinity College Dublin under [Prof.Thomas Chadefaux](https://chadefaux.github.io/)'s supervision, working in [Patterns of Conflict Emergence](https://paceconflictlab.wixsite.com/conflict-research-la), a five-year European Research Concil (ERC) funded project.
 
 🔭 Research Interest:
 * 🚩 Statistical Inference (Bayesian)
