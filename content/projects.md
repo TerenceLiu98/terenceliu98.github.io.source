@@ -30,8 +30,9 @@ These articles are inside my projects: Build a Experimental Network with your VP
 2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/lnet-2)
 3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/lnet-3)
 
-## Medical Image arounds Us: Deep Learning with Medical Image Processing
+## Medical Image arounds Us: Deep Learning with Medical Image Processing(MIP)
 
-These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing
+These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing. More generally, medical image processing is a subset of image processing or computer vision. Therefore, I would also post some of the paper ouside the MIP but inside the CV.
 
 1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/MedCV-retigan-1)
+2. []
