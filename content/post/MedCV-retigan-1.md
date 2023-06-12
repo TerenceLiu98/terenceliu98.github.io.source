@@ -338,7 +338,7 @@ class Perception(nn.Module):
 In general, there are two losses: *Generato Loss* $\mathcal{L}_G$ and *Discriminator Loss* $\mathcal{L}_D$. 
 
 The *Generator Loss* includes these three sub-loss:
-1. Adversarial loss: $\mathcal{L}_{\text{adv}}$: is used to train the generator network by making it generate synthetic data that can fool the discriminator network into thinking that it is real data. The adversarial loss is computed based on the output of the discriminator network.$\mathcal{L}\_{\text{adv}}= \|D(G(s)), 1\|\_2$
+1. Adversarial loss: $\mathcal{L}_{\text{adv}}$: is used to train the generator network by making it generate synthetic data that can fool the discriminator network into thinking that it is real data. The adversarial loss is computed based on the output of the discriminator network.$\mathcal{L}\_{\text{adv}}= \left|\left|D(G(s)), 1\right|\right|\_2$
    
 2. Feature Matching Loss $\mathcal{L}_{\text{FM}}$: In pix2pixHD, the authors found this to stabilize training. In this case, this forces the generator to produce natural statistics at multiple scales. This feature-matching loss is similar to StyleGAN’s[^3] perceptual loss. For some semantic label maps s and corresponding image $x$: $\mathcal{L}\_{\text{FM}} = \mathbb{E}\_{s,x}\left[\sum\_{i=1}^T\dfrac{1}{N\_i}\left|\left|D^{(i)}\_k(s, x) - D^{(i)}_k(s, G(s))\right|\right|\_1\right]$, where $T$ is the total number of layers, $N_i$ is the number of elements at layer $i$ and $D\_k^{(i)}$ denotes the $i$-th layer in discriminator $k$.
    
