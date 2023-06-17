@@ -1,2 +1,2 @@
-[a](cv-retigan-1)
-[b](dl-gan-1)
+- [a](cv-retigan-1)
+- [b](dl-gan-1)
