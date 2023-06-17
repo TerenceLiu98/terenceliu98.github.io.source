@@ -15,12 +15,13 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 4. [Homelab: Don't Let the Docker escape from the ufw's control](/post/my-home-lab-4)
 5. [Homelab: How to build a AIO home-server](/post/my-homelab-5)
 6. [Homelab: My Distributed Homelab (2)](/post/my-homelab-6)
-7. [K3s/Kubernetes - A quick setup for single machine](/post/k3s-setup-1)
-8. [K3s/Kubernetes - A quick setup for HA](/post/k3s-setup-2)
-9. [K3s/Kubernetes - A self-hosted registry](/post/k3s-setup-extra-1)
-10. [K3s/Kubernetes - How GitOps works](/post/k3s-setup-3) - Coming soon
-11. [K3s/Kubernetes - From K3s to Kubernetes: Set up a Kubernetes in a nutshell](/post/k8s-setup-1)
-12. [K3s/Kubernetes - Build a High availability Kubernetes Cluster with Kubeadm](/post/k8s-setup-2)
+7. [Homelab: A self-hosted GitHub Accelerator](/post/my-homelab-extra-1)
+7. [K3s/Kubernetes: A quick setup for single machine](/post/k3s-setup-1)
+8. [K3s/Kubernetes: A quick setup for HA](/post/k3s-setup-2)
+9. [K3s/Kubernetes: A self-hosted registry](/post/k3s-setup-extra-1)
+10. [K3s/Kubernetes: How GitOps works](/post/k3s-setup-3) - Coming soon
+11. [K3s/Kubernetes: From K3s to Kubernetes: Set up a Kubernetes in a nutshell](/post/k8s-setup-1)
+12. [K3s/Kubernetes: Build a High availability Kubernetes Cluster with Kubeadm](/post/k8s-setup-2)
 
 ## Personal Project: Personal Experimental Network: L-Net
 
@@ -30,9 +31,12 @@ These articles are inside my projects: Build a Experimental Network with your VP
 2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/lnet-2)
 3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/lnet-3)
 
-## Medical Image arounds Us: Deep Learning with Medical Image Processing(MIP)
+## Machine Learning with Us
 
-These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing. <u>More generally, medical image processing is a subset of image processing or computer vision. Therefore, I would also post some of the paper ouside the MIP but inside the CV.</u>
+Previously, this project is called: *Medical Image arounds Us: Deep Learning with Medical Image Processing(MIP)*
+
+These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing. **More generally, medical image processing is a subset of image processing or computer vision, or a subset in machine learning and deep learning. Therefore, I would also post some of the paper ouside the MIP but inside the ML/DL.**
 
 1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/MedCV-retigan-1)
-2. []
+2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/DL-GAN-1)
+3. [Style Transfer and Synthesis (1/3): From Decomposition to Generative Model](/post/sci/DL-GAN-2) (coming soon)

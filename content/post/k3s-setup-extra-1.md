@@ -52,6 +52,13 @@ server {
 
 server {
     listen 80;
+    server_name mirrors.example.com;
+
+    return 301 https://$server_name$request_uri;
+}
+
+server {
+    listen 80;
     server_name registry.example.com;
 
     return 301 https://$server_name$request_uri;
@@ -80,7 +87,7 @@ server {
 
 server {
     listen 443 ssl;
-    server_name registry.exmaple.com; # docker proxy
+    server_name mirrors.exmaple.com; # docker proxy
 
     ssl_certificate <path-of-certificate>;
     ssl_certificate_key <path-of-certificate-key>;
@@ -97,9 +104,20 @@ server {
         proxy_set_header Via "nginx";
         client_max_body_size 1024M;
     }
+  
+server {
+    listen 443 ssl;
+    server_name registry.exmaple.com; # docker proxy
 
-    location /v2/ {
-        proxy_pass http://127.0.0.1:8082;
+    ssl_certificate <path-of-certificate>;
+    ssl_certificate_key <path-of-certificate-key>;
+    ssl_session_timeout  5m;;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_protocols SSLv3 TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers   on;
+
+    location / {
+        proxy_pass http://127.0.0.1:8083;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -122,10 +140,10 @@ After setting up the nexus and nginx, we can go to `https://nexus.example.com` t
 Then, you may try pulling image in you server:
 
 ```shell
-sudo docker pull registry.example.com/library/nginx:alpine                                # from Docker Hub
-sudo docker pull registry.example.com/zvonimirsun/yourls                                  # from ghcr.io
-sudo docker pull registry.example.com/google-containers/kubernetes-dashboard-amd64:v1.8.3 # from gcr.io
-sudo docker pull registry.example.com/coreos/kube-state-metrics:v1.5.0                    # from quay.io
+sudo docker pull mirrors.example.com/library/nginx:alpine                                # from Docker Hub
+sudo docker pull mirrors.example.com/zvonimirsun/yourls                                  # from ghcr.io
+sudo docker pull mirrors.example.com/google-containers/kubernetes-dashboard-amd64:v1.8.3 # from gcr.io
+sudo docker pull mirrors.example.com/coreos/kube-state-metrics:v1.5.0                    # from quay.io
 ```
 
 For the system's `containerd`, you can simply go to `/etc/containerd/containerd/config.toml` and modify the configuration and restart `sudo systemctl restart containered`
