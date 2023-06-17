@@ -5,6 +5,7 @@ draft: false
 math: true
 tags: ['Artificial Intelligence', 'Style Tranfer', 'Image Synthesis']
 series: ['CV', 'DL']
+---
 
 <!--more-->
 
