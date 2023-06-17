@@ -8,7 +8,7 @@ series: ['kubernetes']
 
 <!--more-->
 
-As I have mentioned in [K3s Setup 2]({{< ref "/post/k3s-setup-2" >}} "K3s Setup 2"), usually, it is not easy for the China's user to access `https://gcr.io`, `https://k8s.gcr.io` or `https://ghcr.io`. Thus, under this circumstance, we may set up a server as the registry proxy endpoint.
+As I have mentioned in [K3s Setup 2]({{< ref "/post/tech/k3s-setup-2" >}} "K3s Setup 2"), usually, it is not easy for the China's user to access `https://gcr.io`, `https://k8s.gcr.io` or `https://ghcr.io`. Thus, under this circumstance, we may set up a server as the registry proxy endpoint.
 
 ## Some options
 

@@ -11,7 +11,7 @@ series: ['networking']
 
 ## Before
 
-In the previous project: [Homelab]({{< ref "/post/lnet-2" >}} "My Personal Experimental Network"), I upgraded my configuration on the L-Net, where I tried eBGP and iBGP for the routing exchange between different subnet.
+In the previous project: [Homelab]({{< ref "/post/tech/lnet-2" >}} "My Personal Experimental Network"), I upgraded my configuration on the L-Net, where I tried eBGP and iBGP for the routing exchange between different subnet.
 
 ![L-Net 1.1](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/fee27882-b91c-4a86-b6fa-cb4f2e779982/lnet.png)
 

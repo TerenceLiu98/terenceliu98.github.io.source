@@ -11,7 +11,7 @@ series: ['networking']
 
 ## Before
 
-In the previous project: [Homelab]({{< ref "/post/lnet-1" >}} "My Personal Experimental Network"), I create a experimental network and I call it L-Net 1.0. However, I am trying to redesign the network as I am trying to maximize the usage of all the bandwidth,  route auto-correction, and manage the resources based on one machine outside the cluster. Here is the diagram:
+In the previous project: [Homelab]({{< ref "/post/tech/lnet-1" >}} "My Personal Experimental Network"), I create a experimental network and I call it L-Net 1.0. However, I am trying to redesign the network as I am trying to maximize the usage of all the bandwidth,  route auto-correction, and manage the resources based on one machine outside the cluster. Here is the diagram:
 
 ![L-Net 1.1](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/fee27882-b91c-4a86-b6fa-cb4f2e779982/lnet.png)
 
