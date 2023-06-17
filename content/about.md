@@ -5,11 +5,8 @@ draft: false
 featured: true
 ---
 
-If you want to check 
+💡 To check my post, please click [here](/projects) or [here](/post)
 
-1. my blog, click [here](/post/)
-2. my tech-related [here](/post/tech/)
-3. my sci-related [here](/post/sci/)
 
 <!--more-->
 
