@@ -37,6 +37,6 @@ Previously, this project is called: *Medical Image arounds Us: Deep Learning wit
 
 These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing. **More generally, medical image processing is a subset of image processing or computer vision, or a subset in machine learning and deep learning. Therefore, I would also post some of the paper ouside the MIP but inside the ML/DL.**
 
-1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/sci/CV-retigan-1)
-2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/DL-GAN-1)
-3. [Style Transfer and Synthesis (1/3): From Decomposition to Generative Model](/post/sci/DL-GAN-2) (coming soon)
+1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/sci/cv-retigan-1)
+2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/dl-gan-1)
+3. [Style Transfer and Synthesis (1/3): From Decomposition to Generative Model](/post/sci/dl-gan-2) (coming soon)

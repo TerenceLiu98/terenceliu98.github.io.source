@@ -5,7 +5,7 @@ draft: false
 featured: true
 ---
 
-💡 To check my post, please click [here](/projects) or [here](/post)
+💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post)
 
 
 <!--more-->
