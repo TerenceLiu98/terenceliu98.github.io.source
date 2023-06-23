@@ -13,9 +13,9 @@ There are multiple papers in the area of style transfer and image inversion or r
 
 ### Progressive GAN
 
-| --- | --- |
-| Paper URL | [ICLR 2018 - PROGRESSIVE GROWING OF GANS FOR IMPROVED QUALITY, STABILITY, AND VARIATION](https://arxiv.org/abs/1710.10196) |
-| Code URL | https://git.cklau.cc/terenceliu/gans-models/-/tree/main/PGGAN | 
+
+* Paper URL: [ICLR 2018 - PROGRESSIVE GROWING OF GANS FOR IMPROVED QUALITY, STABILITY, AND VARIATION](https://arxiv.org/abs/1710.10196) |
+* Code URL: https://git.cklau.cc/terenceliu/gans-models/-/tree/main/PGGAN | 
 
 > **Key point**: They propose a novel training process of GAN model: progressive training, i.e. from small model to big model/from low resolution to high resolution
 
