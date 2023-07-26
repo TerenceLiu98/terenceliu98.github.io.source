@@ -2,6 +2,7 @@
 title: "📘 从理科到文科 - 2023 Fall 小记"
 date: 2023-06-03T00:11:21+08:00
 draft: false
+math: true
 tags: ['学业', '申请', '无业游民']
 series: ['学业']
 ---
@@ -63,14 +64,14 @@ series: ['学业']
 
 ### 关于签证
 
-爱尔兰签证也是由 VFS 一手包办的，只要准备好资料然后去递交资料就好了。需要准备的资料可以在爱尔兰大使馆找到 [Documentation](https://www.dfa.ie/media/missions/china/visas/English-version-Study-visa-checklist-March-2023.pdf)/[学习签证文件清单](https://www.dfa.ie/media/missions/china/visas/Study.pdf)。通产来说，需要如下资料：
+爱尔兰签证也是由 VFS 一手包办的，只要准备好资料然后去递交资料就好了。需要准备的资料可以在爱尔兰大使馆找到 [Documentation](https://www.dfa.ie/media/missions/china/visas/English-version-Study-visa-checklist-March-2023.pdf)/[学习签证文件清单](https://www.dfa.ie/media/missions/china/visas/Study.pdf)。一般来说，需要如下资料：
 1. 申请摘要 (from [AVATS](https://www.visas.inis.gov.ie/AVATS/OnlineHome.aspx)) + （预约确认 + 缴费单）， 后两个是在 VFS 完成与预约后 VFS 发到邮件的两个 PDF
 2. 签证申请信，是一封给签证官说明如下几点的信：
     1. 你是谁，你住在哪，怎么能联系上你（邮箱 + 电话）
     2. 去爱尔兰的目的，打算什么时候去+什么时候回，逗留期间住在哪
     3. 声明自己有无亲朋好友在爱尔兰/欧盟，同时声明自己有无 XXX 的倾向
 3. （所有）护照 + 出入境记录
-4. 照片 $\times 2$
+4. 照片 ($35\text{mm} \times 45 \text{mm}$) $\times 2$
 5. 学位证、毕业证、成绩单；学信网的学历认证/学籍认证/学位认证(非必需)
 6. 户口本全本复印件 + 英文翻译件（可以自行翻译）
 7. 爱尔兰高校的 Offer + 奖学金信 （一般可以让学院秘书帮忙写一封信，证明你是 Fully Funded + 每周工作时长 + “如有疑问可以联系学校”， 类似于介绍信；同时如果信中提到符合入校条件，那下面的语言成绩应该可以省去）
