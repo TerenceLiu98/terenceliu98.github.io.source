@@ -18,6 +18,9 @@ menu:
     - name: Friends
       url: /friends
       weight: 3
+    - name: Status
+      url: https://status.cklau.cc/status/services
+      weight: 4
 params:
   brand: CKLAU's Blog
   avatarURL: /images/avatar.jpeg
