@@ -40,3 +40,12 @@ These articles are introducing the paper I read and the code I reproduce in Medi
 1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/sci/cv-retigan-1)
 2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/dl-gan-1)
 3. [Style Transfer and Synthesis (2/3): From Decomposition to Generative Model](/post/sci/dl-gan-2) (coming soon)
+
+## Foundation of Mathematics and Computer Science
+
+Mathematics and CS-related knowledge and technique are vitually important for someone who want to dive deeper in Machine Learning and other related Subjects, thus, I would like to build up a knowledge base in both math and cs and programing implementation with mainly `Python` and `Mathematica`.
+The reason we choose
+1. Knowledge base
+    1. [Mathematics](https://wiki.cklau.cc/x/fQA1)
+    2. [Computer Science](https://wiki.cklau.cc/x/tQA1)
+2. Correlated code: [Course We Need](https://git.cklau.cc/terenceliu/Course-We-Need)
