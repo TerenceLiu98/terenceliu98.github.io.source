@@ -35,7 +35,7 @@ params:
   darkModeTheme: data-dark-mode #icy-dark-mode
   comments:
     giscus:
-      enable: true
+      enable: false
       repo: TerenceLiu98/terenceliu98.github.io
       repo_id: R_kgDOIELpKQ
       category: General
@@ -44,6 +44,11 @@ params:
       position: top
       lang: en
       loading: lazy
+    utteranc:
+      enable: true
+      repo: TerenceLiu98/terenceliu98.github.io
+      issueTerm: url
+      theme: github-light
   #analytics:
   #  google:
   #    SiteVerificationTag: xxx
