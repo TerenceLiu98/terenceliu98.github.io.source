@@ -3,6 +3,7 @@ title: "👋 Hello World - About Me"
 date: 2022-09-26T00:11:21+08:00
 draft: false
 featured: true
+comment: false
 ---
 
 💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post)
