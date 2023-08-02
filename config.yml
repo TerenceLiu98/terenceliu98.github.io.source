@@ -7,7 +7,7 @@ description: "CKLAU's Blog"
 homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
 paginate: 10
-googleAnalytics: G-SLCX8B024C
+googleAnalytics: G-PXB7GSCQBT
 menu:
   main:
     - name: Project
