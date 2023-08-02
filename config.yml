@@ -7,6 +7,7 @@ description: "CKLAU's Blog"
 homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
 paginate: 10
+googleAnalytics: G-SLCX8B024C
 menu:
   main:
     - name: Project
@@ -51,7 +52,7 @@ params:
       theme: github-light
   analytics:
     google:
-      SiteVerificationTag: G-SLCX8B024C
+      SiteVerificationTag: GTM-MC97JQPW
   #  umami:
   #    enable: true
   #    website_id: 2320eaa6-a90b-471c-b6ca-e79dadde8c4c
