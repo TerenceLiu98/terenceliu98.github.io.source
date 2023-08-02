@@ -49,9 +49,9 @@ params:
       repo: TerenceLiu98/terenceliu98.github.io
       issueTerm: url
       theme: github-light
-  #analytics:
-  #  google:
-  #    SiteVerificationTag: xxx
+  analytics:
+    google:
+      SiteVerificationTag: G-SLCX8B024C
   #  umami:
   #    enable: true
   #    website_id: 2320eaa6-a90b-471c-b6ca-e79dadde8c4c
