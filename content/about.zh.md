@@ -30,5 +30,6 @@ featured: true
 * 🚩 Multi-Modal and Graph Model 
 
 🫡 更多信息：
-- 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
-- 📃 简历 [CV](/doc/cv.pdf)
+- 📫 邮箱“ [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+- 🔑 GPG 公钥： 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
+- 📃 简历： [CV](/doc/cv.pdf)

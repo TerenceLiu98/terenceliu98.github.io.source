@@ -33,4 +33,5 @@ I may use *TerenceCKLau* as well, only if Terence Liu/Lau is registered.
 
 🫡 For more information: 
 - 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+- 🔑 GPG Pub Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
 - 📃 For more information: check my [CV](/doc/cv.pdf)
