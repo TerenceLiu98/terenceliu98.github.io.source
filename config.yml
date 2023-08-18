@@ -1,6 +1,6 @@
 baseURL: 'https://blog.cklau.cc'
-title: Terence Liu
-theme: ladder
+title: "CKLAU's Blog"
+theme: theme: ["hugo-notice", "ladder"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "CKLAU's Blog"
@@ -19,16 +19,10 @@ menu:
     - name: Friends
       url: /friends
       weight: 3
-    - identifier: tools
-      name: Tools
-    - name: Mirrors
-      url: https://mirrors.cklau.cc
-      parent: tools
-      weight: 1
-    - name: Status
-      url: https://status.cklau.cc/status/services
-      weight: 2
-      parent: tools
+    - name: Gadgets
+      url: /gadgets
+      weight: 4
+
 params:
   brand: CKLAU's Blog
   avatarURL: /images/avatar.jpeg
