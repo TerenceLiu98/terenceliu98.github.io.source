@@ -1,6 +1,6 @@
 baseURL: 'https://blog.cklau.cc'
 title: "CKLAU's Blog"
-theme: theme: ["hugo-notice", "ladder"]
+theme: ["hugo-notice", "ladder"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "CKLAU's Blog"
