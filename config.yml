@@ -13,15 +13,15 @@ menu:
     - name: Project
       url: /projects
       weight: 1
-    - name: Tags
-      url: /tags
-      weight: 2
+    #- name: Tags
+    #  url: /tags
+    #  weight: 2
     - name: Friends
       url: /friends
       weight: 3
-    - name: Gadgets
-      url: /gadgets
-      weight: 4
+    #- name: Gadgets
+    #  url: /gadgets
+    #  weight: 4
 
 params:
   brand: CKLAU's Blog
