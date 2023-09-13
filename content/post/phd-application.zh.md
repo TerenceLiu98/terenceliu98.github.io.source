@@ -79,3 +79,23 @@ series: ['学业']
 9. 语言成绩单（如在中外合办高校就读，可以用“全英教学证明”，或者本身在认可的海外高校就读应该不需要提供额外语言成绩）
 
 以上提到的所有材料，如果原件是中文，则需要提供英文翻译件，比如学信网的认证就提供翻译服务；户口本、成绩单这种就可以自行翻译。 注明：*本人于 2023 年 7 月 17 日在广州 VFS 递交签证信息，签证于 2023 年 8 月 8 日从北京出发， 2023 年 8 月 10 号到手。*
+
+### 关于机票
+
+因为个人的极限操作，导致我的硕士答辩是在 8 月 29 号完成的，在此之前我预订了 8 月 30 号的「广州 - 伊斯坦布尔 - 都柏林」的土航联程（也就导致了我的答辩只能在 29 号完成），直接导致了我没有太多时间收拾行李。虽然但是，我依旧是顺利答辩完成赶上了飞机，只不过大家不要学我搞这种 「everything under control」的极限操作 🫡
+
+### 关于入学和居住
+
+其实本人依旧蒙在鼓里，很多学校里的事情还没搞清楚，但是我相信 🇮🇪 本地的一些主要事项就包括如下几点：
+1. 各种卡片(这些卡片很大程度需要你先拥有一张学生卡，所以尽快注册并在 [tcard](tcard.tcd.ie) 完成学生卡的申领)
+    1. IRP(Irish Residence Permit) = 护照 + proof of address + proof of registration + 银行卡 (€300)
+    2. PPSN(Personal Public Service Number) =  offer letter + proof of registration + proof of address + proof of identity 
+    3. 银行卡(BOI/AIB/Revolut) = proof of identity + visa + student id card
+    4. Leap Card = [leapcard.ie](https://leapcard.ie) + [TCDSU 的 varification](https://www.tcdsu.org/services/student-leap-card) + proof of identity
+2. 各种 APP:
+    1. TESCO Ireland: 加入 Tesco 会员存积分
+    2. Tesco Mobile/My48/Vodafone: 电话费充值
+    3. Leap Top-Up: 充值 leap card 的，但是我没有下载，我用网页端充值
+    4. Trinity Life: 学校的一个官方 App 可以查看自己的课表和前往每个屋子的路线
+
+
