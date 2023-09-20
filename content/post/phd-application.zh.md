@@ -5,6 +5,7 @@ draft: false
 math: true
 tags: ['学业', '申请', '无业游民']
 series: ['学业']
+comment: true
 ---
 
 2023 Fall 申请算是落下帷幕，从一开始打算留在 UIC/HKBU 继续做 Medical Image 和 Mathematical Modelling 到现在准备前往 Trinity College Dublin 做 Political Science，也在此总结一下这一年的流程。

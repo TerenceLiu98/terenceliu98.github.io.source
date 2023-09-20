@@ -2,6 +2,7 @@
 title: 👯 Friends
 date: 2023-06-03T00:11:21+08:00
 draft: false
+comment: true
 ---
 
 - [Junde Yhi](https://yhi.moe)： Linux expert and IoT practitioner
@@ -16,4 +17,4 @@ draft: false
 
 ## Propose New Link
 
-If you want me to append you to the friend page, email me!
+If you want me to append you to the friend page, comment below!
