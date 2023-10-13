@@ -26,4 +26,4 @@ My name is Junjie LIU.
 🫡 For more information: 
 - 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 🔑 GPG Pub Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
-- 📃 For more information: check my [CV](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/EUP14eRTXxRHl0yQLsNqKhEBJCnuYdEEN1exSZwV9Q5s4g?e=SQDj21)
+- 📃 For more information: check my [CV](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)

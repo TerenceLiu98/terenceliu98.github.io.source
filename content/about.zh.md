@@ -30,4 +30,4 @@ featured: true
 🫡 更多信息：
 - 📫 邮箱“ [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 🔑 GPG 公钥： 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
-- 📃 简历： [CV](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/EUP14eRTXxRHl0yQLsNqKhEBJCnuYdEEN1exSZwV9Q5s4g?e=SQDj21)
+- 📃 简历： [CV](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
