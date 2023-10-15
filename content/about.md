@@ -11,13 +11,13 @@ comment: false
 
 <!--more-->
 
-My name is Junjie LIU. 
+👨‍💻 My name is Terence Liu. 
 
 👨🏿‍🏫 For education:
-* 🎓 BSc (Honors) in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) 
-* 🎓 MPhil in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) advised by [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en) and with strong support from [Prof. Huaxiong Huang](https://staff.uic.edu.cn/hhuang/en), worked on "Multiscale-Multiregional Computable Model of Microcirculation and Its Application in Diabetic Retinopathy", supported by the Key Program of the National Natural Science Foundation of China.
 * 🎓 PhD Student in Political Science at Trinity College Dublin advised by [Prof.Thomas Chadefaux](https://chadefaux.github.io/), working in [Patterns of Conflict Emergence](https://paceconflictlab.wixsite.com/conflict-research-la), a five-year European Research Concil (ERC) funded project.
-
+* 🎓 MPhil in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) advised by [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en) and with strong support from [Prof. Huaxiong Huang](https://staff.uic.edu.cn/hhuang/en), worked on "Multiscale-Multiregional Computable Model of Microcirculation and Its Application in Diabetic Retinopathy", supported by the Key Program of the National Natural Science Foundation of China.
+* 🎓 BSc (Honors) in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) 
+  
 🔭 Research Interest:
 * 🚩 Statistical Inference (Bayesian)
 * 🚩 Stochastic Process, Markov-related
@@ -26,4 +26,4 @@ My name is Junjie LIU.
 🫡 For more information: 
 - 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 - 🔑 GPG Pub Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
-- 📃 For more information: check my [CV](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
+- 📃 For more information: check my [resumé](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
