@@ -1,6 +1,6 @@
 ---
 title: 👯 Friends
-date: 2023-06-03T00:11:21+08:00
+date: 2023-10-19T00:11:21+08:00
 draft: false
 comment: true
 ---
@@ -12,6 +12,7 @@ comment: true
 - [Laurence Luo](https://www.lzc.app/): developer, geek
 - [KirinBaka](https://9baka.moe): New generation UICHCC bellwether
 - [Yifu Qiu](https://yfqiu.netlify.app/) PhD Student in The University of Edinburgh and Cambridge University, 2023 Apple Scholars, Fans of Liverpool
+- [Hao Tian](https://www.haotian22.top/) Student in UIC, studying Media and Communication Studies
 
 
 
