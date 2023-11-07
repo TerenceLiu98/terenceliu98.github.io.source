@@ -77,7 +77,7 @@ languages:
   zh:
     languageName: 中
     author: Terence Liu
-    authorDescription: 非 非典型 統計系學生
+    authorDescription: 非 「非典型」 统计系学生
     info: 在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计
     menu:
       main:
