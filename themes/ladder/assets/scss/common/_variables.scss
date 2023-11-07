@@ -66,26 +66,17 @@ $color-dark-code-bg: #202020;
     src: url("/fonts/LXGWNeoZhiSongCHS.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "LXGWHeartSerifCHS";
+    src: url("/fonts/LXGWHeartSerifCHS.ttf") format("truetype");
+}
+
 // Fonts
 $font-family: 
-'Source Serif 4', serif,
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Roboto,
-Oxygen-Sans,
-Ubuntu,
-Cantarell,
-"Helvetica Neue",
-Helvetica,
+"LXGWHeartSerifCHS",
+"Source Serif 4", serif,
 "LXGWNewoZhiSong",
-"LXGWMarkerGothic",
-"PingFang SC",
-STXihei,"华文细黑",
-"Microsoft YaHei","微软雅黑",
-SimSun,"宋体",
-Heiti,"黑体",
-sans-serif;
+"LXGWMarkerGothic";
 
 $code-font-family: SFMono-Regular,
 Consolas,
