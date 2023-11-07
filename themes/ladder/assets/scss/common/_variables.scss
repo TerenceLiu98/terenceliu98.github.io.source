@@ -71,8 +71,14 @@ $color-dark-code-bg: #202020;
     src: url("/fonts/LXGWHeartSerifCHS.ttf") format("truetype");
 }
 
+@font-face {
+    font-family: "KingHwa_OldSong.ttf";
+    src: url("/fonts/KingHwa_OldSong.ttf") format("truetype");
+}
+
 // Fonts
 $font-family: 
+"KingHwa_OldSong.ttf",
 "LXGWHeartSerifCHS",
 "Source Serif 4", serif,
 "LXGWNewoZhiSong",
