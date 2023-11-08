@@ -1,9 +1,9 @@
 baseURL: 'https://blog.cklau.cc'
-title: "CKLAU's Blog"
+title: "特倫蘇的日與夜"
 theme: ["hugo-notice", "ladder"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
-description: "CKLAU's Blog"
+description: "CKLAU's WEBSITE"
 homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
 paginate: 10
@@ -24,7 +24,7 @@ menu:
     #  weight: 4
 
 params:
-  brand: CKLAU's Blog
+  brand: CKLAU's WEBSITE
   avatarURL: /images/avatar.jpeg
   author: Terence Liu
   authorDescription: Statistics Student
@@ -76,6 +76,7 @@ languages:
     languageName: EN
   zh:
     languageName: 中
+    brand: 特倫蘇的日與夜
     author: Terence Liu
     authorDescription: 非 「非典型」 统计系学生
     info: 在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计
