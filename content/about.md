@@ -18,7 +18,7 @@ layout: "single"
 <div class="flink" id="article-container">
 <div class="info-list-div" >
 
-{{< info degree="Ph.D in Political Science" institution="Trinity College Dublin" INSurl="https://www.tcd.ie/" advisor="Prof.Thomas Chadefaux" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
+{{< info degree="Ph.D Student in Political Science" institution="Trinity College Dublin" INSurl="https://www.tcd.ie/" advisor="Prof.Thomas Chadefaux" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
 
 {{< info degree="M.Phil in Probability and Mathematical Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Dr.Yuhui Deng (with strong support from Prof.Huaxiong Huang)" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2021 -- 2023">}}
 

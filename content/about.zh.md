@@ -17,7 +17,7 @@ featured: true
 <div class="flink" id="article-container">
 <div class="info-list-div" >
 
-{{< info degree="博士（政治科学）" institution="都柏林三一学院" INSurl="https://www.tcd.ie/" advisor="Thomas Chadefaux 教授" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
+{{< info degree="博士生（政治科学）" institution="都柏林三一学院" INSurl="https://www.tcd.ie/" advisor="Thomas Chadefaux 教授" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
 {{< info degree="哲学硕士（概率论与数理统计）" institution="香港浸会大学 (北京师范大学-香港浸会大学联合国际学院)" INSurl="https://uic.edu.cn/" advisor="邓宇辉博士（和来自黄华雄教授的强力支持）" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2021 -- 2023">}}
 {{< info degree="统计学（荣誉）学士" institution="香港浸会大学 (北京师范大学-香港浸会大学联合国际学院)" INSurl="https://uic.edu.cn/" advisor="曾镜涛教授（退休）" PROFurl="https://dblp.org/pid/221/8919.html" time="2016 -- 2020" thesis="">}}
 
