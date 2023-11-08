@@ -55,30 +55,19 @@ $color-dark-red: #eb4344;
 $color-dark-orange: #f1964f;
 $color-dark-code-bg: #202020;
 
-
 @font-face {
-    font-family: "LXGWMarkerGothic";
-    src: url("/fonts/LXGWMarkerGothic-Regular.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "LXGWNewoZhiSong";
-    src: url("/fonts/LXGWNeoZhiSongCHS.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "LXGWHeartSerifCHS";
-    src: url("/fonts/LXGWHeartSerifCHS.ttf") format("truetype");
-}
-
-@font-face {
-    font-family: "KingHwa_OldSong.ttf";
+    font-family: "KingHwa_OldSong";
     src: url("/fonts/KingHwa_OldSong.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "VF-Cantonese-PBEn";
+    src: url("/fonts/VF-Cantonese-PBEn.ttf") format("truetype");
 }
 
 // Fonts
 $font-family: 
-"KingHwa_OldSong.ttf",
+"KingHwa_OldSong",
 "Source Serif 4", serif;
 
 $code-font-family: SFMono-Regular,

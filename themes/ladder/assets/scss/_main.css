@@ -4,3 +4,11 @@
     min-height: 100vh;
     width: 100%;
 }
+
+/* katex */ 
+.katex {
+    font-size: 1.0em;
+    text-indent: 0;
+    text-rendering: auto;
+    font-family: $font-family;
+}
