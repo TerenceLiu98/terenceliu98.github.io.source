@@ -73,7 +73,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+a,
+a:hover {
+    color: goldenrod;
     background-color: transparent;
 }
 

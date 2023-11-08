@@ -8,6 +8,7 @@ homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
 paginate: 10
 googleAnalytics: G-PXB7GSCQBT
+hasCJKLanguage: true
 menu:
   main:
     - name: Project
