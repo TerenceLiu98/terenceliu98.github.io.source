@@ -82,12 +82,9 @@ languages:
         - name: 分类
           url: /tags
           weight: 2
-        - name: 项目
-          url: /projects
-          weight: 3
         - name: 朋辈
           url: /friends
-          weight: 4
+          weight: 3
 taxonomies:
   series: series
   tag: tags
