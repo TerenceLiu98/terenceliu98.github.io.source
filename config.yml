@@ -14,20 +14,17 @@ menu:
     - name: Project
       url: /projects
       weight: 1
-    #- name: Tags
-    #  url: /tags
-    #  weight: 2
+    - name: Post
+      url: /post
+      weight: 2
     - name: Friends
       url: /friends
       weight: 3
-    #- name: Gadgets
-    #  url: /gadgets
-    #  weight: 4
 
 params:
   brand: CKLAU's WEBSITE
   avatarURL: /images/avatar.jpeg
-  author: Junjie(Terence) Liu
+  author: Junjie(Terence) LIU
   authorDescription: Statistics Student
   info: All sciences are, in the abstract, mathematics; All judgements are, in their rationale, statistics. -- C. R. Rao
   favicon: /images/icon.png

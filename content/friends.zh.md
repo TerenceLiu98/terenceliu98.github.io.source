@@ -5,13 +5,24 @@ draft: false
 comment: true
 ---
 
-- [Junde Yhi](https://yhi.moe)： Linux 专家， IoT 从业人员
-- [ECWU](https://ecwuuuuu.com/): 「广东省某四非高校」计算机科学和数据科学教育从业人员；全栈开发专家；NLP 和 CV 双线作战的人工智能专家；同时，专注于云原生开发和落地。
-- [Renjie Deng](https://www.drjchn.com/): 全栈开发专家
-- [Junru Zhong](https://junru.dev/): 香港中文大学计算机视觉博士生，医疗图像专家, 交通工具粉（🚄/🚌 为主）
-- [Laurence Luo](https://www.lzc.app/): 开发者，极客，保持着一颗火热的心 🔥
-- [KirinBaka](https://9baka.moe): 新世代 UICHCC 掌门人
-- [Yifu Qiu](https://yfqiu.netlify.app/) 剑桥大学+爱丁堡大学联培博士生, 2023 年苹果学者, 主攻 NLP 
+
+<div class="flink" id="article-container">
+<div class="friend-list-div" >
+
+{{< friend name="Junde Yhi" emoji="👨‍💻"  url="https://yhi.moe" word="Linux 专家， IoT 从业人员" >}}
+{{< friend name="ECWU" emoji="👨‍💻" url="https://ecwuuuuu.com/" word="高等教育/算法/人工智能/云原生" >}}
+{{< friend name="Reijie Deng" emoji="👨‍💻" url="https://ecwuuuuu.com/" word="全栈开发专家" >}}
+{{< friend name="Laurence Luo" emoji="👨‍💻"  url="https://ecwuuuuu.com/" word="极客/保持着一颗赤诚的心 🔥" >}}
+{{< friend name="Kirin Baka" emoji="👨‍💻" url="https://ecwuuuuu.com/" word="新世代 UICHCC 掌门人" >}}
+{{< friend name="Hao Tian" emoji="🙎‍♂️" url="https://www.haotian22.top/" word="BNU-HKBU UIC 新闻与传播学学生" >}}
+{{< friend name="Junru Zhong" emoji="👨‍🎓"  url="https://ecwuuuuu.com/" word="香港中文大学博士生（计算机视觉方向），交通工具迷" >}}
+{{< friend name="Yifu Qiu" emoji="👨‍🎓" url="https://ecwuuuuu.com/" word="剑桥大学+爱丁堡大学联培博士生（自然语言处理方向）, 2023 年苹果学者" >}}
+
+</div>
+</div>
 
 
-互加友链？请在下面评论区留言 🫡
+🫡  互加友链？请在下面评论区提供如下信息：
+1. 希望被呈现的名称
+2. 博客 URL 
+3. 一句话介绍自己

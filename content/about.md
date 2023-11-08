@@ -4,6 +4,7 @@ date: 2022-09-26T00:11:21+08:00
 draft: false
 featured: true
 comment: false
+layout: "single"
 ---
 
 💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post)
@@ -11,13 +12,21 @@ comment: false
 
 <!--more-->
 
-👨‍💻 My name is Terence Liu. 
+👨‍💻 My name is Junjie(Terence) Liu
 
-👨🏿‍🏫 For education:
-* 🎓 PhD Student in Political Science at Trinity College Dublin advised by [Prof.Thomas Chadefaux](https://chadefaux.github.io/), working in [Patterns of Conflict Emergence](https://paceconflictlab.wixsite.com/conflict-research-la), a five-year European Research Concil (ERC) funded project.
-* 🎓 MPhil in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) advised by [Dr.Yuhui Deng](https://staff.uic.edu.cn/ivandeng/en) and with strong support from [Prof. Huaxiong Huang](https://staff.uic.edu.cn/hhuang/en), worked on "Multiscale-Multiregional Computable Model of Microcirculation and Its Application in Diabetic Retinopathy", supported by the Key Program of the National Natural Science Foundation of China.
-* 🎓 BSc (Honors) in Statistics at Hong Kong Baptist University (BNU-HKBU United International College) 
-  
+👨🏿‍🏫 Education：
+<div class="flink" id="article-container">
+<div class="info-list-div" >
+
+{{< info degree="Ph.D in Political Science" institution="Trinity College Dublin" INSurl="https://www.tcd.ie/" advisor="Prof.Thomas Chadefaux" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
+
+{{< info degree="M.Phil in Probability and Mathematical Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Dr.Yuhui Deng (with strong support from Prof.Huaxiong Huang)" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2021 -- 2023">}}
+
+{{< info degree="BSc (Honors) in Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Prof. Ken Tsang (retired)" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2016 -- 2020" thesis="">}}
+
+</div>
+</div>
+
 🔭 Research Interest:
 * 🚩 Statistical Inference (Bayesian)
 * 🚩 Stochastic Process, Markov-related

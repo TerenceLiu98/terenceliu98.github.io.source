@@ -1,0 +1,45 @@
+<style type="text/css">
+.nobull {
+	list-style-type: none;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+</style>
+
+{{ if .IsNamedParams }}
+<div class="info-div" style="text-indent:25px">
+	<span class="info-info">🎓  {{ .Get "degree" }}</span>
+	<span class="info-info">({{ .Get "time" }})</span>
+	<br>
+	<small>
+		{{ if ne .Site.Language.Lang "cn" }}
+		<ul class="nobull">
+			<li>学校: 
+				<a target="_blank" href={{ .Get "INSurl" | safeURL }} title={{ .Get "institution" }} >
+					<span class="info-info">{{ .Get "institution" }}</span>
+				</a>
+			</li>
+			<li>导师: 
+				<a target="_blank" href={{ .Get "PROFurl" | safeURL }} title={{ .Get "advisor" }} >
+					<span class="info-info">{{ .Get "advisor" }}</span>
+				</a>
+			</li>
+		</ul>
+		{{ else }}
+			<ul class="nobull">
+				<li>Institution: 
+					<a target="_blank" href={{ .Get "INSurl" | safeURL }} title={{ .Get "institution" }} >
+						<span class="info-info">{{ .Get "institution" }}</span>
+					</a>
+				</li>
+				<li>Advisor: 
+					<a target="_blank" href={{ .Get "PROFurl" | safeURL }} title={{ .Get "advisor" }} >
+						<span class="info-info">{{ .Get "advisor" }}</span>
+					</a>
+				</li>
+			</ul>
+		{{ end }}
+	</small>
+</div>
+{{ end }}
+
