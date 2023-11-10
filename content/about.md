@@ -7,7 +7,7 @@ comment: false
 layout: "single"
 ---
 
-💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post)
+{{< notice tip >}} 💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post) {{< /notice >}} 
 
 
 <!--more-->
