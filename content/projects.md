@@ -43,9 +43,10 @@ These articles are introducing the paper I read and the code I reproduce in Medi
 
 ## Foundation of Mathematics and Computer Science
 
-Mathematics and CS-related knowledge and technique are vitually important for someone who want to dive deeper in Machine Learning and other related Subjects, thus, I would like to build up a knowledge base in both math and cs and programing implementation with mainly `Python` and `Mathematica`.
+Mathematics and CS-related knowledge and technique are vitually important for someone who want to dive deeper in Machine Learning and other related Subjects, thus, I would like to build up a knowledge base in both math and cs and programing implementation with mainly `R` and `Python`.
 The reason we choose
 1. Knowledge base
-    1. [Mathematics](https://wiki.cklau.cc/x/fQA1)
-    2. [Computer Science](https://wiki.cklau.cc/x/tQA1)
-2. Correlated code: [Course We Need](https://git.cklau.cc/terenceliu/Course-We-Need)
+    1. [Mathematics](/post/math/)
+    2. [Statistics](/post/stat/)
+    3. [Computer Science](/post/comp/)
+2. Correlated code: [Course We Need](https://git.cklau.cc/terenceliu/MSC)
