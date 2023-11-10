@@ -28,3 +28,12 @@ other = "Related Resources"
 [featured_posts]
 one = "Featured Posts"
 other = "Featured Posts"
+
+[extra_materials]
+other = "Extra Materials"
+
+[institution]
+other = "Affiliation"
+
+[advisor]
+other = "Advisor"

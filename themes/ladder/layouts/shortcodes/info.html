@@ -12,33 +12,18 @@
 	<span class="info-info">({{ .Get "time" }})</span>
 	<br>
 	<small>
-		{{ if ne .Site.Language.Lang "zh" }}
-			<ul class="nobull">
-				<li>Institution: 
-					<a target="_blank" href={{ .Get "INSurl" | safeURL }} title={{ .Get "institution" }} >
-						<span class="info-info">{{ .Get "institution" }}</span>
-					</a>
-				</li>
-				<li>Advisor: 
-					<a target="_blank" href={{ .Get "PROFurl" | safeURL }} title={{ .Get "advisor" }} >
-						<span class="info-info">{{ .Get "advisor" }}</span>
-					</a>
-				</li>
-			</ul>
-		{{ else }}
-			<ul class="nobull">
-				<li>学校: 
-					<a target="_blank" href={{ .Get "INSurl" | safeURL }} title={{ .Get "institution" }} >
-						<span class="info-info">{{ .Get "institution" }}</span>
-					</a>
-				</li>
-				<li>导师: 
-					<a target="_blank" href={{ .Get "PROFurl" | safeURL }} title={{ .Get "advisor" }} >
-						<span class="info-info">{{ .Get "advisor" }}</span>
-					</a>
-				</li>
-			</ul>
-		{{ end }}
+		<ul class="nobull">
+			<li>{{- i18n "institution" -}}: 
+				<a target="_blank" href={{ .Get "INSurl" | safeURL }} title={{ .Get "institution" }}>
+					<span class="info-info">{{ .Get "institution" }}</span>
+				</a>
+			</li>
+			<li>{{- i18n "advisor" -}}: 
+				<a target="_blank" href={{ .Get "PROFurl" | safeURL }} title={{ .Get "advisor" }} >
+					<span class="info-info">{{ .Get "advisor" }}</span>
+				</a>
+			</li>
+		</ul>
 	</small>
 </div>
 {{ end }}

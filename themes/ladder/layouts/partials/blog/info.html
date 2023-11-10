@@ -1,0 +1,23 @@
+{{ if .Params.extramaterials }}
+<div class="pb-10 w-content">
+  <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
+	<h3>{{- i18n "extra_materials" -}}</h3>
+	<ul style="list-style-type: none; padding-left: 0">
+		{{ range .Params.extramaterials }}
+			{{ if (eq .type "file") }}
+				<li><i class="fa fa-file-alt"></i><a href="{{ .url }}">{{ .name }}</a></li>
+			{{ end }}
+			{{ if (eq .type "link") }}
+				<li><i class="fa fa-link"></i><a href="{{ .url }}">{{ .name }}</a></li>
+			{{ end }}
+			{{ if (eq .type "image") }}
+				<li><i class="fa fa-image"></i><a href="{{ .url }}">{{ .name }}</a></li>
+			{{ end }}			
+			{{ if (eq .type "video") }}
+				<li><i class="fa fa-video"></i><a href="{{ .url }}">{{ .name }}</a></li>
+			{{ end }}	
+		{{ end }}
+	</ul>
+  </div>
+</div>
+{{ end }}

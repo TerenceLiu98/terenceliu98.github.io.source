@@ -25,6 +25,7 @@
   </div>
   {{ end }}
 
+  {{ partial "blog/info.html" . }}
   {{ partial "blog/series.html" . }}
   {{ if .Params.comment }}
     {{ partial "common/utteranc.html" . }}

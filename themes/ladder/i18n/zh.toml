@@ -29,3 +29,12 @@ other = "相关系列文章推荐"
 [featured_posts]
 one = "推荐阅读"
 other = "推荐阅读"
+
+[extra_materials]
+other = "附件"
+
+[institution]
+other = "学校/机构"
+
+[advisor]
+other = "导师"
