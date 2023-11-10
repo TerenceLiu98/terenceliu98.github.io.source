@@ -41,12 +41,12 @@ These articles are introducing the paper I read and the code I reproduce in Medi
 2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/dl-gan-1)
 3. [Style Transfer and Synthesis (2/3): From Decomposition to Generative Model](/post/sci/dl-gan-2) (coming soon)
 
-## Foundation of Mathematics and Computer Science
+## Foundation of Mathematics, Statistics and Computer Science
 
 Mathematics and CS-related knowledge and technique are vitually important for someone who want to dive deeper in Machine Learning and other related Subjects, thus, I would like to build up a knowledge base in both math and cs and programing implementation with mainly `R` and `Python`.
 The reason we choose
 1. Knowledge base
-    1. [Mathematics](/post/math/)
-    2. [Statistics](/post/stat/)
-    3. [Computer Science](/post/comp/)
+    1. [Mathematics](/post/sci/math/)
+    2. [Statistics](/post/sci/stat/)
+    3. [Computer Science](/post/sci/comp/)
 2. Correlated code: [Course We Need](https://git.cklau.cc/terenceliu/MSC)

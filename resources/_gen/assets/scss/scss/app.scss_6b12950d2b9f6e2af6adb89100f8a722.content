@@ -745,8 +745,7 @@ img {
 .katex {
   font-size: 1.0em;
   text-indent: 0;
-  text-rendering: auto;
-  font-family: "KingHwa_OldSong", "Source Serif 4", serif; }
+  text-rendering: auto; }
 
 .home {
   width: 100%;
