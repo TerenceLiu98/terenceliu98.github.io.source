@@ -44,8 +44,8 @@ This site is powerfully built by Hugo. The Hugo's version can be checked in: [wo
 
 🫡 For more information: 
 
-&nbsp; &nbsp;  📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+&nbsp; 📚 [Google Scholar](https://scholar.google.com/citations?user=GaoaZ1kAAAAJ) & [My Resumé](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
 
-&nbsp; &nbsp;  🔑 GPG Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
+&nbsp; 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 
-&nbsp; &nbsp;  📃 [My Resumé](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
+&nbsp; 🔑 GPG Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6

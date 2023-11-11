@@ -46,12 +46,11 @@ featured: true
 
 🫡 更多信息：
 
-&nbsp; &nbsp; 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+&nbsp; 📚 [谷歌學術](https://scholar.google.com/citations?user=GaoaZ1kAAAAJ) & [简历](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
 
-&nbsp; &nbsp; 🔑 GPG 公钥：9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
+&nbsp; 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 
-&nbsp; &nbsp; 📃 简历：[resumé](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
-
+&nbsp; 🔑 GPG 公钥：9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
 
 [^0]: 这里的分区是指英文版面下的分区;如有需要，中文版面也会分区，这就是后话了。
 [^1]: 关于「大湾区人」的解释详见：[维基百科 - 大湾区人](https://zh.wikipedia.org/zh-hans/%E5%A4%A7%E7%81%A3%E5%8D%80%E4%BA%BA) 或 [百度百科 - 粤港澳大湾区](https://baike.baidu.com/item/粤港澳大湾区/19153589)；对于我个人而言，使用这个词仅仅是对于个人长期在珠三角「漂泊」的自嘲。

@@ -1,6 +1,6 @@
 baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
-theme: ["hugo-notice", "ladder"]
+theme: ["hugo-cite", "hugo-notice", "ladder"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "CKLAU's WEBSITE"
