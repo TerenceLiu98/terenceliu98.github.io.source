@@ -302,11 +302,7 @@ template {
 
 @font-face {
   font-family: "KingHwa_OldSong";
-  src: url("/fonts/KingHwa_OldSong.ttf") format("truetype"); }
-
-@font-face {
-  font-family: "VF-Cantonese-PBEn";
-  src: url("/fonts/VF-Cantonese-PBEn.ttf") format("truetype"); }
+  src: url("/fonts/KingHwa.woff2") format("woff2"); }
 
 *,
 *:after,
