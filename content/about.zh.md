@@ -50,7 +50,7 @@ featured: true
 
 &nbsp; 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 
-&nbsp; 🔑 GPG 公钥：9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
+&nbsp; 🔑 GPG 公钥：`9DB6 F02A C0F6 903B 5632 F558 1FB0 1AE6 64E8 B1C6`
 
 [^0]: 这里的分区是指英文版面下的分区;如有需要，中文版面也会分区，这就是后话了。
 [^1]: 关于「大湾区人」的解释详见：[维基百科 - 大湾区人](https://zh.wikipedia.org/zh-hans/%E5%A4%A7%E7%81%A3%E5%8D%80%E4%BA%BA) 或 [百度百科 - 粤港澳大湾区](https://baike.baidu.com/item/粤港澳大湾区/19153589)；对于我个人而言，使用这个词仅仅是对于个人长期在珠三角「漂泊」的自嘲。

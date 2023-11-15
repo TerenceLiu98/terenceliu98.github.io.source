@@ -48,4 +48,4 @@ This site is powerfully built by Hugo. The Hugo's version can be checked in: [wo
 
 &nbsp; 📫 My E-mail: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 
-&nbsp; 🔑 GPG Key: 9DB6F02AC0F6903B5632F5581FB01AE664E8B1C6
+&nbsp; 🔑 GPG Key: `9DB6 F02A C0F6 903B 5632 F558 1FB0 1AE6 64E8 B1C6`
