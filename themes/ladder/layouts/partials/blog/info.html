@@ -1,7 +1,7 @@
 {{ if .Params.extramaterials }}
 <div class="pb-10 w-content">
   <div class="bg-white dark:bg-gray-900 drop-shadow-lg overflow-hidden sm:rounded-lg">
-	<h3>{{- i18n "extra_materials" -}}</h3>
+	<hr><h3>{{- i18n "extra_materials" -}}</h3>
 	<ul style="list-style-type: none; padding-left: 0">
 		{{ range .Params.extramaterials }}
 			{{ if (eq .type "file") }}
@@ -16,8 +16,11 @@
 			{{ if (eq .type "video") }}
 				<li><i class="fa fa-video"></i><a href="{{ .url }}">{{ .name }}</a></li>
 			{{ end }}	
+			{{ if (eq .type "email") }}
+				<li><i class="fa fa-envelope"></i><a href="{{ .url }}">{{ .name }}</a></li>
+			{{ end }}
 		{{ end }}
-	</ul>
+	</ul><hr>
   </div>
 </div>
 {{ end }}

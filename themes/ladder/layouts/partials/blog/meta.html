@@ -1,14 +1,13 @@
 <p>
-  <!--<small>
+  <small>
     {{ with .GetTerms "tags"}}
     {{ end }}
     {{ range (.GetTerms "tags") }}
-    <u><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></u>
-    {{ end }}
-  </small>-->
+    <u># <a href="{{ .Permalink }}">{{ .LinkTitle }}</a></u>
+    {{ end }}&nbsp;·
+  </small>
   <small>
     {{ i18n "word_count" .WordCount -}}&nbsp;· {{ i18n "reading_time" .ReadingTime -}} &nbsp;·
-    {{ i18n "publish_time" -}} <u>{{.Date | time.Format ":date_long" }}</u> &nbsp;·
-    {{ i18n "update_time" -}} <u>{{.Lastmod | time.Format ":date_long" }}</u>
+    {{ i18n "publish_time" -}} <u>{{.Date | time.Format ":date_long" }}</u> ({{ i18n "update_time" -}} <u>{{.Lastmod | time.Format ":date_long" }})</u>
   </small>
 </p>

@@ -27,8 +27,8 @@ one = "Published on"
 other = "Pbulished On: "
 
 [update_time]
-one = "Updated on"
-other = "Updated On: "
+one = "Last updated on"
+other = "Last updated on: "
 
 [related_resources]
 other = "Related Resources"
