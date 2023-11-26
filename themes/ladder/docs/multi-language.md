@@ -38,7 +38,7 @@ other = "series"
 one = "One minute"
 other = "{{ .Count }} min"
 
-[word_count]
+[]
 one = "one word"
 other = "{{ .Count }} words"
 
@@ -73,7 +73,7 @@ other = "系列文章"
 one = "1 分钟"
 other = "{{ .Count }} 分钟"
 
-[word_count]
+[]
 one = "字"
 other = "{{ .Count }} 字"
 

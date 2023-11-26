@@ -22,6 +22,14 @@ other = "{{ .Count }} min"
 one = "one word"
 other = "{{ .Count }} words"
 
+[publish_time]
+one = "Published on"
+other = "Pbulished On: "
+
+[update_time]
+one = "Updated on"
+other = "Updated On: "
+
 [related_resources]
 other = "Related Resources"
 

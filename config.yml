@@ -3,7 +3,7 @@ title: "特倫蘇的日與夜"
 theme: ["hugo-cite", "hugo-notice", "ladder"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
-description: "CKLAU's WEBSITE"
+description: "'CKLAU's WEBSITE'"
 homepage: 'https://blog.cklau.cc'
 defaultContentLanguage: 'en'
 paginate: 10
@@ -88,3 +88,8 @@ languages:
 taxonomies:
   series: series
   tag: tags
+
+enableGitInfo: true
+frontmatter:
+  date: ["date", ":fileDate", "publishDate"]
+  lastmod: ["lastmod", ":git", ":fileModTime", "date", "publishDate"]

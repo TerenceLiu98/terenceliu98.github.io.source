@@ -22,6 +22,14 @@ other = "{{ .Count }} 分钟"
 one = "字"
 other = "{{ .Count }} 字"
 
+[publish_time]
+one = "发布时间"
+other = "发布时间: "
+
+[update_time]
+one = "更新时间"
+other = "更新时间: "
+
 [related_resources]
 one = "相关系列文章推荐"
 other = "相关系列文章推荐"
