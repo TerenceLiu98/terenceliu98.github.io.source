@@ -3,6 +3,7 @@ title: "👨‍🎓 读多少书和学多少习"
 date: 2023-12-03T23:58:00+08:00
 draft: false
 tags: ['杂文','无业游民', '人类']
+comment: true
 extramaterials:
 - type: link
   name: The World as Will and Representation Volume 1 
