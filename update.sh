@@ -14,9 +14,9 @@ cd public
 origin='KingHwa_OldSong.ttf'
 optimized='KingHwa.woff2'
 echo "[+] optimizing font..."
-pyftsubset "fonts/$origin" --text=$(rg -e '[\w\d]' -oN --no-filename|sort|uniq|tr -d '\n') --no-hinting
+pyftsubset "../static/fonts/$origin" --text=$(rg -e '[\w\d]' -oN --no-filename|sort|uniq|tr -d '\n') --no-hinting
 echo "[+] transfer to woff2 [${origin} -> ${optimized}"
-fonttools ttLib.woff2 compress -o "fonts/$optimized" "fonts/${origin/\./\.subset\.}"
+fonttools ttLib.woff2 compress -o "fonts/$optimized" "fonts/KingHwa_OldSong.subset.ttf"
 
 mv "fonts/$optimized" "../static/fonts/$optimized"
 cd ..

@@ -5,19 +5,19 @@
 	<ul style="list-style-type: none; padding-left: 0">
 		{{ range .Params.extramaterials }}
 			{{ if (eq .type "file") }}
-				<li><i class="fa fa-file-alt"></i><a href="{{ .url }}">{{ .name }}</a></li>
+				<li><i class="fa fa-file-alt"></i><a href="{{ .url }}"> {{ .name }} </a></li>
 			{{ end }}
 			{{ if (eq .type "link") }}
-				<li><i class="fa fa-link"></i><a href="{{ .url }}">{{ .name }}</a></li>
+				<li><i class="fa fa-link"></i><a href="{{ .url }}"> {{ .name }} </a></li>
 			{{ end }}
 			{{ if (eq .type "image") }}
-				<li><i class="fa fa-image"></i><a href="{{ .url }}">{{ .name }}</a></li>
+				<li><i class="fa fa-image"></i><a href="{{ .url }}"> {{ .name }} </a></li>
 			{{ end }}			
 			{{ if (eq .type "video") }}
-				<li><i class="fa fa-video"></i><a href="{{ .url }}">{{ .name }}</a></li>
+				<li><i class="fa fa-video"></i><a href="{{ .url }}"> {{ .name }} </a></li>
 			{{ end }}	
 			{{ if (eq .type "email") }}
-				<li><i class="fa fa-envelope"></i><a href="{{ .url }}">{{ .name }}</a></li>
+				<li><i class="fa fa-envelope"></i><a href="{{ .url }}"> {{ .name }} </a></li>
 			{{ end }}
 		{{ end }}
 	</ul><hr>
