@@ -3,7 +3,7 @@ title: "📻 收音机，你还能活多久"
 date: 2023-10-15T00:11:21+08:00
 draft: false
 math: true
-tags: ['无业游民', '播客', '广播', '人类']
+tags: ['无业游民', '播客', '广播', '人类', '杂文']
 comment: true
 ---
 
