@@ -20,6 +20,9 @@ menu:
     - name: Friends
       url: /friends
       weight: 3
+    - name: Tools
+      url: /gadgets
+      weight: 4
 
 params:
   brand: CKLAU's WEBSITE
@@ -85,6 +88,9 @@ languages:
         - name: 朋辈
           url: /friends
           weight: 3
+        - name: 工具
+          url: /gadgets
+          weight: 4
 taxonomies:
   series: series
   tag: tags
