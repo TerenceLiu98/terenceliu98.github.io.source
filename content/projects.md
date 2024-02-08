@@ -31,22 +31,17 @@ These articles are inside my projects: Build a Experimental Network with your VP
 2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/tech/lnet-2)
 3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/tech/lnet-3)
 
-## Machine Learning with Us
+## Machine Learning/Deep Learning with Us (/post/scientia/machine-learning/)
 
-Previously, this project is called: *Medical Image arounds Us: Deep Learning with Medical Image Processing(MIP)*
+These articles are documenting my learning notes and the code reproductions(if I have the time or capbability) in mainly these fields:
+1. Natural Language Processing: Information Extarction and Retireval
+2. Computer Vision: Object Detection, Segmentation and Synthesis
+3. Optimal Transport and Generative Models
+4. Reinforcement Learning and Game Theory
 
-These articles are introducing the paper I read and the code I reproduce in Medical Image Analysis/Processing. **More generally, medical image processing is a subset of image processing or computer vision, or a subset in machine learning and deep learning. Therefore, I would also post some of the paper ouside the MIP but inside the ML/DL.** All the reference literatures and notes can be found in [Academic Literature](https://wiki.cklau.cc/x/CgCf)
- 
-1. [RetiGAN: A GAN-based model on retinal Image synthesis](/post/sci/cv-retigan-1)
-2. [Style Transfer and Synthesis (1/3): Style Transfer in Image Synthesis](/post/sci/dl-gan-1)
-3. [Style Transfer and Synthesis (2/3): From Decomposition to Generative Model](/post/sci/dl-gan-2) (coming soon)
+CHECK OUT [/post/machine-learning](/post/scientia/machine-learning/)
 
-## Foundation of Mathematics, Statistics and Computer Science
+
+## Foundation of Mathematics, Statistics and Computer Science (MAYBE COMING SOON)
 
 Mathematics and CS-related knowledge and technique are vitually important for someone who want to dive deeper in Machine Learning and other related Subjects, thus, I would like to build up a knowledge base in both math and cs and programing implementation with mainly `R` and `Python`.
-The reason we choose
-1. Knowledge base
-    1. [Mathematics](/post/sci/math/)
-    2. [Statistics](/post/sci/stat/)
-    3. [Computer Science](/post/sci/comp/)
-2. Correlated code: [Course We Need](https://git.cklau.cc/terenceliu/MSC)

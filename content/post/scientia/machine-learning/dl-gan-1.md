@@ -4,7 +4,7 @@ date: 2023-6-17T00:13:00+08:00
 draft: false
 math: true
 tags: ['Artificial Intelligence', 'Style Tranfer', 'Image Synthesis']
-series: ['CV', 'DL']
+series: ['Style Transfer and Synthesis']
 ---
 
 <!--more-->

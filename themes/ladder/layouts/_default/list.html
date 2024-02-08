@@ -1,6 +1,10 @@
 {{ define "content" }}
 <div class="blog-wrapper">
   <div>
+    <div class="card">
+      <h1>{{ .Title }}</h1>
+      {{ .Content}}
+    </div>
     <div class="card-list">
       {{ range .Paginator.Pages }}
       <article>

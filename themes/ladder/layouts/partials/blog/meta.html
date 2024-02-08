@@ -4,10 +4,11 @@
     {{ end }}
     {{ range (.GetTerms "tags") }}
     <u># <a href="{{ .Permalink }}">{{ .LinkTitle }}</a></u>
-    {{ end }}&nbsp;·
+    {{ end }}
   </small>
+  <br>
   <small>
-    {{ i18n "word_count" .WordCount -}}&nbsp;· {{ i18n "reading_time" .ReadingTime -}} &nbsp;·
-    {{ i18n "publish_time" -}} <u>{{.Date | time.Format ":date_long" }}</u> ({{ i18n "update_time" -}} <u>{{.Lastmod | time.Format ":date_long" }})</u>
+    {{ i18n "publish_time" -}} <u>{{.Date | time.Format ":date_long" }}</u> ({{ i18n "update_time" -}} <u>{{.Lastmod | time.Format ":date_long" }})</u> <br>
+    {{ i18n "word_count" .WordCount -}}&nbsp;· {{ i18n "reading_time" .ReadingTime -}}
   </small>
 </p>

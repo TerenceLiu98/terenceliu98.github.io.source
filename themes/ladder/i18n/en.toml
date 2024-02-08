@@ -24,7 +24,7 @@ other = "{{ .Count }} words"
 
 [publish_time]
 one = "Published on"
-other = "Pbulished On: "
+other = "Published On: "
 
 [update_time]
 one = "Last updated on"
