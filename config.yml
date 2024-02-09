@@ -99,3 +99,6 @@ enableGitInfo: true
 frontmatter:
   date: ["date", ":fileDate", "publishDate"]
   lastmod: ["lastmod", ":git", ":fileModTime", "date", "publishDate"]
+
+ui:
+  sidebar_menu_compact: true
