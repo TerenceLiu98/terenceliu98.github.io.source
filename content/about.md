@@ -12,28 +12,9 @@ layout: "single"
 
 <!--more-->
 
-👨‍💻 My name is Junjie(Terence) Liu
+👨‍💻 About Me:
 
-👨🏿‍🏫 Education：
-<div class="flink" id="article-container">
-<div class="info-list-div" >
-
-{{< info degree="Ph.D Student in Political Science" institution="Trinity College Dublin" INSurl="https://www.tcd.ie/" advisor="Prof.Thomas Chadefaux" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
-
-{{< info degree="M.Phil in Probability and Mathematical Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Dr.Yuhui Deng (with strong support from Prof.Huaxiong Huang)" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2021 -- 2023">}}
-
-{{< info degree="BSc (Honors) in Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Prof. Ken Tsang (retired)" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2016 -- 2020" thesis="">}}
-
-</div>
-</div>
-
-🔭 Research Interest:
-
-&nbsp; &nbsp;  🚩 Statsitics: Statistical Inference, Causal Inference, and Stochastic Process
-
-&nbsp; &nbsp;  🚩 Machine Learning: Coding, Embedding, and Graph Reprensentation
-
-&nbsp; &nbsp;  🚩 Others: High Performance Cluster and Cloud Native
+<iframe src="https://share.cklau.cc/generic/web/viewer_readonly.html?file=webdrive/JunjieLIU_CV.pdf" width="100%" height="1000" frameborder="0" allowfullscreen></iframe>
 
 
 ⚙️ About this site

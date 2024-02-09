@@ -1,6 +1,6 @@
 baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
-theme: ["hugo-cite", "hugo-notice", "ladder"]
+theme: ["hugo-simplecite", "hugo-notice", "ladder", "hugo-semantic-web"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "'CKLAU's WEBSITE'"
@@ -9,6 +9,11 @@ defaultContentLanguage: 'en'
 paginate: 10
 googleAnalytics: G-PXB7GSCQBT
 hasCJKLanguage: true
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 menu:
   main:
     - name: Project

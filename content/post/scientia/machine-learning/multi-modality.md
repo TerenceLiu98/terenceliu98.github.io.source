@@ -30,12 +30,33 @@ For this series, we are not shaped by the five main aspects, instead, we would o
 
 CLIP's key contribution is its ability to map text and image into a shared embedding space based on the seperated text/image encoder. This shared multimodal embedding space makes text-to-image and image-to-text tasks so much easier. Not meaning that it can directly used in these tasks, but providing a idea that how to do the multimodal representation.
 
-<center>{{< figure src="https://s3.cklau.cc/outline/uploads/b6880a0c-d8fc-4d04-9621-1e308a59ebb4/01a358bb-57e0-4803-ac14-248e8666b209/Screenshot%202024-02-08%20at%204.27.08%20PM.png" width="50%" title="图1" >}}</center>
+{{< image
+  class="semwebdemostyle"
+  src="https://s3.cklau.cc/outline/uploads/b6880a0c-d8fc-4d04-9621-1e308a59ebb4/64cc5e48-d9a3-46aa-95b2-b6e0e9467fb3/image.png"
+  link="/post/scientia/machine-learning/multi-modality/clip"
+  alt="ALT"
+  caption="Figure 1: The architecture of CLIP model"
+  attr="OPENAI"
+  attrlink="https://openai.com"
+  width="100%"
+>}}
+
+Figure 1 shows the approach of CLIP model. Text and image are encoded by two different encoders $f_{\theta_i}$ and $g_{\theta_t}$, let $\mathbf{x} \in \mathbb{R}^{N \times H \times W \times C}$ as one batch of image, $\mathbf{y} \in \mathbb{R}^{N \times S}$ as one batch of text data,  the embedding of $\mathbf{x}$ and $\mathbf{y}$ then can be denoted as:
+
+$$\begin{aligned} \mathbf{f} &= f_{\theta_i}(\mathbf{x}) \in \mathbf{R}^{N \times D_i} \Rightarrow \mathbf{f}^e = L_i(\mathbf{f})  \cr  \mathbf{g} &= g_{\theta_t}(\mathbf{y}) \in \mathbf{R}^{N \times D_t} \Rightarrow \mathbf{g}^e = L_t(\mathbf{g}) \end{aligned}$$
+
+where $D_i$ and $D_t$ are the dimension of the image and text embedding, respectively. linear projectors $L_i$ and $L_t$ are used for mapping two embedding into the same dimension. The dot product between the image and text embedding is used to calculate the similarity between the text and image, i.e., $\mathcal{F} = \mathbf{f} \cdot \mathbf{g}$, where $\mathcal{F} \in \mathbb{R}^{N \times N}$ is the similarity matrix and the $\mathcal{F} \circ I_N$ is the positive sample set, and the others are the negative samples (In total, there are $N^2 - N$ negatives samples). The pseudocode of the CLIP model is shown in Figure 2 (original papers). The idea of CLIP model is relative naive, as it is a classic negative sampling method called batch negative sampling. The main contribution is that they create a huge dataset with the text and image pairs, including 400 million (image, text) pairs collected form of a variety of publicly available sources on the Internet. With this dataset, they don't even need the pretrained encoder as the encoder can be trained simultaneously with the downstream alignment. 
+
+### Applications
+
+The first application of CLIP is classification. Since the CLIP model is relatively similar to the reitrival model, it can be easily implemented into the classification with zero-shot learning. The zero-shot learning is a task that the model can classify the unseen classes without any training data. See the second part of Figure 1, where for a given image, the model can classify the similarity between the given image and the prompted text, by calculating the similarity of image and each given sentence we could get the classification, vice versa. This can be seen as classification, or retrieval. 
+
+The second application is the generation. The CLIP model can be used to generate the image from the given text. Although it cannot generate the image directly since it does not have any decoder, however, the CLIP can be seen as the backbone and provide the embedding for image or text generation. After the CLIP came out, OpenAI also released the DALL-E2, where they provide a model called unCLIP {{< cite "ramesh_hierarchical_2022" >}}
 
 ## Reference 
 
-{{< bibliography cited >}}
+{{< references >}}
 
 
 
-[^1] For more information, pleace check [Spectrogram](https://en.wikipedia.org/wiki/Spectrogram) and [Mel Spectrogram](https://ieeexplore.ieee.org/document/9859621)
+[^1]: For more information, pleace check [Spectrogram](https://en.wikipedia.org/wiki/Spectrogram) and [Mel Spectrogram](https://ieeexplore.ieee.org/document/9859621)
