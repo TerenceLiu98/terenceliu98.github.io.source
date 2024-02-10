@@ -1,0 +1,11 @@
+[submodule "themes/cklau-theme"]
+	path = themes/cklau-theme
+	url = https://github.com/TerenceLiu98/cklau-theme
+
+[submodule "themes/hugo-notice"]
+	path = themes/hugo-notice
+	url = https://github.com/martignoni/hugo-notice
+
+[submodule "themes/hugo-semantic-web"]
+	path = themes/hugo-semantic-web
+	url = https://github.com/yelosan/hugo-semantic-web
