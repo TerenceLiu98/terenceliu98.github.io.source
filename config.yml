@@ -2,6 +2,7 @@ baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
 theme: ["hugo-simplecite", "hugo-notice", "ladder", "hugo-semantic-web"]
 license: MIT
+enableRobotsTXT: true
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "'CKLAU's WEBSITE'"
 homepage: 'https://blog.cklau.cc'
@@ -57,10 +58,6 @@ params:
   analytics:
     google:
       SiteVerificationTag: GTM-MC97JQPW
-  #  umami:
-  #    enable: true
-  #    website_id: 2320eaa6-a90b-471c-b6ca-e79dadde8c4c
-  #    url: https://umami-ochre-nu.vercel.app/hugo-ladder.js
   social:
     - name: RSS
       pre: >- 

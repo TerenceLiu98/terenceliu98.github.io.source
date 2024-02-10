@@ -154,7 +154,7 @@ Here is the simple implementation of CLIP:
 
 The first application of CLIP is classification. Since the CLIP model is relatively similar to the reitrival model, it can be easily implemented into the classification with zero-shot learning. The zero-shot learning is a task that the model can classify the unseen classes without any training data. See the second part of Figure 1, where for a given image, the model can classify the similarity between the given image and the prompted text, by calculating the similarity of image and each given sentence we could get the classification, vice versa. This can be seen as classification, or retrieval. 
 
-The second application is the generation. The CLIP model can be used to generate the image from the given text. Although it cannot generate the image directly since it does not have any decoder, however, the CLIP can be seen as the backbone and provide the embedding for image or text generation. After the CLIP came out, OpenAI also released the DALL-E2, where they provide a model called unCLIP {{< cite "ramesh_hierarchical_2022" >}}, it is a text-to-image generation model[^2].
+The second application is the generation. The CLIP model can be used to generate the image from the given text. Although it cannot generate the image directly since it does not have any decoder, however, the CLIP can be seen as the backbone and provide the embedding for image or text generation. After the CLIP came out, OpenAI also released the DALL·E 2, where they provide a model called unCLIP {{< cite "ramesh_hierarchical_2022" >}}, it is a text-to-image generation model[^2].
 
 ## BLIP: Hierarchical Text-Conditional Image Generation with CLIP Latents
 
@@ -168,3 +168,4 @@ The second application is the generation. The CLIP model can be used to generate
 
 [^1]: For more information, pleace check [Spectrogram](https://en.wikipedia.org/wiki/Spectrogram) and [Mel Spectrogram](https://ieeexplore.ieee.org/document/9859621)
 [^2]: We would talk about the "downstream" research in the ["Empirical Research"](#empirical-research) section.
+[^3]: test

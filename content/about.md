@@ -5,6 +5,7 @@ draft: false
 featured: true
 comment: false
 layout: "single"
+toc: false
 ---
 
 {{< notice tip >}} 💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post) {{< /notice >}} 

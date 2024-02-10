@@ -8,7 +8,9 @@
 
 
   <div class="blog-toc">
-    {{ partial "blog/toc.html" . }}
+    {{ if .Params.toc }}
+        {{ partial "toc.html" . }}
+    {{ end }}
   </div>
 
   <section class="blog-content">{{ .Content }}</section>
