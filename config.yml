@@ -33,6 +33,7 @@ params:
   author: Junjie(Terence) LIU
   authorDescription: Statistics Student
   info: All sciences are, in the abstract, mathematics; All judgements are, in their rationale, statistics. -- C. R. Rao
+  beian: "粤ICP备2022102668号"
   favicon: /images/icon.png
   options:
     showDarkMode: true

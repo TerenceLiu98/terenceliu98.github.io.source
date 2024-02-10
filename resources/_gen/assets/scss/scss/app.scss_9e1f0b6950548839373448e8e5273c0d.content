@@ -954,19 +954,21 @@ img {
     top: 4rem;
     height: auto;
     overflow-y: auto; }
-    .blog-single .blog-toc ul {
-      padding-left: 0;
-      list-style: none; }
-    .blog-single .blog-toc li {
-      margin-top: 0.375rem;
-      padding-top: 0.375rem; }
-    .blog-single .blog-toc li ul li {
-      border-top: none;
-      padding-left: 3rem;
-      margin-top: 0.125rem;
-      padding-top: 0.125rem; }
-    .blog-single .blog-toc li:not(:first-child) {
-      border-top: 1px dashed #e9ecef; }
+    .blog-single .blog-toc details {
+      padding: 0px;
+      border: 1.5px dashed #6c757d;
+      border-radius: 20px; }
+    .blog-single .blog-toc details summary {
+      cursor: zoom-in;
+      margin-inline-start: 20px; }
+    .blog-single .blog-toc details[open] summary {
+      cursor: zoom-out; }
+    .blog-single .blog-toc .details {
+      display: inline;
+      font-weight: 500; }
+    .blog-single .blog-toc .inner {
+      margin: 0 20px;
+      padding: 10px 20px; }
     .blog-single .blog-toc a {
       display: block;
       font-size: 1.50rem; }
@@ -1072,23 +1074,6 @@ body {
   .sidenote-number:hover .sidenote {
     background-color: var(--theme-color-light); } }
 
-details {
-  border: 1px solid #aaa;
-  border-radius: 4px;
-  padding: 0.5em 0.5em 0; }
-
-summary {
-  font-weight: bold;
-  margin: -0.5em -0.5em 0;
-  padding: 0.5em; }
-
-details[open] {
-  padding: 0.5em; }
-
-details[open] summary {
-  border-bottom: 1px solid #aaa;
-  margin-bottom: 0.5em; }
-
 .footer {
   display: flex;
   align-items: center;
@@ -1126,30 +1111,147 @@ details[open] summary {
   font-size: 80%;
   color: #212121; }
 
-.tags {
-  width: 100%; }
-  .tags .tags-list {
-    width: 80rem;
-    margin-left: auto;
-    margin-right: auto; }
-    @media only screen and (max-width: 768px) {
-      .tags .tags-list {
-        width: 100%; } }
-  .tags .tags-list li {
-    display: inline-block;
-    font-weight: 500;
+.blog-wrapper {
+  position: relative;
+  max-width: 100rem;
+  margin: auto;
+  padding: 1.5rem; }
+  .blog-wrapper .card {
+    position: relative;
+    padding: 0.5rem 1.5rem 1.5rem 0.5rem;
+    background: white;
+    border-bottom: 1px dashed #6c757d; }
+  .blog-wrapper .paginator .next {
+    float: right; }
+
+.blog-single {
+  position: relative;
+  max-width: 80rem;
+  margin: auto;
+  padding: 1.5rem; }
+  .blog-single .blog-toc {
+    top: 4rem;
+    height: auto;
+    overflow-y: auto; }
+    .blog-single .blog-toc details {
+      padding: 0px;
+      border: 1.5px dashed #6c757d;
+      border-radius: 20px; }
+    .blog-single .blog-toc details summary {
+      cursor: zoom-in;
+      margin-inline-start: 20px; }
+    .blog-single .blog-toc details[open] summary {
+      cursor: zoom-out; }
+    .blog-single .blog-toc .details {
+      display: inline;
+      font-weight: 500; }
+    .blog-single .blog-toc .inner {
+      margin: 0 20px;
+      padding: 10px 20px; }
+    .blog-single .blog-toc a {
+      display: block;
+      font-size: 1.50rem; }
+    .blog-single .blog-toc a:hover {
+      text-decoration: none;
+      color: #212121; }
+  .blog-single .related-resources {
     margin-top: 3rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem; }
-    @media only screen and (max-width: 768px) {
-      .tags .tags-list li {
-        margin-top: 1rem; } }
-  .tags .tags-list a {
-    display: block;
-    padding: 3px 10px;
-    background: #e9ecef;
-    border-radius: 0.5rem;
-    text-decoration: none; }
+    border-top: 1px solid #212121; }
+
+.paginator {
+  margin-top: 3rem;
+  height: 3rem; }
+
+.paginator .next {
+  float: right; }
+
+.blog-content p img {
+  border-radius: 0.6rem; }
+
+.blog-content a {
+  text-decoration: none;
+  color: #343a40;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px; }
+
+.comments {
+  margin-top: 2rem; }
+
+/* * Margin notes/sidenotes */
+.sidenote {
+  font-family: sans-serif;
+  font-size: 80%;
+  /* slightly smaller font for sidenote content */
+  font-weight: normal;
+  color: var(--theme-hl1-color);
+  position: relative;
+  /* forces note to be relative its the normal position */ }
+
+/* Wide viewport */
+@media (min-width: 1400px) {
+  .sidenote {
+    float: right;
+    clear: right;
+    /* prevent overlapping of sidenotes */
+    text-align: left;
+    /* https://kennethfriedman.org/thoughts/2019/marginal-notes/ */
+    /* display: inline; */
+    /* not sure if this is required */
+    top: -3rem;
+    /* start the sidenote display a bit higher than its reference in body */
+    width: 20vw;
+    /* limits the width of the marginal note */
+    margin-right: -23vw;
+    /* sets the distance of sidenote's left margin from the HTML element on right */
+    margin-top: 1rem;
+    /* keep some space between adjacent sidenotes if they get too close */ } }
+
+/* Narrow viewport */
+/* Interleave the "sidenotes" with the body text on narrow screen */
+@media (max-width: 1400px) {
+  .sidenote {
+    /* As the sidenotes are in the body in narrow viewport, they need to
+           be floated to the left. */
+    float: right;
+    text-align: right;
+    /* display: block; */
+    /* not sure if this is required */
+    width: 100%;
+    /* Width is set to 100% so that the sidenote when inlined takes up the entire row. */
+    margin: 1rem 0;
+    padding-left: 5%;
+    /* Indentation of the sidenotes inside the body. */ } }
+
+/* Sidenote counter */
+/* https://codepen.io/dredmorbius/details/OVmBaZ */
+body {
+  counter-reset: sidenote-counter; }
+
+.sidenote-number {
+  counter-increment: sidenote-counter; }
+
+/* Counter before the sidenote in the margin. */
+.sidenote::before {
+  content: counter(sidenote-counter) ".";
+  position: relative;
+  vertical-align: baseline;
+  font-size: 0.9em;
+  font-weight: bold; }
+
+/* Counter in the main body. */
+.sidenote-number::after {
+  content: counter(sidenote-counter);
+  vertical-align: super;
+  font-family: sans-serif;
+  font-size: 0.7em;
+  font-weight: bold;
+  color: var(--theme-body-color);
+  display: inline;
+  margin-right: 0.2rem; }
+
+@media (min-width: 1400px) {
+  /* Highlight the sidenote when mouse hovers on the sidenote number in body. */
+  .sidenote-number:hover .sidenote {
+    background-color: var(--theme-color-light); } }
 
 .archive {
   width: 100%; }

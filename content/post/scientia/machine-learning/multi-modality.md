@@ -3,6 +3,7 @@ title: "🧑🏿‍💻 Multimodal Representation Leraning from both Text and Im
 date: 2024-02-08T00:15:00+00:00
 draft: false
 math: true
+toc: true
 comment: true
 tags: ['Artificial Intelligence', 'text-image', 'multi-modality', 'long-read']
 series: ['Multi-Modality']
