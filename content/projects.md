@@ -41,7 +41,7 @@ This subdirectory is documenting my learning notes and the code reproductions(if
 3. Optimal Transport and Generative Models
 4. Reinforcement Learning and Game Theory 
 
-Checkout: [/post/machine-learning](/post/scientia/)
+Checkout: [/post/scientia](/post/scientia/)
 
 
 ## Foundation of Mathematics, Statistics and Computer Science (MAYBE COMING SOON)
