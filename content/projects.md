@@ -31,15 +31,17 @@ These articles are inside my projects: Build a Experimental Network with your VP
 2. [L-Net: My Experimental Network v1.1 - eBGP and iBGP](/post/tech/lnet-2)
 3. [L-Net: My Experimental Netwrok v1.2 - VXLAN over Wireguard](/post/tech/lnet-3)
 
-## Machine Learning/Deep Learning with Us (/post/scientia/machine-learning/)
+## Scientia: My Knowledgebase
 
-These articles are documenting my learning notes and the code reproductions(if I have the time or capbability) in mainly these fields:
+> *This project, or the subdirectory, is inspired by the [Lilan's Blog](lilianweng.github.io), who is now working in OpenAI.* 
+
+This subdirectory is documenting my learning notes and the code reproductions(if I have the time or capbability) in mainly these fields:
 1. Natural Language Processing: Information Extarction and Retireval
 2. Computer Vision: Object Detection, Segmentation and Synthesis
 3. Optimal Transport and Generative Models
-4. Reinforcement Learning and Game Theory
+4. Reinforcement Learning and Game Theory 
 
-CHECK OUT [/post/machine-learning](/post/scientia/machine-learning/)
+Checkout: [/post/machine-learning](/post/scientia/)
 
 
 ## Foundation of Mathematics, Statistics and Computer Science (MAYBE COMING SOON)

@@ -226,21 +226,27 @@ BLIP's Group allow continue their work on the multimodal representation learning
 
 #### BLIP2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
 
-BLIP2 is a successor of BLIP, the overall framework is shown in *Fig. 4.*.  
+BLIP2 is a successor of BLIP, the overall framework is shown in *Fig. 4.*, still, it contains three training tasks: ITC, ITM, and Text generation. Two-stage process is proposed: the first stage is visuion-lanaguge representation learning and the second stage is the vision-language generative learning:
+
+1. representation learning: the Q-former contains three modules, where at the left is the pretrained image encoder(the parameter is frozen), the middle one is learnable query encoder and the right one is the text decoder. The query encoder and text decoder are adapted from the classic transformer architecture {{< cite "vaswani2017attention" >}}, the queries is a learnable vector set that is used to query the extracted visual representation most relevant to the given text{{% sidenote %}}Since the self-attention layer is shared, which may insure the coherence between query module and the text module.{{% /sidenote %}}, and the text decoder is used for the alignment. 
+2. generative learning: the downsteam module is the pretrained LLM model(the parameter is frozen). After the stage 1, the learned queries are the visual represenataions, and in this stage, a linear projection is needed to map the queries into the LLM(also, we need to reshape queries' dimension to fit the LLM). 
+   1. For the Decoder-based LLM(like GPT), we use query as the only input
+   2. For the Encoder-Decoder-based LLM(like T5), we use the query and the prefix text as the output. 
 
 {{< image
   class="semwebdemostyle"
-  src="https://s3.cklau.cc/outline/uploads/b6880a0c-d8fc-4d04-9621-1e308a59ebb4/bb28c8e8-ffec-4dc8-8a70-2b57d88e8ae7/image.png"
+  src="https://s3.cklau.cc/outline/uploads/b6880a0c-d8fc-4d04-9621-1e308a59ebb4/a10471cb-7ea5-4133-936e-259d94da0b53/BLIP2.png"
   link="/post/scientia/machine-learning/multi-modality"
   alt="ALT"
-  caption="Fig. 4. The overviewer of BLIP-2's framework"
+  caption="Fig. 4. The overviewe of BLIP-2's framework"
   attr="Salesforce Research"
   attrlink="https://blog.salesforceairesearch.com/blip-2/"
   width="100%"
 >}}
 
-#### InstructBLIP: Towards General-purpose Vision-Language Models with Instruction Tuning
+This queries set contains "almost" all the imformation from the image, but make it looks like a text token. Since the authors want to align between the two pretrained models, it proposed this Q-former as the hidden process of the alignment. This idea is not new, as it is similar to the VQ-VAE{{< cite "oord2018neural" >}}. The VQ-VAE uses a discrete latent variables to replace the continuous latent variables, where they called the trained discrete latent space as the "codebook". This process of the generation can be seen as a retrieval process where using the activated code as the decoder's input.  the query in BLIP2 also can be seen as the "codebook" for transformer. Instead of learning the representation from the scratch, the only request for the queries learning is to compress the image embedding into a lower dimension space where can be more easily to align with the text embedding, reduce the redundency from the original image embedding, and lower the computational complexity. 
 
+The BLIP2 shows a possible way that instead of training from the scratch, the "align and fuse" can also solve the multimodal problem{{% sidenote %}}You may also check MiniGPT4{{< cite "zhu2023minigpt4" >}} and MiniGPT5{{< cite "zheng2023minigpt5" >}} {{% /sidenote %}}. 
 
 ## Empirical Research
 
