@@ -13,16 +13,14 @@ toc: false
 
 <!--more-->
 
-👨‍💻 About Me:
-
-<iframe src="https://share.cklau.cc/generic/web/viewer_readonly.html?file=webdrive/JunjieLIU_CV.pdf" width="100%" height="1000" frameborder="0" allowfullscreen></iframe>
-
-
 ⚙️ About this site
 
 This site is powerfully built by Hugo. The Hugo's version can be checked in: [workflows/hugo.yml](https://github.com/TerenceLiu98/terenceliu98.github.io.source/blob/f8327d16f7880ec098bc56ead9f488b5ca18d104/.github/workflows/hugo.yml#L19); It is automatically built by GitHub Action and deployed on GitHub Pages, which means in some specific regions it may be suffered by the network when you are openning this site. The website theme is built based on [hugo-theme-ladder](https://github.com/guangzhengli/hugo-theme-ladder). I would like to express my gratitude to the author 🙏; the fontface I used in this site is [京華老宋体](https://zhuanlan.zhihu.com/p/637491623), a free commercial Chinese font. The discovery of this font was also a coincidence, and the choice of this font was a coincidence.
 
 
+👨‍💻 About Me:
+
+Check [my Résumé](https://drive.cklau.cc/JunjieLIU_CV.pdf)
 
 🫡 For more information: 
 
