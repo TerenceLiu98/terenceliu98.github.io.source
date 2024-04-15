@@ -16,12 +16,13 @@ These articles  are inside my projects: My Disbributed HomeLab and My HA K3s clu
 5. [Homelab: How to build a AIO home-server](/post/tech/my-homelab-5)
 6. [Homelab: My Distributed Homelab (2)](/post/tech/my-homelab-6)
 7. [Homelab: A self-hosted GitHub Accelerator](/post/tech/my-homelab-extra-1)
-7. [K3s/Kubernetes: A quick setup for single machine](/post/tech/k3s-setup-1)
-8. [K3s/Kubernetes: A quick setup for HA](/post/tech/k3s-setup-2)
-9. [K3s/Kubernetes: A self-hosted registry](/post/tech/k3s-setup-extra-1)
-10. [K3s/Kubernetes: How GitOps works](/post/tech/k3s-setup-3) - Coming soon
-11. [K3s/Kubernetes: From K3s to Kubernetes: Set up a Kubernetes in a nutshell](/post/tech/k8s-setup-1)
-12. [K3s/Kubernetes: Build a High availability Kubernetes Cluster with Kubeadm](/post/tech/k8s-setup-2)
+8. [Homelab: Authentikc - An alternative of self-hosted SSO Module that you might need](/post/tech/authentik)
+9. [K3s/Kubernetes: A quick setup for single machine](/post/tech/k3s-setup-1)
+10. [K3s/Kubernetes: A quick setup for HA](/post/tech/k3s-setup-2)
+11. [K3s/Kubernetes: A self-hosted registry](/post/tech/k3s-setup-extra-1)
+12. [K3s/Kubernetes: How GitOps works](/post/tech/k3s-setup-3) - Coming soon
+13. [K3s/Kubernetes: From K3s to Kubernetes: Set up a Kubernetes in a nutshell](/post/tech/k8s-setup-1)
+14. [K3s/Kubernetes: Build a High availability Kubernetes Cluster with Kubeadm](/post/tech/k8s-setup-2)
 
 ## Personal Project: Personal Experimental Network: L-Net
 
