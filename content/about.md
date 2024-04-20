@@ -14,7 +14,15 @@ layout: "single"
 
 👨‍💻 About Me:
 
-<iframe src="https://share.cklau.cc/generic/web/viewer_readonly.html?file=webdrive/JunjieLIU_CV.pdf" width="100%" height="1000" frameborder="0" allowfullscreen></iframe>
+<div class="flink">
+<div class="info-list-div" >
+
+{{< info degree="PhD Student in Political Science" institution="Trinity College Dubin" INSurl="https://www.tcd.ie/" advisor="Prof.Thomas Chadefaux" PROFurl="https://chadefaux.github.io/" time="2023 -- 2027" thesis="NA">}}
+{{< info degree="Mphil in Probability and Mathematical Statistics " institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Prof.Yuhui Deng" PROFurl="https://staff.uic.edu.cn/ivandeng/en" time="2021 -- 2023">}}
+{{< info degree="Bacholer of Science (Honour) in Statistics" institution="Hong Kong Baptist University (BNU-HKBU United International College)" INSurl="https://uic.edu.cn/" advisor="Prof.Kang-Too Tsang (Retired)" PROFurl="https://dblp.org/pid/221/8919.html" time="2016 -- 2020" thesis="">}}
+
+</div>
+</div>
 
 
 ⚙️ About this site
