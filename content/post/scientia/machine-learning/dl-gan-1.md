@@ -19,9 +19,6 @@ There are multiple papers in the area of style transfer and image inversion or r
 
 > **Key point**: They propose a novel training process of GAN model: progressive training, i.e. from small model to big model/from low resolution to high resolution
 
-<img src="https://s3.cklau.cc/outline/uploads/d7aefdee-237d-4247-b2da-cfe403a10ec2/0f8be702-90dd-403e-89f9-9ccd65eec7e9/pggan-1.png" alt="Figure A" width="400"/>
-<img src="https://s3.cklau.cc/outline/uploads/d7aefdee-237d-4247-b2da-cfe403a10ec2/76b044d1-611e-47fc-a60e-7a1387cbf4d4/pggan-2.png" alt="Figure B" width="400"/>
-
 #### Some Hightlights
 
 1. The training (see Figure A) is from left to right, 

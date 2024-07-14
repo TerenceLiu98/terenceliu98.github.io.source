@@ -31,17 +31,6 @@ For this series, we are not shaped by the five main aspects, instead, we would o
 
 CLIP's key contribution is its ability to map text and image into a shared embedding space based on the seperated text/image encoder. This shared multimodal embedding space makes text-to-image and image-to-text tasks so much easier. Not meaning that it can directly used in these tasks, but providing a idea that how to do the multimodal representation.
 
-{{< image
-  class="semwebdemostyle"
-  src="https://s3.cklau.cc/outline/uploads/b6880a0c-d8fc-4d04-9621-1e308a59ebb4/64cc5e48-d9a3-46aa-95b2-b6e0e9467fb3/image.png"
-  link="/post/scientia/machine-learning/multi-modality/clip"
-  alt="ALT"
-  caption="Figure 1: The architecture of CLIP model"
-  attr="OPENAI"
-  attrlink="https://openai.com"
-  width="100%"
->}}
-
 Figure 1 shows the approach of CLIP model. Text and image are encoded by two different encoders $f_{\theta_i}$ and $g_{\theta_t}$, let $\mathbf{x} \in \mathbb{R}^{N \times H \times W \times C}$ as one batch of image, $\mathbf{y} \in \mathbb{R}^{N \times S}$ as one batch of text data,  the embedding of $\mathbf{x}$ and $\mathbf{y}$ then can be denoted as:
 
 $$\begin{aligned} \mathbf{f} &= f_{\theta_i}(\mathbf{x}) \in \mathbf{R}^{N \times D_i} \Rightarrow \mathbf{f}^e = L_i(\mathbf{f})  \cr  \mathbf{g} &= g_{\theta_t}(\mathbf{y}) \in \mathbf{R}^{N \times D_t} \Rightarrow \mathbf{g}^e = L_t(\mathbf{g}) \end{aligned}$$

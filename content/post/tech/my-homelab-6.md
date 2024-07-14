@@ -37,8 +37,6 @@ Since I have multiple different server in differnt locations, I still keep them 
 
 Previously, `AS4242104` is the machines located in Japan, however, during the Spring Festival, I accidentlly got the quota of ARM machines from Oracle Cloud, thus, I replace the machine X86 machines from Japan to ARM machines to Mumbai. The ARM machine is much powerful then the free-X86, where it has 2C/12G and the X86 has only 1C/1G. 
 
-![NETWORK](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/2b48d637-5791-464d-8252-931046db7358/network.drawio.png)
-
 Besides, I also includes the intranet of my home into the L-NET. The meaning of "include" is that they are acting as the client of L-NET.  Therefore, I desided to set up an external tunnel for the "user" side where the edge access points forward the traffic to the correct machine. However, since clients are using multiple different OS (Windows, Linux, iOS, macOS, Android), I choose [OCServ](https://ocserv.gitlab.io/www/) as the tunnel tools for clients, and keep using Wireguard as the backbone VPN. Anyconnect is more compatible to different distribution.
 
 

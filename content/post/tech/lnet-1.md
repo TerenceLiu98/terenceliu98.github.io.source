@@ -24,8 +24,6 @@ Under this circumstance, we can connect the nodes inside the `A (a2, a3, …)`  
 
 Here is the topology of my design:
 
- ![topology](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/dc88ca70-d652-4d2b-9360-931c852ea1b3/LNet.drawio.png)
-
 Those bold-colored dotted lines can be seen as the Backbone network, and the slim-colored dotted lines can be seen as the internet/intranet. The slim-black dotted line shows that cross IP range is accessible as long as the client allows the traffic.
 
 ## Network Configuration
@@ -252,8 +250,6 @@ sudo birdc show route
 ```
 
 With the above configuration, `cn-router` and `sg-router` can communicate and exchange routing table, the next step is to propagate `cn` and to `sg`'s node. We can still use `OSPF` for routing. 
-
-![ospf routing](https://s3.cklau.cc/outline/uploads/f96d0f35-cf0a-46bd-aeca-b1a1ac9052c9/18362fae-26e4-403b-9c54-79b1fe7539e9/ospf-lnet.png)
 
 As you can see, two LAN OSPF can sharing the local routing table to each other via the `sgcn` and `sgjp`.
 
