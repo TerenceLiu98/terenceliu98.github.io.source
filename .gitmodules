@@ -6,4 +6,4 @@
 	url = git@github.com:TerenceLiu98/cklau-theme.git
 [submodule "themes/cklau-theme"]
 	path = themes/cklau-theme
-	url = git@github.com:TerenceLiu98/cklau-theme.git
+	url = https://github.com/TerenceLiu98/cklau-theme.git
