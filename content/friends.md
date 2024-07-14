@@ -8,7 +8,9 @@ comment: true
 <div class="flink" id="article-container">
 <div class="friend-list-div" >
 
-{{< friend name="Junde Yhi" emoji="👨‍💻"  url="https://yhi.moe" word="Linux expert, IoT practitioner" >}}
+{{<friend name="TerenceLiu98" avatar="https://github.com/TerenceLiu98.png" word="test">}}
+
+{{< friend name="Junde Yhi" emoji="👨"  url="https://yhi.moe" word="Linux expert, IoT practitioner" >}}
 {{< friend name="ECWU" emoji="👨‍💻" url="https://ecwuuuuu.com/" word="Assistant Instructur, focusing on NLP & Medical imaging research" >}}
 {{< friend name="Reijie Deng" emoji="👨‍💻" url="https://www.drjchn.com/" word="full-stack developer" >}}
 {{< friend name="Laurence Luo" emoji="👨‍💻"  url="https://www.lzc.app/" word="developer, geek" >}}
