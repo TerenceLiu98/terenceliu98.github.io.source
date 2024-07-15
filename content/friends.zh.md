@@ -5,15 +5,66 @@ draft: false
 comment: true
 ---
 
-* [👨‍💻 Junde Yhi](https://yhi.moe): Linux 专家， IoT 从业人员
-* [👨‍💻 ECWU](https://ecwuuuuu.com): Assistant 高等教育/算法/人工智能/云原生
-* [👨‍💻 Reijie Deng](https://www.drjchn.com/): 全栈开发专家
-* [👨‍💻 Laurence Luo](https://lzc.app): 极客/保持着一颗赤诚的心 🔥
-* [👨‍💻 Kirin Baka](https://9baka.moe): 新世代 UICHCC 掌门人
-* [👨‍💻 Hao Tian](https://www.haotian22.top/): BNU-HKBU UIC 新闻与传播学学生
-* [👨‍🎓 Junru Zhong](https://junru.dev/): 香港中文大学博士生（计算机视觉方向），交通工具迷
-* [👨‍🎓 Yifu Qiu](https://yfqiu.netlify.app/): 剑桥大学+爱丁堡大学联培博士生（自然语言处理方向）, 2023 年苹果学者
+<style>
+ul {
+    list-style-type: none;
+}
 
+img {
+  border-radius: 50%;
+  width: 150px;
+}
+</style>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div class="image"><img src="https://github.com/jyhi.png"></div></td>
+    <td>Junde Yhi</td>
+    <td>Linux 专家， IoT 从业人员</td>
+    <td><a href="https://yhi.moe">https://yhi.moe</a></td>
+  </tr>
+    <td><div class="image"><img src="https://github.com/DRJ31.png"></div></td>
+    <td>Reijie Deng</td>
+    <td>全栈开发专家</td>
+    <td><a href="https://www.drjchn.com/">https://www.drjchn.com/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/lzcapp.png"></div></td>
+    <td>Laurence Luo</td>
+    <td>极客/保持着一颗赤诚的心 🔥</td>
+    <td><a href="https://www.lzc.app/">https://www.lzc.app/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/ECWU.png"></div></td>
+    <td>ECWU</td>
+    <td>Assistant 高等教育/算法/人工智能/云原生, UCD(Ireland) 博士生（云计算方向）</td>
+    <td><a href="https://ecwuuuuu.com/">https://ecwuuuuu.com/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/ninekirin.png"></div></td>
+    <td>Kirin Baka</td>
+    <td>新世代 UICHCC 掌门人 🫡</td>
+    <td><a href="https://9baka.moe/">https://9baka.moe/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/billzhonggz.png"></div></td>
+    <td>Junru Zhong</td>
+    <td>香港中文大学博士生（计算机视觉方向），交通工具迷</td>
+    <td><a href="https://junru.dev/">https://junru.dev/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/yfqiu98.png"></div></td>
+    <td>Yifu Qiu</td>
+    <td>剑桥大学+爱丁堡大学联培博士生（自然语言处理方向）, 2023 年苹果学者</td>
+    <td><a href="https://yfqiu.netlify.app/">https://yfqiu.netlify.app/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/HaoTian22.png"></div></td>
+    <td>Hao Tian</td>
+    <td>BNU-HKBU UIC 新闻与传播学学生</td>
+    <td><a href="https://www.haotian22.top/">https://www.haotian22.top/</a></td>
+  </tr>
+</table>
 
 🫡  互加友链？请在下面评论区提供如下信息：
 1. 希望被呈现的名称

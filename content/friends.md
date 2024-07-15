@@ -5,19 +5,63 @@ draft: false
 comment: true
 ---
 
-<div class="flink" id="article-container">
-<div class="friend-list-div" >
+<style>
+ul {
+    list-style-type: none;
+}
 
-{{<friend name="TerenceLiu98" avatar="https://github.com/TerenceLiu98.png" word="test">}}
+img {
+  border-radius: 50%;
+  width: 150px;
+}
+</style>
 
-{{< friend name="Junde Yhi" emoji="👨"  url="https://yhi.moe" word="Linux expert, IoT practitioner" >}}
-{{< friend name="ECWU" emoji="👨‍💻" url="https://ecwuuuuu.com/" word="Assistant Instructur, focusing on NLP & Medical imaging research" >}}
-{{< friend name="Reijie Deng" emoji="👨‍💻" url="https://www.drjchn.com/" word="full-stack developer" >}}
-{{< friend name="Laurence Luo" emoji="👨‍💻"  url="https://www.lzc.app/" word="developer, geek" >}}
-{{< friend name="Kirin Baka" emoji="👨‍💻" url="https://9baka.moe/" word="New generation UICHCC bellwether" >}}
-{{< friend name="Hao Tian" emoji="🙎‍♂️" url="https://www.haotian22.top/" word="Student in UIC, studying Media and Communication Studies" >}}
-{{< friend name="Junru Zhong" emoji="👨‍🎓"  url="https://junru.dev/" word="PhD candidate in Chinese University of Hong Kong" >}}
-{{< friend name="Yifu Qiu" emoji="👨‍🎓" url="https://yfqiu.netlify.app/" word="PhD candidate in The University of Edinburgh and Cambridge University, 2023 Apple Scholars, Fans of Liverpool" >}}
-
-</div>
-</div>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><div class="image"><img src="https://github.com/jyhi.png"></div></td>
+    <td>Junde Yhi</td>
+    <td>Linux expert, IoT practitioner</td>
+    <td><a href="https://yhi.moe">https://yhi.moe</a></td>
+  </tr>
+    <td><div class="image"><img src="https://github.com/DRJ31.png"></div></td>
+    <td>Reijie Deng</td>
+    <td>Full-stack developer</td>
+    <td><a href="https://www.drjchn.com/">https://www.drjchn.com/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/lzcapp.png"></div></td>
+    <td>Laurence Luo</td>
+    <td>Developer, geek</td>
+    <td><a href="https://www.lzc.app/">https://www.lzc.app/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/ECWU.png"></div></td>
+    <td>ECWU</td>
+    <td>Assistant Instructur, focusing on NLP & Medical imaging research, PhD student in UCD(Ireland)</td>
+    <td><a href="https://ecwuuuuu.com/">https://ecwuuuuu.com/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/ninekirin.png"></div></td>
+    <td>Kirin Baka</td>
+    <td>New generation UICHCC bellwether</td>
+    <td><a href="https://9baka.moe/">https://9baka.moe/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/billzhonggz.png"></div></td>
+    <td>Junru Zhong</td>
+    <td>PhD candidate in Chinese University of Hong Kong</td>
+    <td><a href="https://junru.dev/">https://junru.dev/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/yfqiu98.png"></div></td>
+    <td>Yifu Qiu</td>
+    <td>PhD candidate in The University of Edinburgh and Cambridge University, 2023 Apple Scholars, Fans of Liverpool</td>
+    <td><a href="https://yfqiu.netlify.app/">https://yfqiu.netlify.app/</a></td>
+  </tr>
+  </tr>
+    <td><div class="image"><img src="https://github.com/HaoTian22.png"></div></td>
+    <td>Hao Tian</td>
+    <td>Student in BNU-HKBU UIC, studying Media and Communication Studies</td>
+    <td><a href="https://www.haotian22.top/">https://www.haotian22.top/</a></td>
+  </tr>
+</table>

@@ -28,7 +28,7 @@ menu:
 
 params:
   brand: CKLAU's WEBSITE
-  avatarURL: /images/avatar.jpeg
+  avatarURL: https://github.com/TerenceLiu98.png
   author: Junjie(Terence) LIU
   authorDescription: Statistics Student
   info: All sciences are, in the abstract, mathematics; All judgements are, in their rationale, statistics. -- C. R. Rao
