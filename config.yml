@@ -1,14 +1,9 @@
 baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
-theme: ["hugo-simplecite", "hugo-notice", "cklau-theme", "hugo-semantic-web"]
-license: MIT
-licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
+theme: ["hugo-simplecite", "cklau-hugo-theme"]
 description: "'CKLAU's WEBSITE'"
 homepage: 'https://blog.cklau.cc'
-defaultContentLanguage: 'en'
-paginate: 10
-googleAnalytics: G-PXB7GSCQBT
-hasCJKLanguage: true
+enableRobotsTXT: true
 markup:
   goldmark:
     renderer:
@@ -16,13 +11,13 @@ markup:
 
 menu:
   main:
-    - name: Blog
+    - name: "[Blog]"
       url: /post
       weight: 1
-    - name: Scientia
+    - name: "[Scientia]"
       url: /post/scientia
       weight: 2
-    - name: Friends
+    - name: "[Friends]"
       url: /friends
       weight: 3
 
@@ -55,52 +50,3 @@ params:
       repo: TerenceLiu98/terenceliu98.github.io
       issueTerm: url
       theme: github-light
-  analytics:
-    google:
-      SiteVerificationTag: GTM-MC97JQPW
-  #  umami:
-  #    enable: true
-  #    website_id: 2320eaa6-a90b-471c-b6ca-e79dadde8c4c
-  #    url: https://umami-ochre-nu.vercel.app/hugo-ladder.js
-  social:
-    - name: RSS
-      pre: >- 
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-      url: "https://terenceliu98.github.io/index.xml"
-    - name: GitHub
-      pre: >-
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-      url: 'https://github.com/TerenceLiu98'
-languages:
-  en:
-    languageName: EN
-  zh:
-    languageName: 中
-    params:
-      brand: 特倫蘇的日與夜
-      author: 劉駿傑
-      authorDescription: 非 「非典型」 统计系学生
-      info: 在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计 -- C. R. Rao
-    menu:
-      main:
-        - name: 文章
-          url: /post
-          weight: 1
-        - name: 分类
-          url: /tags
-          weight: 2
-        - name: 朋辈
-          url: /friends
-          weight: 3
-
-taxonomies:
-  series: series
-  tag: tags
-
-enableGitInfo: true
-frontmatter:
-  date: ["date", ":fileDate", "publishDate"]
-  lastmod: ["lastmod", ":git", ":fileModTime", "date", "publishDate"]
-
-ui:
-  sidebar_menu_compact: true

@@ -1,9 +1,6 @@
-[submodule "themes/hugo-cite"]
-	path = themes/hugo-cite
-	url = https://github.com/loup-brun/hugo-cite.git
-[submodule "cklau-theme"]
-	path = cklau-theme
-	url = git@github.com:TerenceLiu98/cklau-theme.git
-[submodule "themes/cklau-theme"]
-	path = themes/cklau-theme
-	url = https://github.com/TerenceLiu98/cklau-theme.git
+[submodule "themes/cklau-hugo-theme"]
+	path = themes/cklau-hugo-theme
+	url = https://github.com/TerenceLiu98/cklau-hugo-theme.git
+[submodule "themes/hugo-simplecite"]
+	path = themes/hugo-simplecite
+	url = https://github.com/joksas/hugo-simplecite.git

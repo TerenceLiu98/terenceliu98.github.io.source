@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/logo.svg" />
+<title>🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management | 特倫蘇的日與夜</title>
+<meta name="title" content="🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management" />
+<meta name="description" content="There are multiple articles have illustruated that the project(code) management is important:" />
+<meta name="keywords" content="Management,Deep Learing,Coding," />
+
+
+<meta property="og:title" content="🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management" />
+<meta property="og:description" content="There are multiple articles have illustruated that the project(code) management is important:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/specification/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-07-28T00:15:00+08:00" />
+<meta property="article:modified_time" content="2023-07-28T00:15:00+08:00" />
+
+
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management"/>
+<meta name="twitter:description" content="There are multiple articles have illustruated that the project(code) management is important:"/>
+
+
+
+<meta itemprop="name" content="🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management">
+<meta itemprop="description" content="There are multiple articles have illustruated that the project(code) management is important:"><meta itemprop="datePublished" content="2023-07-28T00:15:00+08:00" />
+<meta itemprop="dateModified" content="2023-07-28T00:15:00+08:00" />
+<meta itemprop="wordCount" content="753">
+<meta itemprop="keywords" content="Management,Deep Learing,Coding," />
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: "Noto Serif SC", serif;
+    font-weight: 500;
+    font-style: normal;
+    margin: auto;
+    padding: 20px;
+    max-width: 980px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #444;
+    text-decoration: none;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  main content p a {
+    word-wrap: break-word;
+    border: none;
+    box-shadow: inset 0 -2px #444;
+    transition-property: box-shadow;
+    transition-duration: .1s;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+    line-height: 2;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 6.5rem;
+  }
+
+  ul.blog-posts li time {
+    color: #8e8d8d;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+
+   
+
+
+  .bg { background-color: #f0f0f0; }
+  .chroma { background-color: #f0f0f0; }
+  .chroma .x {  }
+  .chroma .err {  }
+  .chroma .cl {  }
+  .chroma .lnlinks { outline: none; text-decoration: none; color: inherit }
+  .chroma .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+  .chroma .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+  .chroma .hl { background-color: #ffffcc }
+  .chroma .lnt { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+  .chroma .ln { white-space: pre; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em;color: #7f7f7f }
+  .chroma .line { display: flex; }
+  .chroma .k { color: #007020; font-weight: bold }
+  .chroma .kc { color: #007020; font-weight: bold }
+  .chroma .kd { color: #007020; font-weight: bold }
+  .chroma .kn { color: #007020; font-weight: bold }
+  .chroma .kp { color: #007020 }
+  .chroma .kr { color: #007020; font-weight: bold }
+  .chroma .kt { color: #902000 }
+  .chroma .n {  }
+  .chroma .na { color: #4070a0 }
+  .chroma .nb { color: #007020 }
+  .chroma .bp {  }
+  .chroma .nc { color: #0e84b5; font-weight: bold }
+  .chroma .no { color: #60add5 }
+  .chroma .nd { color: #555555; font-weight: bold }
+  .chroma .ni { color: #d55537; font-weight: bold }
+  .chroma .ne { color: #007020 }
+  .chroma .nf { color: #06287e }
+  .chroma .fm {  }
+  .chroma .nl { color: #002070; font-weight: bold }
+  .chroma .nn { color: #0e84b5; font-weight: bold }
+  .chroma .nx {  }
+  .chroma .py {  }
+  .chroma .nt { color: #062873; font-weight: bold }
+  .chroma .nv { color: #bb60d5 }
+  .chroma .vc {  }
+  .chroma .vg {  }
+  .chroma .vi {  }
+  .chroma .vm {  }
+  .chroma .l {  }
+  .chroma .ld {  }
+  .chroma .s { color: #4070a0 }
+  .chroma .sa { color: #4070a0 }
+  .chroma .sb { color: #4070a0 }
+  .chroma .sc { color: #4070a0 }
+  .chroma .dl { color: #4070a0 }
+  .chroma .sd { color: #4070a0; font-style: italic }
+  .chroma .s2 { color: #4070a0 }
+  .chroma .se { color: #4070a0; font-weight: bold }
+  .chroma .sh { color: #4070a0 }
+  .chroma .si { color: #70a0d0 }
+  .chroma .sx { color: #c65d09 }
+  .chroma .sr { color: #235388 }
+  .chroma .s1 { color: #4070a0 }
+  .chroma .ss { color: #517918 }
+  .chroma .m { color: #40a070 }
+  .chroma .mb { color: #40a070 }
+  .chroma .mf { color: #40a070 }
+  .chroma .mh { color: #40a070 }
+  .chroma .mi { color: #40a070 }
+  .chroma .il { color: #40a070 }
+  .chroma .mo { color: #40a070 }
+  .chroma .o { color: #666666 }
+  .chroma .ow { color: #007020; font-weight: bold }
+  .chroma .p {  }
+  .chroma .c { color: #60a0b0; font-style: italic }
+  .chroma .ch { color: #60a0b0; font-style: italic }
+  .chroma .cm { color: #60a0b0; font-style: italic }
+  .chroma .c1 { color: #60a0b0; font-style: italic }
+  .chroma .cs { color: #60a0b0; background-color: #fff0f0 }
+  .chroma .cp { color: #007020 }
+  .chroma .cpf { color: #007020 }
+  .chroma .g {  }
+  .chroma .gd { color: #a00000 }
+  .chroma .ge { font-style: italic }
+  .chroma .gr { color: #ff0000 }
+  .chroma .gh { color: #000080; font-weight: bold }
+  .chroma .gi { color: #00a000 }
+  .chroma .go { color: #888888 }
+  .chroma .gp { color: #c65d09; font-weight: bold }
+  .chroma .gs { font-weight: bold }
+  .chroma .gu { color: #800080; font-weight: bold }
+  .chroma .gt { color: #0044dd }
+  .chroma .gl { text-decoration: underline }
+  .chroma .w { color: #bbbbbb }
+
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<script defer data-domain="nova.moe" src="https://possible.knat.network/js/script.js"></script>
+
+<link href="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet">
+<script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/katex.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/contrib/auto-render.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/KaTeX/0.16.8/contrib/copy-tex.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        renderMathInElement(document.body, {
+            
+            
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+                { left: '\\(', right: '\\)', display: false },
+                { left: '\\[', right: '\\]', display: true },
+                { left: "\\begin{equation}", right: "\\end{equation}", display: true },
+                { left: "\\begin{align}", right: "\\end{align}", display: true },
+                { left: "\\begin{alignat}", right: "\\end{alignat}", display: true },
+                { left: "\\begin{gather}", right: "\\end{gather}", display: true },
+                { left: "\\begin{CD}", right: "\\end{CD}", display: true },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            
+            throwOnError: false,
+            trust: (context) => ['\\htmlId', '\\href'].includes(context.command),
+            macros: {
+                "\\eqref": "\\href{###1}{(\\text{#1})}",
+                "\\ref": "\\href{###1}{\\text{#1}}",
+                "\\label": "\\htmlId{#1}{}"
+            }
+        });
+    });
+</script></head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>特倫蘇的日與夜</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/post">[Blog]</a>
+
+<a href="/post/scientia">[Scientia]</a>
+
+<a href="/friends">[Friends]</a>
+
+</nav>
+</header>
+  <main>
+<h1>🤔 A General Introduction of ML/DL Project Management and Knowledge Management - Project Management</h1>
+<p>
+  <i>
+    <time datetime='2023-07-28' pubdate>
+      28 Jul, 2023
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>There are multiple articles have illustruated that the project(code) management is important:</p>
+<ol>
+<li><a href="https://neptune.ai/blog/how-to-organize-deep-learning-projects-best-practices">neptune.ai - how to organize deep learning projects</a></li>
+<li><a href="https://www.zhihu.com/question/269707221/answer/350542551">深度学习科研，如何高效进行代码和实验管理？</a></li>
+</ol>
+<p>In this guideline, I would mainly shows you how I manage my project&rsquo;s code and link the new knowledge to the knowledge base.</p>
+<h2 id="in-general">In General</h2>
+<p>A lifecyle of a project may includes this five points<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>:</p>
+<ol>
+<li>Planning and project setup
+<ul>
+<li>Define the task and scope out requirements</li>
+<li>Determine project feasibility</li>
+<li>Discuss general model tradeoffs (accuracy vs speed)</li>
+<li>Set up project codebase</li>
+</ul>
+</li>
+<li>Data collection and labelling
+<ul>
+<li>Define ground truth (create labeling documentation)</li>
+<li>Build data ingestion pipeline</li>
+<li>Validate quality of data</li>
+<li>Label data and ensure ground truth is well-definend</li>
+<li>Revisit Step 1 and ensure data is sufficient for the task</li>
+</ul>
+</li>
+<li>Model exploration
+<ul>
+<li>Establish baselines for model performance</li>
+<li>Start with a simple model using initial data pipeline</li>
+<li>Overfit simple model to training data</li>
+<li>Stay nimble and try many parallel (isolated) ideas during early stages</li>
+<li>Find SoTA model for your problem domain (if available) and reproduce results, then apply to your dataset as a second baseline</li>
+<li>Revisit Step 1 and ensure feasibility</li>
+<li>Revisit Step 2 and ensure data quality is sufficient</li>
+</ul>
+</li>
+<li>Model refinement
+<ul>
+<li>Perform model-specific optimizations (ie. hyperparameter tuning)</li>
+<li>Iteratively debug model as complexity is added</li>
+<li>Perform error analysis to uncover common failure modes</li>
+<li>Revisit Step 2 for targeted data collection and labeling of observed failure modes</li>
+</ul>
+</li>
+<li>Testing and evaluation
+<ul>
+<li>Evaluate model on test distribution; understand differences between train and test set distributions (how is “data in the wild” different than what you trained on)</li>
+<li>Revisit model evaluation metric; ensure that this metric drives desirable downstream user behavior</li>
+<li>Write tests for:
+<ul>
+<li>Input data pipeline</li>
+<li>Model inference functionality</li>
+<li>Model inference performance on validation data</li>
+<li>Explicit scenarios expected in production (model is evaluated on a curated set of observations)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>For each part of the project, there are multiple different tools we may use:</p>
+<ol>
+<li>Planning and project step, in specific, it could be treated as the project tracking, thus, all the tracking tools can be used in the step, e.g., Confluence, YouTrack, Jira, Trello, etc..</li>
+<li>Data collection and labelling: If we are using the public dataset, we may ignore the labelling problem; however, if we are collecting and labelling our own dataset, we may consider these <a href="https://github.com/HumanSignal/awesome-data-labeling">awesome-labelling-tools</a>; the next question for the data storage and collection is the versioning problem, we may consider these tools:
+<ol>
+<li><a href="https://neptune.ai/">Neptune</a></li>
+<li><a href="https://wandb.ai/">WandB</a></li>
+<li><a href="https://dvc.org/">DVC</a></li>
+<li><a href="https://lakefs.io/">LakeFS</a></li>
+<li><a href="https://git-lfs.com/">Git LFS</a></li>
+</ol>
+</li>
+<li>Log tracing
+<ol>
+<li>We can use <code>loggings</code> or <code>tensorboard</code> to store the log to the local directory</li>
+<li>We can also use <code>wandb</code>, <code>neptune</code> and other tools to store the log to both the local directory or the cloud</li>
+</ol>
+</li>
+</ol>
+<h2 id="project-specification">Project Specification</h2>
+<p>The project specification includes two aspects:</p>
+<ol>
+<li>project files specification</li>
+<li>git branche specification</li>
+</ol>
+<h3 id="project-files-specification">Project files Specification</h3>
+<p>Here is the architecuture of a project<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<table>
+<thead>
+<tr>
+<th>Files/Catalogue</th>
+<th>Detail</th>
+<th>Required</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>README.md</td>
+<td>Instruction of the project and the folder architecture</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>train.py</td>
+<td>Model Traning and Validation</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>test.py</td>
+<td>Model Testing</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>src/{model-name}.py</td>
+<td>Statement and Source code of the Model (For single model)</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>src/{model-name}.py</td>
+<td>Statement and Source code of the Model (For multiple models)</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>src/{modules-name}/{model-name}}.py</td>
+<td>Statement and Source code of the Model (For multiple submodules &amp; single model)</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>src/{modules-name}/{model-name}.py</td>
+<td>Statement and Source code of the Model (For multiple submodules &amp; multiple models)</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>utils/loss.py</td>
+<td>Implementation of loss function</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>utils/base.py</td>
+<td>utilities file</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>data/data.py</td>
+<td>Dataset and DataLoader Implemenetation</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>data/train.txt</td>
+<td>manifest file of training set</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>data/validate.txt</td>
+<td>manifest of validation set</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>data/test.txt</td>
+<td>manifest of testing set</td>
+<td>NO</td>
+</tr>
+<tr>
+<td>experiment/{exp-name}/params.yaml</td>
+<td>configuration of the experiment</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>experiment/{exp-name}/log/</td>
+<td>folder to store the log file produced by the experiment</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>experiment/{exp-name}/model/</td>
+<td>folder to store the binary file of the trained models</td>
+<td>YES</td>
+</tr>
+<tr>
+<td>experiment/{exp-name}/result/</td>
+<td>folder to store the model output (images, csv, etc.)</td>
+<td>YES</td>
+</tr>
+</tbody>
+</table>
+<h3 id="git-branch-specification">Git Branch Specification</h3>
+<p>Every projects may face a problem: how to perform multiple experiments in parallel? We adopt the solution of git branch:</p>
+<ol>
+<li>Each experiment has a corresponding git branch</li>
+<li>Three kinds of branches:
+<ol>
+<li>Temporary branches: start with <code>TEMP_</code></li>
+<li>Long-term branches: start with <code>MAIN_</code></li>
+<li>Project Introduction/Demo branch: <code>main</code>: include the basic information of the project in the branch</li>
+</ol>
+</li>
+<li>The branches&rsquo; name should includes:
+<ol>
+<li>Main purpose of the branch, i.e. model&rsquo;s name</li>
+<li>Dataset it use: i.e., dataset&rsquo;s name</li>
+<li>Others: whether the experiment include augmentation or other configuration</li>
+</ol>
+</li>
+</ol>
+<p>Here are two examples:</p>
+<ol>
+<li><code>TEMP_PIX2PIX_DRIVE_NOAUG</code> represents a temporary branch with <code>pix2pix</code> model using <code>DRIVE</code> dataset with no augmentation in data preprocessing</li>
+<li><code>MAIN_PIX2PIX_MESSIDOR_AUG</code> represents a long-term branch with <code>pix2pix</code> model using <code>MESSIDOR</code> dataset with augmentation in  data proprocessing</li>
+</ol>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>There are some extra steps, you may check them in <a href="https://www.jeremyjordan.me/ml-projects-guide/">Jeremey Jordan&rsquo;s Blog</a>&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>For more detail, please check <a href="https://git.cklau.cc/terenceliu/specification/">CKLAU&rsquo;s GitLab - Specification</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+</content>
+
+<p>
+  
+  <a href="http://localhost:1313/tags/management/">#Management</a>
+  
+  <a href="http://localhost:1313/tags/deep-learing/">#Deep Learing</a>
+  
+  <a href="http://localhost:1313/tags/coding/">#Coding</a>
+  
+</p>
+
+  </main>
+  <footer>
+
+
+<p>
+    <span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2022102668号</a></span>
+
+&copy; 2024 <a href="http://localhost:1313/">Junjie LIU</a>
+    <a href="http://localhost:1313/feed" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+    <br>
+Tech stack: <a href="https://cloud.tencent.com/">Tencent Cloud</a> / <a href="https://cloudflare.com/">Cloudflare</a> / <a href="https://webp.se/">WebP Cloud Services</a>
+</p>
+
+</footer>
+
+    
+</body>
+
+</html>
