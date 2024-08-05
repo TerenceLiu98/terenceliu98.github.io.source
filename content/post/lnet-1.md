@@ -11,7 +11,7 @@ series: ['networking']
  
 ## Before
 
-In the previous project: [Homelab]({{< ref "/post/tech/my-homelab-1" >}} "My Homelab 2"), I listed all my devices and VPS on a table, where all the VPS own a specific public IP, and I tried to use the Wireguard to connect them into a Full-mesh intranet.
+In the previous project: [Homelab]({{< ref "/post/my-homelab-1" >}} "My Homelab 2"), I listed all my devices and VPS on a table, where all the VPS own a specific public IP, and I tried to use the Wireguard to connect them into a Full-mesh intranet.
 
 However, to investigate deeper into the network performance, I started to learn how to federate these clusters while not affecting the current usage. What's more, if I can federate this isolated network, I don't need to build separate services in different clusters. For instance, I can use a single [Prometheus](https://prometheus.io/) to monitor all the devices and no more millions of virtual interfaces :rofl: 
 

@@ -11,7 +11,7 @@ series: ['networking']
 
 ## Before
 
-In the previous project: [Homelab]({{< ref "/post/tech/lnet-1" >}} "My Personal Experimental Network"), I create a experimental network and I call it L-Net 1.0. However, I am trying to redesign the network as I am trying to maximize the usage of all the bandwidth,  route auto-correction, and manage the resources based on one machine outside the cluster. Here is the diagram:
+In the previous project: [Homelab]({{< ref "/post/lnet-1" >}} "My Personal Experimental Network"), I create a experimental network and I call it L-Net 1.0. However, I am trying to redesign the network as I am trying to maximize the usage of all the bandwidth,  route auto-correction, and manage the resources based on one machine outside the cluster. Here is the diagram:
 
 Here, as usual, I made three network areas, “East-Asia-CN” is `192.168.101.0/24` , “Southeast-Asia-HKSAR“ is `192.168.102.0/24`, and “East-Aisa-JP“ is `192.168.103.0/24`.  As you can see, I draw three routers in the diagram, but it is four, and I will explain why. For the backbone network, For Mainland China $\Leftrightarrow$ HKSAR is `10.255.101.0/24`,  Mainland China $\Leftrightarrow$ Japan is `10.255.102.0/24` and Japan $\Leftrightarrow$ HKSAR  is `10.255.103.0/24`. One more thing, I combine my Singapore server into the “Southeast-Asia-HK“ network as I only have one server in South Asia, and the combination can reduce multiple configurations. 
 

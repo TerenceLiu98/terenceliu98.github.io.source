@@ -11,7 +11,7 @@ series: ['networking']
 
 ## Before
 
-In the previous project: [Homelab]({{< ref "/post/tech/lnet-2" >}} "My Personal Experimental Network"), I upgraded my configuration on the L-Net, where I tried eBGP and iBGP for the routing exchange between different subnet.
+In the previous project: [Homelab]({{< ref "/post/lnet-2" >}} "My Personal Experimental Network"), I upgraded my configuration on the L-Net, where I tried eBGP and iBGP for the routing exchange between different subnet.
 
 However, since, there are too many interface in the backbone device. In this post, I tried to build a overlay network with VXLAN over Wireguard. 
 
