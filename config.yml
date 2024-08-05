@@ -75,10 +75,11 @@ languages:
     languageName: EN
   zh:
     languageName: 中
-    brand: 特倫蘇的日與夜
-    author: 劉駿傑
-    authorDescription: 非 「非典型」 统计系学生
-    info: 在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计 -- C. R. Rao
+    params:
+      brand: 特倫蘇的日與夜
+      author: 劉駿傑
+      authorDescription: 非 「非典型」 统计系学生
+      info: 在抽象的意义下，一切科学都是数学；在理性的世界里，所有的判断都是统计 -- C. R. Rao
     menu:
       main:
         - name: 文章
