@@ -23,6 +23,9 @@ fonttools ttLib.woff2 compress -o "fonts/$optimized" "fonts/KingHwa_OldSong.subs
 mv "fonts/$optimized" "../static/fonts/$optimized"
 cd ..
 
+# update bibliography
+bash update_bib.sh
+
 # Add changes to git.
 rm -rf public && git add .
 git commit -m "rebuilding site $(date)"
