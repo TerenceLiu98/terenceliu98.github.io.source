@@ -1,6 +1,6 @@
 baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
-theme: ["hugo-simplecite", "hugo-notice", "ladder", "hugo-semantic-web"]
+theme: ["hugo-simplecite", "hugo-notice", "cklau-theme", "hugo-semantic-web"]
 license: MIT
 licenselink: 'https://github.com/guangzhengli/hugo-theme-ladder/blob/master/LICENSE'
 description: "'CKLAU's WEBSITE'"
@@ -16,7 +16,7 @@ markup:
 
 menu:
   main:
-    - name: Posts
+    - name: Blog
       url: /post
       weight: 1
     - name: Scientia
@@ -30,6 +30,7 @@ params:
   brand: CKLAU's WEBSITE
   avatarURL: https://avatars-githubusercontent.webp.se/TerenceLiu98
   author: Junjie LIU
+  beian: 粤ICP备2022102668号
   authorDescription: Statistics Student
   info: All sciences are, in the abstract, mathematics; All judgements are, in their rationale, statistics. -- C. R. Rao
   favicon: /images/logo.svg

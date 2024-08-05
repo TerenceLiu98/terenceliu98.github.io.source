@@ -1,5 +1,5 @@
 ---
-title: "Homelab: A self-hosted GitHub Accelerator"
+title: "🧑🏿‍💻 Homelab: A self-hosted GitHub Accelerator"
 date: 2023-06-17T00:11:21+08:00
 draft: false
 math: true

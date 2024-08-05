@@ -1,5 +1,5 @@
 ---
-title: "Homelab: My Distributed Homelab"
+title: "🧑🏿‍💻 Homelab: My Distributed Homelab"
 date: 2022-07-21T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','hardware']

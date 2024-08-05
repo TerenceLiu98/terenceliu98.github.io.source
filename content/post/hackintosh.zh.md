@@ -18,15 +18,15 @@ extramaterials:
 
 ---
 
-{{< notice tip >}} 💡 For learning and communication purposes only. Commercial use is strictly prohibited. 
-
-
-此文为技术实践记录和个人学习用途，并已经删除相关文件，包括且不限 EFI 文件和镜像。 {{< /notice >}} 
-
+> 💡 For learning and communication purposes only. Commercial use is strictly prohibited. 
+> 
+> 💡 此文为技术实践记录和个人学习用途，并在实验后卸载及删除相关文件，包括且不限 EFI 文件和镜像。
 
 ## 一台 mini PC 
 
 笔者目前的工作和生活在不知不觉之中已经浸润在 iOS + iPadOS + macOS 之中，「搞机多年，归来仍是 Apple」在当年的我看来似乎未来是会一定的，也亦然实现了。而苹果公司的「金内存，银固态」策略让我这个收入尚不如 Homeless 的人抬不起头。不得已，在互联网冲浪中，冥冥之中，让我看到了这一台 mini PC：Beelink SER5 MAX，由零刻公司开发的一台巴掌小主机。具体配置如下: AMD Ryzen 7 5800H + 32GB DDR4 + 1T NVME SSD，作为一个懒人，并没有购买准系统，而 32GB 已经可以满足个人日常使用。至于系统的选择，如果可以和笔者其他设备进行「十物互联」那便是最好的[^1]。从这里，引出了 Hackintosh。
+
+<!--more-->
 
 ## 如何赶上潮流
 

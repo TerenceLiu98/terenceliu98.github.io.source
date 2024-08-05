@@ -1,5 +1,5 @@
 ---
-title: "Homelab: Don't Let the Docker escape from the ufw's control"
+title: "🧑🏿‍💻 Homelab: Don't Let the Docker escape from the ufw's control"
 date: 2022-07-21T00:11:21+08:00
 draft: false
 tags: ['homelab','networking', 'docker', 'ufw']

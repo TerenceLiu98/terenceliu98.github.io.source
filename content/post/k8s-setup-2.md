@@ -1,5 +1,5 @@
 ---
-title: "K3s/Kubernetes - From K3s to Kubernetes: Build a High availability Kubernetes Cluster with Kubeadm"
+title: "🧑🏿‍💻 K3s/Kubernetes - From K3s to Kubernetes: Build a High availability Kubernetes Cluster with Kubeadm"
 date: 2023-02-19T22:42:17+08:00
 lastmod: 2023-02-19T22:42:17+08:00
 draft: false

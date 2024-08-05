@@ -1,5 +1,5 @@
 ---
-title: "Homelab: How to build a AIO home-server"
+title: "🧑🏿‍💻 Homelab: How to build a AIO home-server"
 date: 2022-10-24T00:11:21+08:00
 draft: false
 math: true

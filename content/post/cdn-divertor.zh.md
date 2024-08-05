@@ -7,9 +7,11 @@ comment: true
 series: ["杂文"]
 ---
 
-## 前置条件
-
 本文纯属个人记录，不保证是最优解决方案，仅供参考。 对于博客的境内外 CDN 分流有很多更加优雅的方式，而我选择了最蠢的「跳转」。
+
+<!--more-->
+
+## 前置条件
 
 1. 我的静态博客是托管在 [GitHub Page](https://pages.github.com)，并且使用了 [Cloudflare](https://www.cloudflare.com) 的 CDN 服务。
 2. 我拥有一台境内服务器，并且有一个已备案域名，可以满足国内 CDN 的要求。

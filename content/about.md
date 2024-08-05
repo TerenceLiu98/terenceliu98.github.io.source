@@ -7,12 +7,13 @@ comment: false
 layout: "single"
 ---
 
-{{< notice tip >}} 💡 To check my post, please click [here(projects)](/projects) or [here(daily)](/post) {{< /notice >}} 
 
+👨‍💻 Hi, I am {{< ruby 劉駿傑 >}}Junjie Liu{{< /ruby >}}, a PhD student at Trinity College Dublin. Before that, I spent most of my time in [GHMGBA](https://english.www.gov.cn/news/202402/19/content_WS65d2b021c6d0868f4e8e422e.html): 
+<center>
+    <img src="https://32cf906.webp.li/2024/08/GHMGBA.jpg" width="80%">
+</center>
 
 <!--more-->
-
-👨‍💻 About Me:
 
 <div class="flink">
 <div class="info-list-div" >
@@ -27,7 +28,7 @@ layout: "single"
 
 ⚙️ About this site
 
-This site is powerfully built by Hugo. The Hugo's version can be checked in: [workflows/hugo.yml](https://github.com/TerenceLiu98/terenceliu98.github.io.source/blob/f8327d16f7880ec098bc56ead9f488b5ca18d104/.github/workflows/hugo.yml#L19); It is automatically built by GitHub Action and deployed on GitHub Pages, which means in some specific regions it may be suffered by the network when you are openning this site. The website theme is built based on [hugo-theme-ladder](https://github.com/guangzhengli/hugo-theme-ladder). I would like to express my gratitude to the author 🙏; the fontface I used in this site is [京華老宋体](https://zhuanlan.zhihu.com/p/637491623), a free commercial Chinese font. The discovery of this font was also a coincidence, and the choice of this font was a coincidence.
+This site is powerfully built by Hugo. The Hugo's version can be checked in: [workflows/hugo.yml](https://github.com/TerenceLiu98/terenceliu98.github.io.source/blob/f8327d16f7880ec098bc56ead9f488b5ca18d104/.github/workflows/hugo.yml#L19); It is automatically built by GitHub Action and deployed on GitHub Pages, which means in some specific regions it may be suffered by the network when you are openning this site. The website theme is built based on [hugo-theme-ladder](https://github.com/guangzhengli/hugo-theme-ladder). I would like to express my gratitude to the author 🙏; the fontface I used in this site is [京華老宋体](https://zhuanlan.zhihu.com/p/637491623), a free commercial Chinese font. The discovery of this font was also a coincidence, and the choice of this font was a coincidence. 
 
 
 

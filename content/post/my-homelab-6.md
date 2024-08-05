@@ -1,5 +1,5 @@
 ---
-title: "Homelab: My Distributed Homelab (2)"
+title: "🧑🏿‍💻 Homelab: My Distributed Homelab (2)"
 date: 2023-01-24T00:11:21+08:00
 draft: false
 math: true

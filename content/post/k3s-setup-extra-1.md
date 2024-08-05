@@ -1,5 +1,5 @@
 ---
-title: "K3s/Kubernetes - Set up a K3s Cluster with your VPS (Extra Story 1)"
+title: "🧑🏿‍💻 K3s/Kubernetes - Set up a K3s Cluster with your VPS (Extra Story 1)"
 date: 2022-10-02T10:00:00+08:00
 draft: false
 tags: ['k3s', 'kubernetes', 'docker', 'registry']
