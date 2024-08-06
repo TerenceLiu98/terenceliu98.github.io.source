@@ -18,6 +18,9 @@
 
 生活在别处，生活其实在当下。
 
+<center>
+    <img src="https://32cf906.webp.li/2024/08/GHMGBA.jpg" width="70%" alt="粵港澳大灣區圖">
+</center>
 
 🫡 更多信息：
 
@@ -31,6 +34,3 @@
 [^1]: 关于「大湾区人」的解释详见：[维基百科 - 大湾区人](https://zh.wikipedia.org/zh-hans/%E5%A4%A7%E7%81%A3%E5%8D%80%E4%BA%BA) 或 [百度百科 - 粤港澳大湾区](https://baike.baidu.com/item/粤港澳大湾区/19153589)；对于我个人而言，使用这个词仅仅是对于个人长期在珠三角「漂泊」的自嘲。
 [^2]: 原文详见微信公众号推送：[为什么没有男人能忍住在饭桌上不聊政治？](https://mp.weixin.qq.com/s/8yo_hB0-NbfkY6Coe3yatg)
 [^3]: 至今理解不了公寓里的外国人为什么煮个意粉都要用电子秤，以及做饭做成糊糊也硬要放进锅里去炒饭，可能对于他们来说，我才是外国人吧。
-
-
-https://32cf906.webp.li/2024/08/GHMGBA.jpg
