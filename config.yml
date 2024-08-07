@@ -17,8 +17,8 @@ menu:
     - name: "[Scientia]"
       url: /post/scientia
       weight: 2
-    - name: "[Friends]"
-      url: /friends
+    - name: "[Links]"
+      url: /links
       weight: 3
 
 params:
