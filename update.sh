@@ -7,6 +7,7 @@ printf "\033[0;32mDeploying updates to GitHub...\033[0m\n"
 
 find . -name "*.DS_Store" -delete
 
+<< COMMENT
 # Build the project.
 hugo # if using a theme, replace with `hugo -t <YOURTHEME>`
 
@@ -22,7 +23,7 @@ fonttools ttLib.woff2 compress -o "fonts/$optimized" "fonts/KingHwa_OldSong.subs
 
 mv "fonts/$optimized" "../static/fonts/$optimized"
 cd ..
-
+COMMENT
 # update bibliography
 bash update_bib.sh
 
