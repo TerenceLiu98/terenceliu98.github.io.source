@@ -1,8 +1,5 @@
-## 👋 你好，世界
+# 👋 你好，世界
 
-### ⚙️ 架构与笔墨
-
-本站由 Hugo 强力构建，版本号详见 [workflows/hugo.yml](https://github.com/TerenceLiu98/terenceliu98.github.io.source/blob/f8327d16f7880ec098bc56ead9f488b5ca18d104/.github/workflows/hugo.yml#L19)；由 GitHub Action 自动构建，部署在 GitHub Pages（~~因此在某些网络环境下访问可能会出现加载缓慢的现象~~）{{< sidenote >}}通过跳转方式解决{{</ sidenote >}}。
 
 
 ### 👨‍💻 关于我
@@ -22,7 +19,25 @@
     <img src="https://32cf906.webp.li/2024/08/GHMGBA.jpg" width="70%" alt="粵港澳大灣區圖">
 </center>
 
-🫡 更多信息：
+## ⚙️ 架构与政策
+
+本站由 Hugo 强力构建，版本号详见 [workflows/hugo.yml](https://github.com/TerenceLiu98/terenceliu98.github.io.source/blob/f8327d16f7880ec098bc56ead9f488b5ca18d104/.github/workflows/hugo.yml#L19)；由 GitHub Action 自动构建，部署在 GitHub Pages（~~因此在某些网络环境下访问可能会出现加载缓慢的现象~~）{{< sidenote >}}通过跳转方式解决{{</ sidenote >}}。
+
+⚠️ 注意：本站启用了 "Consent" 功能，这项功能会根据用户所在地，进行使用 cookie 的提示。这项服务是通过 *Cloudflare Zaraz* 进行统一接入和管理，一般的，本站启用 *Google Anlaytics 4* 进行用户访问来源等信息采集，使用 *WebP Cloud* 提供图片缓存服务。如下是对应的公司/服务的隐私政策：
+1. [Cloudflare](https://www.cloudflare.com/privacypolicy/)
+2. [Google Anlaytics 4](https://support.google.com/analytics/topic/2919631) 
+3. [Webp Cloud](https://webp.se/privacy-policy/)
+
+所有文章，在没有特殊提示的情况下，一般遵循 CC BY-SA 4.0 协议。由于本人学识浅薄，如发现包括但不限于事实性错误，望不吝赐教 👏🏿 。
+
+⚠️ Attention: This site has enabled the "Consent" function. This service is centrally provided *Cloudflare Zaraz*. Generally, this site uses *Google Anlaytics 4* to collect information such as user's geo-location and uses *WebP Cloud* to provide image caching services. The following are the privacy policies of the corresponding companies/services:
+1. [Cloudflare](https://www.cloudflare.com/privacypolicy/)
+2. [Google Anlaytics 4](https://support.google.com/analytics/topic/2919631)
+3. [Webp Cloud](https://webp.se/privacy-policy/)
+   
+All articles, unless specified, generally follow the CC BY-SA 4.0 agreement. Due to my limited knowledge, if you find any errors, including but not limited to factual errors, please feel free to correct me 👏🏿.
+
+## 🫡 更多信息：
 
 &nbsp; &nbsp; 📚 学术相关：[谷歌學術](https://scholar.google.com/citations?user=GaoaZ1kAAAAJ) & [简历](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
 
