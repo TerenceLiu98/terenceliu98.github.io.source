@@ -35,7 +35,7 @@
 2. [Google Anlaytics 4](https://support.google.com/analytics/topic/2919631)
 3. [Webp Cloud](https://webp.se/privacy-policy/)
    
-All articles, unless specified, generally follow the CC BY-SA 4.0 agreement. Due to my limited knowledge, if you find any errors, including but not limited to factual errors, please feel free to correct me 👏🏿.
+All articles, unless specified, generally follow the CC BY-SA 4.0 agreement. Due to my limited knowledge, if you find any errors, including but not limited to factual errors, please feel free to correct me 👏🏿
 
 ## 🫡 更多信息：
 
