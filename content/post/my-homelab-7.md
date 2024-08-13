@@ -4,6 +4,7 @@ date: 2024-08-10T00:11:21+08:00
 draft: false
 tags: ['homelab','networking','hardware', '网络', '存储', 'NAS']
 series: ['homelab']
+ads: true
 ---
 
 回到原点，又开始了一年一度的 Homelab 折腾。这一次， 打算整点「起夜」级方案 :)
