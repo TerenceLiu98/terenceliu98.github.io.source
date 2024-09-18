@@ -1,7 +1,7 @@
 baseURL: 'https://blog.cklau.cc'
 title: "特倫蘇的日與夜"
 theme: ["hugo-simplecite", "cklau-hugo-theme"]
-description: "'CKLAU's WEBSITE'"
+description: "CKLAU's WEBSITE"
 homepage: 'https://blog.cklau.cc'
 enableRobotsTXT: true
 markup:
@@ -24,6 +24,7 @@ menu:
 params:
   brand: CKLAU's WEBSITE
   avatarURL: https://avatars-githubusercontent.webp.se/TerenceLiu98
+  description: "CKLAU's WEBSITE"
   author: Junjie LIU
   beian: 粤ICP备2022102668号
   authorDescription: Statistics Student
