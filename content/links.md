@@ -13,8 +13,7 @@ comment: true
 {{< info url="https://yfqiu.netlify.app/" image="https://avatars-githubusercontent.webp.se/yfqiu98" name="Yifu Qiu" descr="PhD candidate in The University of Edinburgh and Cambridge University, 2023 Apple Scholars" >}} 
 {{< info url="https://www.drjchn.com/" image="https://avatars-githubusercontent.webp.se/DRJ31" name="Reijie Deng" descr="Full-stack developer" >}} 
 {{< info url="https://www.lzc.app/" image="https://avatars-githubusercontent.webp.se/lzcapp" name="Laurence Luo" descr="Developer, geek" >}} 
-{{< info url="https://9baka.moe/" image="https://avatars-githubusercontent.webp.se/ninekirin" name="Kirin Baka" descr="New generation UICHCC bellwether" >}} 
-{{< info url="https://www.haotian22.top/" image="https://avatars-githubusercontent.webp.se/HaoTian22" name="Hao Tian" descr="Student in UIC, studying Media and Communication Studies" >}} 
+{{< info url="https://9baka.moe/" image="https://avatars-githubusercontent.webp.se/ninekirin" name="Kirin Baka" descr="New generation UICHCC bellwether" >}}  
 {{< info url="https://blog.steven53.top/" image="https://blog.steven53.top/img/avatar_hue48002d6542a472818c02b5f0bee8ed1_780708_300x0_resize_box_3.png" name="Steven Wu" descr="NULL" >}} 
 {{< info url="https://zlicdt.github.io" image="https://zlicdt.github.io/img/avatar.png" name="zlicdt" descr="なに？？" >}}
 {{< info url="https://chrdsite.rinchord.studio/" image="https://chrdsite.rinchord.studio/content/images/size/w256h256/format/jpeg/2024/09/1000023288.jpg" name="渺宙凛娴" descr="渺之舟，宇之奏" >}}
