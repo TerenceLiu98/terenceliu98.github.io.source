@@ -5,7 +5,7 @@ draft: false
 comment: true
 ---
 
-## 🤓 Blogs that I read 
+## 🤓 Blogs that I might read 
 
 {{< info url="https://yhi.moe" image="https://avatars-githubusercontent.webp.se/jyhi" name="Junde Yhi" descr="Proficient in computer tech (specializing in IoT), open source evangelist." >}} 
 {{< info url="https://ecwuuuuu.com/" image="https://avatars-githubusercontent.webp.se/ECWU" name="ECWU" descr="Assistant Instructur, PhD student in  🇮🇪 UCD,  focusing on NLP, Medical imaging, & cloud-native" >}} 
@@ -15,9 +15,5 @@ comment: true
 {{< info url="https://www.lzc.app/" image="https://avatars-githubusercontent.webp.se/lzcapp" name="Laurence Luo" descr="Developer, geek" >}} 
 {{< info url="https://9baka.moe/" image="https://avatars-githubusercontent.webp.se/ninekirin" name="Kirin Baka" descr="New generation UICHCC bellwether" >}} 
 {{< info url="https://www.haotian22.top/" image="https://avatars-githubusercontent.webp.se/HaoTian22" name="Hao Tian" descr="Student in UIC, studying Media and Communication Studies" >}}  
-
-
-🫡  互加友链？请在下面评论区提供如下信息：
-1. 希望被呈现的名称
-2. 博客 URL 
-3. 一句话介绍自己
+{{< info url="https://zlicdt.github.io" image="https://zlicdt.github.io/img/avatar.png" name="zlicdt" descr="なに？？" > }}
+{{< info url="https://chrdsite.rinchord.studio/" image="https://chrdsite.rinchord.studio/content/images/size/w256h256/format/jpeg/2024/09/1000023288.jpg" name="渺宙凛娴" descr="渺之舟，宇之奏" > }}
