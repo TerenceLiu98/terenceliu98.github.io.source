@@ -585,6 +585,12 @@ stream {
 至此，我们已经完成了从 client 到 entrance 再到 source 的两步走流程。当然，选择 nginx 的原因不仅仅是 TCP 加速，更是因为可以根据域名进行不同后端的分流，这些应该是 IPTABLES/REALM 这些工具无法达到的。而至于为什么不用 HAProxy 则是因为本人不善于使用它，是我的错。
 
 
+## 参考
+
+1. [Debian12/Ubuntu24.04 安装 PowerDNS 和 PowerDNS-Admin 自建权威 DNS 教程](https://u.sb/debian-install-powerdns/)
+2. [使用 PowerDNS 的 Lua 功能自建分地区解析 GeoDNS](https://lantian.pub/article/modify-website/powerdns-lua-diy-geodns.lantian/)
+
+
 [^1]: 其实也是因为没有 AS 号在手，不然就是「我选择自建 Anycast DNS 服务器」了 ：）
 [^2]: 本文中所提及的所有 IP 地址（包括 IPV4 和 IPV6）均是通过 [IPVOID](https://www.ipvoid.com/) 随机生成
 [^3]: 由此可以看出，如果域名本身不需要作为自身的 NS 服务器，则无需设置胶水纪录，即，可以省略这一步
