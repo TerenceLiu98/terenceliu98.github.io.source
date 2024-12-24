@@ -565,8 +565,8 @@ sudo systemctl enable --now nginx
 ```shell
 stream {
     upstream cluster {
-        server 192.168.101.151:443;
-        server 192.168.101.152:443;
+        server 192.168.101.101:443;
+        server 192.168.101.102:443;
     }
 
     map $ssl_preread_server_name $upstream_server {
@@ -583,6 +583,8 @@ stream {
 ```
 
 至此，我们已经完成了从 client 到 entrance 再到 source 的两步走流程。当然，选择 nginx 的原因不仅仅是 TCP 加速，更是因为可以根据域名进行不同后端的分流，这些应该是 IPTABLES/REALM 这些工具无法达到的。而至于为什么不用 HAProxy 则是因为本人不善于使用它，是我的错。
+
+回到集群里，我们这个时候就可以设置 `ingress-nginx-a` 和 `ingress-nginx-b` 两个 ingress-controller，分别对应 `192.168.101.101` 和 `192.168.101.102` 两个 External IP。做到任意一个宕机都可以随时切换。
 
 
 ## 参考
