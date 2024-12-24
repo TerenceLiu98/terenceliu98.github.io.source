@@ -4,9 +4,9 @@
 
 ### 👨‍💻 关于我 - About Me
 
-我是{{< ruby Junjie Liu >}}劉駿傑{{< /ruby >}}，一个不太懂概率/统计的概率/统计学生，目前正在从事社会科学（政治科学）方面的研究。这里我的个人网站，包括但不限于学术相关的分享、{{< ruby causerie >}}个人生活感悟{{< /ruby >}}。
+我是{{< ruby Junjie Liu >}}刘骏杰{{< /ruby >}}/劉駿傑，一个不太懂概率/统计的概率/统计学生，目前正在从事社会科学（政治科学）方面的研究。这里我的个人网站，包括但不限于学术相关的分享、{{< ruby causerie >}}个人生活感悟{{< /ruby >}}。
 
-I am {{< ruby Junjie Liu >}}刘骏杰/劉駿傑{{< /ruby >}}, working on social science (Political Science) research with statistics modelling. This is my personal website. The content of this blog includes bot not limited to academic sharing and daily life. While you can see, I may write the post in Chinese and English, but not simultaneously (except this page) :)
+I am 刘骏杰/劉駿傑, working on social science (Political Science) research with statistics modelling. This is my personal website. The content of this blog includes bot not limited to academic sharing and daily life. While you can see, I may write the post in Chinese and English, but not simultaneously (except this page) :)
 
 <!--more-->
 
@@ -22,7 +22,7 @@ For now, I am living in Dublin, as a student who spent nearly 7 years on statist
 Back to the daily, life is not all study and work, as well as beer and skittles.  Life Is Elsewhere, as it happens, life is the road we walk over.
 
 <center>
-    <img src="https://32cf906.webp.li/2024/08/GHMGBA.jpg" width="70%" alt="粵港澳大灣區圖">
+    <img src="https://32cf906.webp.li/2024/08/GHMGBA.jpg" width="65%" alt="This is the Greater Bay Area (粵港澳大灣區)">
 </center>
 
 ## ⚙️ 架构与政策
