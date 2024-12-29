@@ -29,7 +29,7 @@ In this section, we will introduce the foundation of IF in mathematical aspect. 
 
 $$P\_{\epsilon} = (1 - \epsilon)P + \epsilon \cdot \delta\_{z\_i}$$
 
-where $P$ is the original distribution, $\delta\_{z\_i}$ is dirac delta distribution {{< sidenote >}}where the dirac delta distribution assigns probability $1$ to $z\_i$ while $0$ to all other elements. As the retriction of we only focus on the single datapoint or perturbation{{</ sidenote >}} at $z\_i$  and $\epsilon$ si the weight of the pertubation, with $\epsilon \to 0$. Thus, the **Influence Function(IF)** of $z\_i$ is defined as the derivative({{< sidenote >}}Gateaux derivative{{</ sidenote >}}) of $T(P)$ w.r.t $\epsilon$, evaluate at $\epsilon = 0$:
+where $P$ is the original distribution, $\delta\_{z\_i}$ is dirac delta distribution {{< sidenote >}}where the dirac delta distribution assigns probability $1$ to $z\_i$ while $0$ to all other elements. As the retriction of we only focus on the single datapoint or perturbation{{</ sidenote >}} at $z\_i$  and $\epsilon$ si the weight of the pertubation, with $\epsilon \to 0$. Thus, the **Influence Function(IF)** of $z\_i$ is defined as the derivative{{< sidenote >}}Gateaux derivative{{</ sidenote >}} of $T(P)$ w.r.t $\epsilon$, evaluate at $\epsilon = 0$:
 
 \begin{equation}
     \textbf{IF}(z\_i;T,P) = \lim\_{\epsilon \to 0} \frac{T(P\_{\epsilon}) - T(P)}{\epsilon}
