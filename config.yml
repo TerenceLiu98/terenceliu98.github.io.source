@@ -15,11 +15,14 @@ menu:
       url: /post
       weight: 1
     - name: "[Scientia]"
-      url: /post/scientia
+      url: /scientia
       weight: 2
+    - name: "[Projects]"
+      url: /projects
+      weight: 3
     - name: "[Links]"
       url: /links
-      weight: 3
+      weight: 4
 
 params:
   brand: CKLAU's WEBSITE
