@@ -6,6 +6,20 @@ comment: true
 math: true
 ---
 
+{{< research_card
+    title="Knowledge Distillation with Adapted Weight"
+    conference="Statistics(Just Accepted), 2025"
+    authors="Sirong Wu, Xi Luo, Junjie Liu, Yuhui Deng"
+    pdf="https://arxiv.org/abs/2501.02705"
+    doi=" 10.1080/02331888.2025.2451944"
+>}}
+
+<center>
+    <img src="https://32cf906.webp.li/2025/01/kd-aif.png" width="65%" alt="KD-AIF Framework">
+</center>
+We propose the Knowledge Distillation with Adaptive Influence Weight (KD-AIF) framework which leverages influence functions from robust statistics to assign weights to training data, rounded in the four key SAFE principles: Sustainability, Accuracy, Fairness, and Explainability. This novel approach not only optimizes distillation but also increases transparency by revealing the significance of different data. The exploration of various update mechanisms within the KD-AIF framework further elucidates its potential to significantly improve learning efficiency and generalization in student models, marking a step toward more explainable and deployable Large Models.
+{{< /research_card >}}
+
 
 {{< research_card
     title="VSG-GAN: A High Fidelity Image Synthesis Method with Semantic Manipulation in Retinal Fundus Image"
@@ -20,7 +34,7 @@ math: true
     <img src="https://32cf906.webp.li/2025/01/generator-vsggan.png" width="65%" alt="Generator of VSG-GAN">
 </center>
 
-In recent years, advancements in retinal image analysis, driven by machine learning and deep learning techniques, have enhanced disease detection and diagnosis through automated feature extraction. However, challenges persist, including limited data set diversity due to privacy concerns and imbalanced sample pairs, hindering effective model training. To address these issues, we introduce the vessel and style guided generative adversarial network (VSG-GAN), an innovative algorithm building upon the foundational concept of GAN. In VSG-GAN, a generator and discriminator engage in an adversarial process to produce realistic retinal images. Our approach decouples retinal image generation into distinct modules: the vascular skeleton and background style. Leveraging style transformation and GAN inversion, our proposed hierarchical variational autoencoder module generates retinal images with diverse morphological traits. In addition, the spatially adaptive denormalization module ensures consistency between input and generated images. We evaluate our model on MESSIDOR and RITE data sets using various metrics, including structural similarity index measure, inception score, Fréchet inception distance, and kernel inception distance. Our results demonstrate the superiority of VSG-GAN, outperforming existing methods across all evaluation assessments. This underscores its effectiveness in addressing data set limitations and imbalances. Our algorithm provides a novel solution to challenges in retinal image analysis by offering diverse and realistic retinal image generation. Implementing the VSG-GAN augmentation approach on downstream diabetic retinopathy classification tasks has shown enhanced disease diagnosis accuracy, further advancing the utility of machine learning in this domain.
+In VSG-GAN, a generator and discriminator engage in an adversarial process to produce realistic retinal images. Our approach decouples retinal image generation into distinct modules: the vascular skeleton and background style. Leveraging style transformation and GAN inversion, our proposed hierarchical variational autoencoder module generates retinal images with diverse morphological traits. In addition, the spatially adaptive denormalization module ensures consistency between input and generated images.
 
 {{< /research_card >}}
 
@@ -33,7 +47,7 @@ In recent years, advancements in retinal image analysis, driven by machine learn
     github="https://github.com/Bayes-Cluster/MESOCP"
 >}}
 
-The study of uncertainty is one of the essential parts of statistics, but not easy for students to understand especially in elementary statistical classes. With the rise of new technologies and media, it is worthwhile to think about how to promote innovation in class teaching combining these new technologies with online platforms. In this article, we develop a collection of dynamic interactive web-based applications with Shiny package based on our textbook “Modern Elementary Statistics”. The online and interactive teach-assisted platform seeks to facilitate conceptual understanding of the main aspects of elementary statistics, such as data description, statistical distributions, statistical inferences, and regression analysis. As the platform is affiliated with the textbook, it can ease the teaching and learning of important theorems and techniques for introductory probability and statistics.
+The study of uncertainty is one of the essential parts of statistics, but not easy for students to understand especially in elementary statistical classes. With the rise of new technologies and media, it is worthwhile to think about how to promote innovation in class teaching combining these new technologies with online platforms. In this article, we develop a collection of dynamic interactive web-based applications with Shiny package based on our textbook “Modern Elementary Statistics”. 
 
 {{< /research_card >}}
 

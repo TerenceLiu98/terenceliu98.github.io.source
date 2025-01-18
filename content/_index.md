@@ -45,11 +45,11 @@ All articles, unless specified, generally follow the CC BY-SA 4.0 agreement. Due
 
 ## 🫡 更多信息：
 
-&nbsp; &nbsp; 📚 学术相关：[谷歌學術](https://scholar.google.com/citations?user=GaoaZ1kAAAAJ) & [简历](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
+&nbsp; &nbsp; 📚 学术相关：[谷歌學術/Google Scholar](https://scholar.google.com/citations?user=GaoaZ1kAAAAJ) & [简历/Résumé](https://terencelau-my.sharepoint.com/:b:/g/personal/terencelau_terencelau_onmicrosoft_com/ESH1R1joUSxOghfIGc1r9-UBL36zElJeNgYwazTSi7LNog?e=Ecmvdy)
 
-&nbsp; &nbsp; 📫 邮箱: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
+&nbsp; &nbsp; 📫 邮箱/Email: [bWVAY2tsYXUuY2M=](mailto:bWVAY2tsYXUuY2M=)
 
-&nbsp; &nbsp; 🔑 GPG 公钥：`BDF4 7D3A 6BE5 17A6 18E8 6CC8 0724 485A 2A49 EC40`
+&nbsp; &nbsp; 🔑 GPG 公钥 / GPG PubKey：`BDF4 7D3A 6BE5 17A6 18E8 6CC8 0724 485A 2A49 EC40`
 
 [^0]: 这里的分区是指英文版面下的分区;如有需要，中文版面也会分区，这就是后话了。
 [^1]: 关于「大湾区人」的解释详见：[维基百科 - 大湾区人](https://zh.wikipedia.org/zh-hans/%E5%A4%A7%E7%81%A3%E5%8D%80%E4%BA%BA) 或 [百度百科 - 粤港澳大湾区](https://baike.baidu.com/item/粤港澳大湾区/19153589)；对于我个人而言，使用这个词仅仅是对于个人长期在珠三角「漂泊」的自嘲。
