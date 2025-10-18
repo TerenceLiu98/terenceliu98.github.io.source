@@ -13,14 +13,15 @@ math: true
     pdf="https://arxiv.org/abs/2501.01284"
     doi=""
 >}}
-<center>
-    
-</center>
-This study introduces a novel framework for analyzing and mitigating media bias by tracing partisan stances to their linguistic roots in emotional language. We posit that partisan bias is not merely an abstract stance but materializes as quantifiable 'emotional fingerprints' within news texts. These fingerprints are systematically measured using the Valence-Arousal-Dominance (VAD) framework, allowing us to decode the affective strategies behind partisan framing. Our analysis of the Allsides dataset confirms this hypothesis, revealing distinct and statistically significant emotional fingerprints for left, centre, and right-leaning media. Based on this evidence-driven approach, we then propose a computational approach to mitigation through NeutraSum, a model designed to neutralise these identified emotional patterns. By explicitly targeting the VAD characteristics of biased language, NeutraSum generates summaries that are not only coherent but also demonstrably closer to an emotionally neutral baseline. Experimental results validate our framework: NeutraSum successfully erases the partisan emotional fingerprints from its summaries, achieving a demonstrably lower emotional bias score than other models. This work pioneers a new path for bias mitigation, shifting the focus from treating symptoms (political labels) to addressing the cause: the emotional encoding of partisan bias in language.
+
+This study introduces a novel framework for analyzing and mitigating media bias by tracing partisan stances to their linguistic roots in emotional language. We posit that partisan bias is not merely an abstract stance but materializes as quantifiable 'emotional fingerprints' within news texts. These fingerprints are systematically measured using the Valence-Arousal-Dominance (VAD) framework, allowing us to decode the affective strategies behind partisan framing. Our analysis of the Allsides dataset confirms this hypothesis, revealing distinct and statistically significant emotional fingerprints for left, centre, and right-leaning media. Based on this evidence-driven approach, we then propose a computational approach to mitigation through NeutraSum, a model designed to neutralise these identified emotional patterns. By explicitly targeting the VAD characteristics of biased language, NeutraSum generates summaries that are not only coherent but also demonstrably closer to an emotionally neutral baseline. Experimental results validate our framework: NeutraSum successfully erases the partisan emotional fingerprints from its summaries, achieving a demonstrably lower emotional bias score than other models. This work pioneers a new path for bias mitigation, shifting the focus from treating symptoms (political labels) to addressing the cause: the emotional encoding of partisan bias in language. 
+
+<i><u>We will update the Arxiv version as soon as possible</u></i>
+{{< /research_card >}}
 
 {{< research_card
     title="Knowledge Distillation with Adapted Weight"
-    conference="Statistics(Just Accepted), 2025"
+    conference="Statistics, 2025"
     authors="Sirong Wu, Xi Luo, Junjie Liu, Yuhui Deng"
     pdf="https://arxiv.org/abs/2501.02705"
     doi=" 10.1080/02331888.2025.2451944"
@@ -78,7 +79,7 @@ The study analyzes stroke risk factors in Shanxi Province using machine learning
 {{< research_card
     title="A variant RSA acceleration with parallelisation"
     conference="International Journal of Parallel, Emergent and Distributed Systems, 2021"
-    authors="Junjie Liu, Shixin Xu, Ping He, Sirong Wu, Xi Luo, Yuhui Deng, Huaxiong Huang"
+    authors="Junjie Liu, Kang-Too Tsang, Yuhui Deng"
     pdf="https://arxiv.org/abs/2111.11924"
     doi=" 10.1080/17445760.2021.2024535"
 >}}
