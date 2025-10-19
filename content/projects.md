@@ -7,15 +7,17 @@ math: true
 ---
 
 {{< research_card
-    title="Tracing Partisan Bias to Its Emotional Fingerprints: A Computational Approach to Mitigation"
+    title="🎭 Tracing Partisan Bias to Its Emotional Fingerprints: A Computational Approach to Mitigation"
     conference="IEEE International Conference on Big Data, 2025"
     authors="unjie Liu, Xi Luo, Sirong Wu, Gengchen Sun, Yuhui Deng"
     pdf="https://arxiv.org/abs/2501.01284"
     doi=""
 >}}
-
+<center>
+    <img src="https://32cf906.webp.li/2025/10/CoT-revise.png" width="90%" alt="">
+</center>
 This study introduces a novel framework for analyzing and mitigating media bias by tracing partisan stances to their linguistic roots in emotional language. We posit that partisan bias is not merely an abstract stance but materializes as quantifiable 'emotional fingerprints' within news texts. These fingerprints are systematically measured using the Valence-Arousal-Dominance (VAD) framework, allowing us to decode the affective strategies behind partisan framing. Our analysis of the Allsides dataset confirms this hypothesis, revealing distinct and statistically significant emotional fingerprints for left, centre, and right-leaning media. Based on this evidence-driven approach, we then propose a computational approach to mitigation through NeutraSum, a model designed to neutralise these identified emotional patterns. By explicitly targeting the VAD characteristics of biased language, NeutraSum generates summaries that are not only coherent but also demonstrably closer to an emotionally neutral baseline. Experimental results validate our framework: NeutraSum successfully erases the partisan emotional fingerprints from its summaries, achieving a demonstrably lower emotional bias score than other models. This work pioneers a new path for bias mitigation, shifting the focus from treating symptoms (political labels) to addressing the cause: the emotional encoding of partisan bias in language. 
-
+<br>
 <i><u>We will update the Arxiv version as soon as possible</u></i>
 {{< /research_card >}}
 
