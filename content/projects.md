@@ -32,7 +32,7 @@ math: true
     conference="IEEE International Conference on Big Data"
     year="2025"
     authors="Junjie Liu, Xi Luo, Sirong Wu, Gengchen Sun, Yuhui Deng"
-    image="https://32cf906.webp.li/2025/10/CoT-revise.png"
+    image="https://32cf906.webp.li/2026/04/tracing-partisan-bias.png"
     pdf="https://arxiv.org/abs/2501.01284"
 >}}
 
@@ -41,7 +41,7 @@ math: true
     conference="Statistics"
     year="2025"
     authors="Sirong Wu, Xi Luo, Junjie Liu, Yuhui Deng"
-    image="https://32cf906.webp.li/2025/01/kd-aif.png"
+    image="https://32cf906.webp.li/2026/04/kd-aif.png"
     pdf="https://arxiv.org/abs/2501.02705"
     doi="https://doi.org/10.1109/BigData66926.2025.11402001"
 >}}
@@ -81,6 +81,7 @@ math: true
     conference="International Journal of Parallel, Emergent and Distributed Systems"
     year="2021"
     authors="Junjie Liu, Kang-Too Tsang, Yuhui Deng"
+    image="https://32cf906.webp.li/2026/04/pmkrsa.png"
     pdf="https://arxiv.org/abs/2111.11924"
     doi="https://doi.org/10.1080/17445760.2021.2024535"
 >}}
