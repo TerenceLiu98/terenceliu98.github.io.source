@@ -6,8 +6,6 @@ comment: true
 math: true
 ---
 
-## Publications
-
 {{< research_card
     title="🎭 Tracing Partisan Bias to Its Emotional Fingerprints: A Computational Approach to Mitigation"
     conference="IEEE International Conference on Big Data"
@@ -66,13 +64,11 @@ math: true
     doi="https://doi.org/10.1080/17445760.2021.2024535"
 >}}
 
-## Working Papers
-
-<!--
+<!-- Working paper example (add status="working" to get an orange tag):
 {{</* research_card
     status="working"
     title="Your working paper title"
-    conference="Target venue (e.g., Under review at ...)"
+    conference="Under review at ..."
     year="2026"
     authors="..."
     image="..."
