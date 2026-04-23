@@ -9,6 +9,14 @@ series: ['XAI']
 bibFile: /content/post/scientia/machine-learning/bib.json
 ---
 
+## TL;DR
+
+- Mechanistic interpretability of transformers has matured along **three axes**: *states* (Logit / Tuned Lens, probing), *causality* (activation patching, ACDC, feature circuits), and *contrastive states* (RepE, CAA, steering vectors). Most interpretability blogs cover the first three.
+- A **fourth lineage** has been quietly developing in the dynamical-systems community — block-Jacobian spectra, mean-field/Vlasov limits, phase portraits, Langevin/Fokker–Planck fits, Koopman/DMD, Liang–Kleeman information flow — but it studies the residual stream **unconditionally**, as background, not under task contrasts.
+- The **missing fourth axis** is *differential transition operators*: ask not "what state does the model represent" or "which components fire", but "how does the layer-$\ell$ update map $f\_\ell$ change between two task conditions?" Object from Axis 4, framing from Axes 2/3 — nobody has explicitly bridged them.
+- The cross-cutting issue: there is **no unified pathway-share metric** ("how much of the work at this layer goes through attention vs MLP") that is comparable across tasks and across model scales. That metric naturally lives on the *transition*, not the *state* — which is another way of saying the missing axis is missing for an operational reason, not a taxonomical one.
+- **Audience:** someone who has read the IOI paper and Logit Lens, but not the dynamics literature. The dynamics section is where this post adds the most value.
+
 ## Before
 
 Most interpretability blog posts walk the reader through a list of methods in roughly chronological order — Logit Lens first, then activation patching, then ACDC, then sparse autoencoders, then steering vectors. After reading them you know what each method is *called*, but you don't really know *what question each method commits to answering*. The literature is small enough that the methods recombine, and the chronological ordering flattens what is actually going on.
@@ -19,7 +27,7 @@ This post is for someone who has read the IOI paper {{< cite "wang2023ioi" >}} a
 
 ## Axis 1 — States: what is linearly there, and at what depth?
 
-The oldest interpretability tradition for transformers is **state readout**. Take the hidden activation at some intermediate layer $\ell$, project it back into vocabulary space, and read off what the model "thinks" it is going to say at that depth. nostalgebraist's Logit Lens is the canonical version: apply the unembedding matrix $W\_U$ directly to the residual stream $h\_\ell$, and look at the top-k tokens of $\text{softmax}(W\_U h\_\ell)$. The result is surprisingly informative — by mid-depth the residual stream's top tokens already concentrate on plausible continuations, which is itself a non-trivial fact about how the model builds answers.
+The oldest interpretability tradition for transformers is **state readout**. Take the hidden activation at some intermediate layer $\ell$, project it back into vocabulary space, and read off what the model "thinks" it is going to say at that depth. nostalgebraist's [Logit Lens post on LessWrong (2020)](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens) is the canonical version: apply the unembedding matrix $W\_U$ directly to the residual stream $h\_\ell$, and look at the top-k tokens of $\text{softmax}(W\_U h\_\ell)$. The result is surprisingly informative — by mid-depth the residual stream's top tokens already concentrate on plausible continuations, which is itself a non-trivial fact about how the model builds answers.
 
 The trouble is that Logit Lens implicitly assumes the basis at every layer is *the same* basis the unembedding was trained on. That is only approximately true. **Tuned Lens** {{< cite "belrose2023tunedlens" >}} fixes this with a small affine probe $A\_\ell$ trained per layer so that $\text{softmax}(W\_U A\_\ell h\_\ell)$ matches the final-layer distribution; the lens becomes calibrated rather than naive. Linear probing is the same family of idea pushed further: train a small classifier on top of $h\_\ell$ to recover any property you care about — sentiment, syntax, factual recall, position, the answer to a multiple-choice question — and ask at which depth the property becomes linearly decodable.
 
@@ -59,7 +67,9 @@ where $f\_{\ell}$ is whatever the $\ell$-th block computes (attention + MLP, wit
 
 - **Stochastic / Fokker–Planck fits.** Sarfati et al. fit a Langevin-type model
 $$dh = -\nabla U(h)\,d\ell + \sigma\,dW\_\ell$$
-to the residual-stream evolution, recovering an effective potential $U(h)$ whose minima correspond to high-confidence answers. This is the only thread that explicitly treats forward depth as an **integration time**, with the corresponding free-energy / potential-landscape vocabulary that comes for free.
+to the residual-stream evolution, recovering an effective potential $U(h)$ whose minima correspond to high-confidence answers. The picture this gives you, if you have not seen it before, is genuinely useful: **forward depth is integration time** (each layer is one step of an SDE rather than an arbitrary computation), the residual stream **flows downhill on a potential landscape** $U(h)$, and the equilibrium distribution at any depth has the Boltzmann form $p(h) \propto e^{-U(h)/T}$ — so the model's softmax confidence is reinterpreted as a *temperature on the basins of $U$*. Equivalently, the time-evolution of the *distribution* over residual streams obeys the Fokker–Planck equation
+$$\partial\_\ell\,p(h, \ell) = \nabla \cdot \bigl(p\,\nabla U\bigr) + \tfrac{\sigma^{2}}{2}\nabla^{2} p,$$
+which is the dual, distributional view that Vlasov / mean-field analyses operate in. This is the only thread in the lineage that explicitly treats depth as integration time, and it brings free-energy and potential-landscape vocabulary along with it — which is the kind of vocabulary interpretability is going to need once it starts asking *transition*-level questions.
 
 - **Operator-theoretic methods (Koopman, DMD).** Approaches in the spirit of ATO apply Dynamic Mode Decomposition to the layer-by-layer activations to extract a *linear* operator that best explains the (nonlinear) state evolution. The Koopman framing is powerful precisely because it converts a nonlinear dynamical question into a linear *spectral* one — modes, frequencies, decay rates — which is exactly the structure that interpretability is starving for.
 
@@ -105,6 +115,19 @@ What we do *not* have today is a unified pathway-share metric — one number per
 If you have spent your time reading the canonical interpretability blogs — Logit Lens, IOI, ACDC, the SAE papers, the steering-vector posts — your mental model of the field is probably organized by *method*. I think the more useful organization is by *what the method commits to explaining*: states, causality, contrastive states, or transitions. The first three are mature. The fourth — dynamics — has a deep, careful, mostly-unread literature attached to it, but that literature studies the network *unconditionally*, which is exactly the thing that interpretability does not need.
 
 If I had to place one bet on what the next genuinely interesting interpretability tool will look like, it would be a Koopman-style (or Jacobian-spectrum, or Liang–Kleeman) analysis run **contrastively** across two task conditions, and reported as a per-layer, per-pathway *differential* operator. The math is sitting on the shelf. The question is whether anyone will pick it up before the next round of "we patched some heads on a new task" papers.
+
+## Further Reading (Community Posts)
+
+A lot of the most useful mechanistic-interpretability material lives outside conventional venues — LessWrong, the Alignment Forum, Anthropic's transformer-circuits.pub, Neel Nanda's blog. Some posts I keep coming back to:
+
+- **nostalgebraist (2020), [*Interpreting GPT: the Logit Lens*](https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens).** The original Logit Lens post. Read this first if you have not — most of Axis 1 is a refinement of the empirical observation made here.
+- **Anonymous, [*SAE Training Dataset Influence in Feature Matching and a Hypothesis on Position Features*](https://www.lesswrong.com/posts/ATsvzF77ZsfWzyTak/dataset-sensitivity-in-feature-matching-and-a-hypothesis-on-1).** A nice reminder that *which dataset you train your SAE on* changes which features it discovers — i.e. SAE features are not a property of the model alone, but of the (model, dataset) pair. Worth reading because it shows that even "model-internal" objects are silently conditioned on data, which is exactly the contrast/conditioning move I am pushing for in Axis 4.
+- **Elhage et al., [*A Mathematical Framework for Transformer Circuits*](https://transformer-circuits.pub/2021/framework/index.html) (Anthropic, 2021).** The bilinear / rank decomposition that makes the QK-OV picture of attention legible; the conceptual scaffolding most subsequent circuit papers borrow from.
+- **Olsson et al., [*In-context Learning and Induction Heads*](https://transformer-circuits.pub/2022/in-context-learning-and-induction-heads/index.html) (Anthropic, 2022).** The induction-head story; useful as a worked example of "we found the mechanism" at small scale, and a useful baseline for asking when that picture stops working at larger scale.
+- **Neel Nanda, [*A Comprehensive Mechanistic Interpretability Explainer & Glossary*](https://www.neelnanda.io/mechanistic-interpretability/glossary).** Probably the single best entry point if you are landing in this field cold.
+- **Neel Nanda, [*How To Become A Mechanistic Interpretability Researcher*](https://www.lesswrong.com/posts/jP9KDyMkchuv6tHwm/how-to-become-a-mechanistic-interpretability-researcher) (2025).** A staged curriculum and career guide rather than a technical post. If you are reading this blog because you want to *do* mech-interp, not just understand the literature, this is the practical companion piece — what to learn, in what order, how to find mentorship, how to ship work.
+
+If you only have time for one of these, read nostalgebraist's Logit Lens post — almost everything in Axis 1 is downstream of it.
 
 ## Reference
 
