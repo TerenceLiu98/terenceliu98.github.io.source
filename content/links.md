@@ -16,4 +16,3 @@ comment: true
 {{< info url="https://9baka.moe/" image="https://avatars-githubusercontent-webp.webp.se/u/29482388?v=4" name="Kirin Baka" descr="New generation UICHCC bellwether" >}}  
 {{< info url="https://blog.steven53.top/" image="https://blog.steven53.top/img/avatar_hue48002d6542a472818c02b5f0bee8ed1_780708_300x0_resize_box_3.png" name="Steven Wu" descr="NULL" >}} 
 {{< info url="https://zlicdt.github.io" image="https://zlicdt.github.io/img/avatar.png" name="zlicdt" descr="なに？？" >}}
-{{< info url="https://chrdsite.rinchord.studio/" image="https://chrdsite.rinchord.studio/content/images/size/w256h256/format/jpeg/2024/09/1000023288.jpg" name="渺宙凛娴" descr="渺之舟，宇之奏" >}}
