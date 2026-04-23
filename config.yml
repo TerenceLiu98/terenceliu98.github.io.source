@@ -1,13 +1,23 @@
 baseURL: 'https://blog.cklau.cc'
+languageCode: 'en'
 title: "特倫蘇的日與夜"
 theme: ["hugo-simplecite", "cklau-hugo-theme"]
-description: "CKLAU's WEBSITE"
+description: "特倫蘇 (Junjie Liu / CKLAU) 的個人網站——統計、機器學習研究筆記、論文與生活記錄。"
 homepage: 'https://blog.cklau.cc'
 enableRobotsTXT: true
+enableGitInfo: true
 markup:
   goldmark:
     renderer:
       unsafe: true
+
+minify:
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
+    css:
+      precision: 2
 
 menu:
   main:
@@ -27,8 +37,10 @@ menu:
 params:
   brand: CKLAU's WEBSITE
   avatarURL: https://avatars-githubusercontent.webp.se/TerenceLiu98
-  description: "CKLAU's WEBSITE"
+  description: "特倫蘇 (Junjie Liu / CKLAU) 的個人網站——統計、機器學習研究筆記、論文與生活記錄。"
   author: Junjie LIU
+  images:
+    - https://avatars-githubusercontent.webp.se/TerenceLiu98
   beian: 粤ICP备2022102668号
   authorDescription: Statistics Student
   info: All sciences are, in the abstract, mathematics; All judgements are, in their rationale, statistics. -- C. R. Rao
