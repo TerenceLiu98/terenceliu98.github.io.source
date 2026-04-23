@@ -15,7 +15,7 @@ math: true
     authors="Junjie Liu, Xi Luo, Sirong Wu, Gengchen Sun, Yuhui Deng"
     image="https://32cf906.webp.li/2025/10/CoT-revise.png"
     pdf="https://arxiv.org/abs/2501.01284"
-/>}}
+>}}
 
 {{< research_card
     title="Knowledge Distillation with Adapted Weight"
@@ -25,7 +25,7 @@ math: true
     image="https://32cf906.webp.li/2025/01/kd-aif.png"
     pdf="https://arxiv.org/abs/2501.02705"
     doi="https://doi.org/10.1080/02331888.2025.2451944"
-/>}}
+>}}
 
 {{< research_card
     title="VSG-GAN: A High Fidelity Image Synthesis Method with Semantic Manipulation in Retinal Fundus Image"
@@ -36,7 +36,7 @@ math: true
     pdf="https://www.cell.com/biophysj/abstract/S0006-3495(24)00139-5"
     doi="https://doi.org/10.1016/j.bpj.2024.02.019"
     github="https://github.com/TerenceLiu98/VSG-GAN"
-/>}}
+>}}
 
 {{< research_card
     title="Online Statistics Teaching-assisted Platform with Interactive Web Applications using R Shiny"
@@ -46,7 +46,7 @@ math: true
     pdf="https://link.springer.com/chapter/10.1007/978-3-030-92836-0_8"
     doi="https://doi.org/10.1007/978-3-030-92836-0_8"
     github="https://github.com/Bayes-Cluster/MESOCP"
-/>}}
+>}}
 
 {{< research_card
     title="Analysis of main risk factors causing stroke in Shanxi Province based on machine learning models"
@@ -55,7 +55,7 @@ math: true
     authors="Junjie Liu, Yiyang Sun, Jing Ma, Jiachen Tu, Yuhui Deng, Ping He, Rongshan Li, Fengyun Hu, Huaxiong Huang, Xiaoshuang Zhou, Shixin Xu"
     pdf="https://www.sciencedirect.com/science/article/pii/S2352914821001933"
     doi="https://doi.org/10.1016/j.imu.2021.100712"
-/>}}
+>}}
 
 {{< research_card
     title="A variant RSA acceleration with parallelisation"
@@ -64,7 +64,7 @@ math: true
     authors="Junjie Liu, Kang-Too Tsang, Yuhui Deng"
     pdf="https://arxiv.org/abs/2111.11924"
     doi="https://doi.org/10.1080/17445760.2021.2024535"
-/>}}
+>}}
 
 ## Working Papers
 
