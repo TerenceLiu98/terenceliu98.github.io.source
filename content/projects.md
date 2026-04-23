@@ -22,7 +22,7 @@ math: true
     authors="Sirong Wu, Xi Luo, Junjie Liu, Yuhui Deng"
     image="https://32cf906.webp.li/2025/01/kd-aif.png"
     pdf="https://arxiv.org/abs/2501.02705"
-    doi="https://doi.org/10.1080/02331888.2025.2451944"
+    doi="https://doi.org/10.1109/BigData66926.2025.11402001"
 >}}
 
 {{< research_card
