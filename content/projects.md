@@ -7,6 +7,27 @@ math: true
 ---
 
 {{< research_card
+    status="working"
+    title="Differential Transfer Lenses for Residual Dynamics in Transformers"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu, Yuhui Deng"
+    image="https://32cf906.webp.li/2026/04/mechanistic-interpretability.png"
+    post="/scientia/llm-from-scratch/"
+>}}
+
+
+{{< research_card
+    status="working"
+    title="The Optimisation Trap: How Algorithmic Workflows reshape Bureaucratic Discretion"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu, Yuhui Deng"
+    image="https://32cf906.webp.li/2026/04/optimisation-trap.png"
+    post="/scientia/llm-from-scratch/"
+>}}
+
+{{< research_card
     title="🎭 Tracing Partisan Bias to Its Emotional Fingerprints: A Computational Approach to Mitigation"
     conference="IEEE International Conference on Big Data"
     year="2025"
@@ -76,23 +97,3 @@ math: true
 */>}}
 -->
 
-{{< research_card
-    status="working"
-    title="Differential Transfer Lenses for Residual Dynamics in Transformers"
-    conference="Working in progress"
-    year="2026"
-    authors="Junjie Liu, Yuhui Deng"
-    image="https://32cf906.webp.li/2026/04/mechanistic-interpretability.png"
-    post="/scientia/llm-from-scratch/"
->}}
-
-
-{{< research_card
-    status="working"
-    title="The Optimisation Trap: How Algorithmic Workflows reshape Bureaucratic Discretion"
-    conference="Working in progress"
-    year="2026"
-    authors="Junjie Liu, Yuhui Deng"
-    image="https://32cf906.webp.li/2026/04/optimisation-trap.png"
-    post="/scientia/llm-from-scratch/"
->}}
