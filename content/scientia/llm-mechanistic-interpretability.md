@@ -31,7 +31,7 @@ The oldest interpretability tradition for transformers is **state readout**. Tak
 
 The problem is that Logit Lens implicitly assumes the basis at every layer is the same basis the unembedding was trained on, which is only approximately true. **Tuned Lens** {{< cite "belrose2023tunedlens" >}} fixes this with a small affine probe $A\_\ell$ trained per layer, such that $\text{softmax}(W\_U A\_\ell h\_\ell)$ matches the final-layer distribution. The lens becomes calibrated rather than naive.
 
-![Fig. 2 — Logit Lens vs Tuned Lens.](/images/scientia/mi-logit-vs-tuned-lens.svg) Linear probing is the same family of idea pushed further: train a small classifier on top of $h\_\ell$ to recover any property you care about, e.g., sentiment, syntax, factual recall, position, or the answer to a multiple-choice question, and ask at which depth the property becomes linearly decodable.
+![Fig. 1 — Logit Lens vs Tuned Lens.](/images/scientia/mi-logit-vs-tuned-lens.svg) Linear probing is the same family of idea pushed further: train a small classifier on top of $h\_\ell$ to recover any property you care about, e.g., sentiment, syntax, factual recall, position, or the answer to a multiple-choice question, and ask at which depth the property becomes linearly decodable.
 
 These methods answer one question well: what does the model represent, and where in the stack? They do not answer a second question: how is that representation built? A linear probe at layer 12 tells you that subject information is there. It does not tell you which earlier layers wrote it, or how stable the encoding is.
 
@@ -61,7 +61,7 @@ $$h\_{0} \to h\_{1} \to \dots \to h\_{L}, \quad h\_{\ell+1} = h\_{\ell} + f\_{\e
 
 where $f\_{\ell}$ is whatever the $\ell$-th block computes (attention + MLP, with a residual bypass). This is a discrete-time dynamical system, and dynamical-systems people have a lot to say about discrete-time dynamical systems.
 
-![Fig. 3 — Residual-stream trajectory and Fokker–Planck potential landscape.](/images/scientia/mi-residual-trajectory.svg) Five threads worth knowing about:
+![Fig. 2 — Residual-stream trajectory and Fokker–Planck potential landscape.](/images/scientia/mi-residual-trajectory.svg) Five threads worth knowing about:
 
 * **Block-Jacobian spectra.** Li and Papyan {{< cite "li2023residual" >}} compute the Jacobian of one transformer block, $J\_\ell = \partial h\_{\ell+1}/\partial h\_\ell$, and characterize its eigenvalue distribution across depth. They call the phenomenon *residual alignment*, i.e., the residual updates align with a shrinking set of singular directions as depth grows. Early layers behave like contraction, mid layers expand a few subspaces, late layers re-collapse onto a low-dimensional output manifold. This gives a depth-dependent operator picture rather than a state picture.
 
@@ -83,7 +83,7 @@ The important caveat is that this entire lineage studies **unconditional** dynam
 
 ## The Gap
 
-![Fig. 1 — The four eras arranged by (object of study × task conditioning); the bottom-right cell is the gap.](/images/scientia/mi-four-axes-quadrant.svg)
+![Fig. 3 — The four eras arranged by (object of study × task conditioning); the bottom-right cell is the gap.](/images/scientia/mi-four-axes-quadrant.svg)
 
 Put the four eras side by side:
 
