@@ -22,7 +22,7 @@ math: true
     title="The Optimisation Trap: How Algorithmic Workflows reshape Bureaucratic Discretion"
     conference="Working in progress"
     year="2026"
-    authors="Junjie Liu, Yuhui Deng"
+    authors="Junjie Liu, Thomas Chadefaux"
     image="https://32cf906.webp.li/2026/04/optimisation-trap.png"
     post="/scientia/llm-from-scratch/"
 >}}
@@ -51,7 +51,7 @@ math: true
     conference="Biophysical Journal"
     year="2024"
     authors="Junjie Liu, Shixin Xu, Ping He, Sirong Wu, Xi Luo, Yuhui Deng, Huaxiong Huang"
-    image="https://32cf906.webp.li/2025/01/generator-vsggan.png"
+    image="https://32cf906.webp.li/2026/04/vsg-gan.png"
     pdf="https://www.cell.com/biophysj/abstract/S0006-3495(24)00139-5"
     doi="https://doi.org/10.1016/j.bpj.2024.02.019"
     github="https://github.com/TerenceLiu98/VSG-GAN"
@@ -62,6 +62,7 @@ math: true
     conference="The 6th International Symposium on Emerging Technologies for Education"
     year="2021"
     authors="Junjie Liu, Yuhui Deng, Xiaoling Peng"
+    image="https://32cf906.webp.li/2026/04/online-stats-edu.png"
     pdf="https://link.springer.com/chapter/10.1007/978-3-030-92836-0_8"
     doi="https://doi.org/10.1007/978-3-030-92836-0_8"
     github="https://github.com/Bayes-Cluster/MESOCP"
@@ -72,6 +73,7 @@ math: true
     conference="Informatics in Medicine Unlocked"
     year="2021"
     authors="Junjie Liu, Yiyang Sun, Jing Ma, Jiachen Tu, Yuhui Deng, Ping He, Rongshan Li, Fengyun Hu, Huaxiong Huang, Xiaoshuang Zhou, Shixin Xu"
+    image="https://32cf906.webp.li/2026/04/stroke-analysis.png"
     pdf="https://www.sciencedirect.com/science/article/pii/S2352914821001933"
     doi="https://doi.org/10.1016/j.imu.2021.100712"
 >}}
