@@ -150,6 +150,33 @@ LLMs are discrete-time dynamical systems along at least two time axes. Depth —
 
 If the shadow hunch holds even loosely, these are two views of the same operator, and the open problems on one axis are the same open problems on the other. The math is on the shelf at both scales. I have not seen anyone actually bridge them yet.
 
+## A One-Page Proof: Intrinsic Self-Refinement Cannot Beat Bayes
+
+The empirical result that intrinsic self-correction degrades reasoning ({{< cite "huang2024selfcorrect" >}}, {{< cite "kamoi2024selfcorrection" >}}) has not, as far as I can tell, been written down as a clean theorem. It is a one-page consequence of the data-processing inequality. Stating it makes precise what those papers are observing, and what loophole the rare positive results (e.g., {{< cite "madaan2023selfrefine" >}}) are exploiting.
+
+**Setup.** Fix a model $\theta$ and a query $q$. Let $A^{\ast}$ denote the correct answer, modeled as a random variable on the joint probability space of $(q, A^{\ast})$. The model defines a generation kernel $p_\theta(T \mid q)$ over text outputs. We consider an iterative refinement procedure
+$$T_0 \sim p_\theta(\cdot \mid q),\qquad T_{n+1} \sim K_\theta(\cdot \mid q,\, T_n),$$
+where $K_\theta$ is **any** kernel derived from $\theta$ alone — self-critique, "let me reconsider", verifier-rerank against the same model, multi-agent debate among copies of $\theta$, chain-of-thought ensembling, plan-execute-review. The defining property is that $K_\theta$ does not depend on $A^{\ast}$ except through $T_n$ and $q$.
+
+**Theorem (DPI on intrinsic refinement).** *For every $n \ge 0$,*
+$$I(A^{\ast};\, T_{n+1} \mid q) \;\le\; I(A^{\ast};\, T_n \mid q). \qquad (*)$$
+*Consequently, for any loss $\ell(\cdot, A^{\ast})$, the Bayes risk of recovering $A^{\ast}$ from $T_{n+1}$ is at least the Bayes risk of recovering it from $T_n$:*
+$$\inf_{\hat{A}}\, \mathbb{E}\!\left[\ell\bigl(\hat{A}(T_{n+1}), A^{\ast}\bigr)\right] \;\ge\; \inf_{\hat{A}}\, \mathbb{E}\!\left[\ell\bigl(\hat{A}(T_n), A^{\ast}\bigr)\right]. \qquad (\dagger)$$
+
+**Proof.** By construction, conditional on $q$, the sequence $A^{\ast} \to T_n \to T_{n+1}$ is a Markov chain: $K_\theta$ depends on $A^{\ast}$ only through $T_n$. The data-processing inequality for conditional mutual information (Cover & Thomas, Thm. 2.8.1) gives $(\ast)$ directly.
+
+For $(\dagger)$: any predictor $\hat{A}$ that is $\sigma(T_{n+1})$-measurable can be lifted to a $\sigma(T_n)$-measurable predictor $\tilde{A}(T_n) \mathrel{:=} \mathbb{E}[\hat{A}(T_{n+1}) \mid T_n, q]$ for convex $\ell$ (Jensen), or to one with weakly smaller risk in general by a measurable selection (Bertsekas–Shreve, Lemma 7.27). Therefore the infimum on the left is taken over a smaller class. $\square$
+
+**Reading.** Each step of intrinsic refinement weakly destroys information about the answer. The expected loss of the **best possible** predictor that reads $T_{n+1}$ is at least the expected loss of the best possible predictor that reads $T_n$. There is no information-theoretic free lunch from looping a model against itself.
+
+**Where the loophole sits, and why Self-Refine sometimes works.** The theorem bounds **Bayes** risk, not the user's actual extractor. If the user reads $T_n$ with a fixed naive readout — "take the last sentence", "extract the boxed number" — there is no contradiction in $T_{n+1}$ being easier to read for that readout than $T_n$. Refinement can move information from latent positions to surface positions without creating it. This is exactly the regime where Self-Refine reports gains: open-ended generation with format-fix critiques on strong frontier models. It is not the regime in which Huang and Kamoi found degradation: hard reasoning, where the user's extractor is already close to optimal and any randomness added by $K_\theta$ strictly hurts.
+
+**A rate-explicit version is the next theorem to write.** $(\ast)$ is a $\le$ inequality and allows mutual information to stay constant. In practice, every empirical result in this post — Wang's 2-cycle, Perez's contraction, Carson's stationary distribution, the Markov-chain framing of {{< cite "zekri2024markov" >}} — predicts a stronger statement: mutual information **contracts** at a geometric rate. The right form should read
+$$I(A^{\ast};\, T_{n+1} \mid q) \;\le\; e^{-\lambda} \cdot I(A^{\ast};\, T_n \mid q),$$
+where $\lambda > 0$ is the kernel $K_\theta$'s log-Sobolev (or Poincaré) constant, controllable from the kernel's spectral gap and the Doeblin minorization implied by low-temperature decoding. That is the version worth proving carefully — and is what would turn this short note into a real paper.
+
+**Why this matters for agentic loops.** Self-refinement, multi-agent debate, plan-execute-review, chain-of-thought ensembling are all special cases of an intrinsic kernel $K_\theta$. The theorem says none of them can extract more correctness signal than was already in the first sample. Diversity, calibration, format, *legibility* of the answer can all change. Bayes risk against an external truth cannot. If you want to do better than the first sample, your kernel must be a function of something the model does not already encode — external retrieval, a stronger verifier, a tool call, a human in the loop. Anything else just walks the attractor.
+
 ## Reference
 
 {{< references >}}
