@@ -148,6 +148,17 @@ The theory is cute but the practical consequences are the reason I care about th
 
 None of these recommendations need interpretability, they follow from the attractor observations alone. But the shadow hunch, if it holds, would give a mechanistic reason for *why* the attractor sits where it does, which is the thing alignment actually needs to reason about.
 
+## A Practitioner Vignette
+
+The framing above is academic, but builders independently surface the same operator. Two posts by ecwuuuuu — a [survey of single / ReAct / coordinated multi-agent designs](https://ecwuuuuu.com/post/agentic-academic-literature-understanding-1-cn/) and a [discussion-based extension](https://ecwuuuuu.com/post/agentic-academic-literature-understanding-1.5-cn/) for academic-paper understanding — name two failure modes that map cleanly onto the dynamics above.
+
+* **"Error accumulation"** in long single-agent reasoning chains is what Carson's supercritical regime looks like from the application layer, i.e., $\alpha > \beta$, severity drifts to 1, and the longer you let the chain run the further off the rails it goes. Calling it compounding error rather than "wrong side of $x_c$" obscures that this is a phase-diagram fact, not a tooling fact.
+* **"Acquiescence bias"** — an agent folding its position when challenged — is the Wang 2-cycle in moral-debate clothing. Two copies of $\theta$ playing critic and defender of an approximately invertible map land on a low-order limit cycle; ecwuuuuu's patches (require citations, label support / challenge / clarify, score confidence) are attempts at exactly the structural perturbation Wang found is the *only* class of intervention that breaks the cycle. Temperature and prompt variation do not.
+
+The proposed Discussion Agent itself is a textbook intrinsic kernel $K_\theta$ — four personas drawn from the same model, no external grounding by default — so the DPI theorem above applies verbatim, i.e., it cannot reduce Bayes risk against ground truth, only reshape the surface readout. Where the design *does* break the bound is exactly at the loophole clauses, i.e., when "cite evidence" means evidence external to $\theta$ (the paper itself, retrieval) and when convergence is measured rather than enforced. The 0–1 convergence score is, unintentionally, a runtime estimate of Perez's attractor strength $1 - |s|$.
+
+This is the contrastive analysis the rest of the post keeps asking for, in miniature. Builders are running ablations across (single, coordinated, debate, debate + retrieval) without naming the operator they are perturbing. The differential attractor framing is what makes those ablations comparable.
+
 ## Related Dynamical-Systems Framings
 
 A few 2024–2025 papers fit the same operator-level picture from different angles and are worth reading as context, even though none of them bridges the depth axis and the iteration axis directly.
