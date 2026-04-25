@@ -34,7 +34,7 @@ Back to the daily, life is not all study and work, as well as beer and skittles.
 2. [Google Anlaytics 4](https://support.google.com/analytics/topic/2919631) 
 3. [Webp Cloud](https://webp.se/privacy-policy/)
 
-所有文章，在没有特殊提示的情况下，一般遵循 CC BY-SA 4.0 协议。由于本人学识浅薄，如发现包括但不限于事实性错误，望不吝赐教 👏🏿 。
+所有文章，在没有特殊提示的情况下，一般遵循 CC BY-SA 4.0 协议。由于本人学识浅薄，如发现包括但不限于事实性错误，望不吝赐教 👏🏿
 
 ⚠️ Attention: This site has enabled the "Consent" function. This service is centrally provided *Cloudflare Zaraz*. Generally, this site uses *Google Anlaytics 4* to collect information such as user's geo-location and uses *WebP Cloud* to provide image caching services. The following are the privacy policies of the corresponding companies/services:
 1. [Cloudflare](https://www.cloudflare.com/privacypolicy/)
