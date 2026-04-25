@@ -26,8 +26,11 @@ Fine. That is depth as time. But there is another, equally obvious time axis tha
 ## Two Time Axes, Not One
 
 Forget the internals for a moment. Fix an LLM and a task prompt, define
+
 $$P(T) \;=\; \mathrm{LLM}_\theta(\text{task},\, T),$$
+
 and feed it back on itself:
+
 $$T_0 \to T_1 \to T_2 \to \dots,\qquad T_{n+1} = P(T_n).$$
 
 This is a discrete-time dynamical system on the text space $\mathcal{T}$, with exactly the same structural form as the depth recursion $h_{\ell+1} = h_\ell + f_\ell(h_\ell)$ from last post. The only thing that changed is what plays the role of state (text instead of $\mathbb{R}^d$) and what plays the role of the map ($P$ instead of $f_\ell$). Everything from the dynamics lineage — fixed points, limit cycles, Jacobian spectra, Koopman modes, potential landscapes — applies.
@@ -41,7 +44,9 @@ Three concrete choices of $P$ recover the three papers. Wang's $P$ is a paraphra
 This one is clean. Take a sentence, paraphrase it, paraphrase the paraphrase, repeat 15 times. You would expect the trajectory to fan out, because paraphrasing in principle has huge combinatorial freedom. In practice it collapses into a **2-period cycle**, i.e., $T_i$ is textually very close to $T_{i-2}$, $T_{i-4}$, and so on, while $T_i$ and $T_{i-1}$ alternate between two structurally similar but distinct clusters.
 
 Wang et al. quantify this with a simple 2-periodicity degree
+
 $$\tau \;=\; 1 - \frac{1}{M-2}\sum_{i=3}^{M} d(T_i,\,T_{i-2}),$$
+
 where $d$ is normalized Levenshtein. Across Llama-3, Mistral, Qwen-2.5, GPT-4o in both English and Chinese, $\tau$ sits in $[0.60, 0.92]$.
 
 The *why* is where it gets interesting. Paraphrasing is approximately **invertible**: a paraphrase preserves meaning, so you can in principle recover the original from the paraphrase. That constrains $P$ so that $P^{-1}$ roughly exists, which in turn forces trajectories to carry bidirectional predictability. They confirm this by measuring *reverse perplexity* $\hat{\sigma}(T_i \mid T_{i+1})$, which also collapses as iteration proceeds. Bidirectional predictability on a discrete state space is exactly the footprint of a low-order periodic orbit — cycles are what invertible discrete maps tend to settle on.
@@ -59,7 +64,9 @@ The clean takeaway: **invertibility of the per-step transformation is enough to 
 Perez et al. ask a cousin question. Run 50-step transmission chains with tasks rephrase / take inspiration / continue, starting from 20 different human-generated seed texts, across five LLMs. Do not look at the text directly, look at aggregate **properties**: toxicity, positivity, reading difficulty (Gunning–Fog), length.
 
 They borrow the framing from *cultural attraction theory* (CAT): a cultural attractor is a content state that iterated transmission biases a chain toward, regardless of where it starts. Their estimation is simple, i.e., fit a linear recurrence
+
 $$\text{prop}(T_{n+1}) \;=\; I + s \cdot \text{prop}(T_n),$$
+
 which has a unique fixed point at $l = I/(1-s)$ whenever $|s| < 1$. Attractor position is $l$, attractor strength is $1 - |s|$ on a $[0, 1]$ scale.
 
 Two results matter for us:
@@ -74,10 +81,15 @@ Fine-tuning shifts both the position $l$ and the strength $1-|s|$. Alignment doe
 ## Carson 2025: Severity as a Critical SDE
 
 Carson {{< cite "carson2025severity" >}} does not stop at a linear recurrence. Take the same kind of scalar summary Perez uses — call it **severity** $x(t) \in [0, 1]$ (toxicity, bias level, whatever) — and take the $\Delta t \to 0$ limit under a near-Markov assumption. What you get is a stochastic differential equation
+
 $$dx \;=\; \mu(x)\,dt + \sigma(x)\,dW_t,$$
+
 with a parametric drift
+
 $$\mu(x) \;=\; \underbrace{\alpha x(1-x)}_{\text{self-reinforcement}} \;-\; \underbrace{\beta x^2}_{\text{alignment damping}} \;+\; \underbrace{\gamma}_{\text{baseline}},$$
+
 and a density $P(x,t)$ governed by the Fokker–Planck equation
+
 $$\partial_t P \;=\; -\partial_x\!\bigl[\mu(x) P\bigr] \;+\; \tfrac{1}{2}\,\partial_x^2\!\bigl[\sigma^2(x) P\bigr].$$
 
 Three things drop out of this once you have it written down.
@@ -105,7 +117,9 @@ Here is the connection I actually want to flag, i.e., the thing this blog exists
 **Hunch.** *Under low-temperature decoding, iteration-axis attractors are shadows of residual-stream attractors.*
 
 Sketch. Under greedy or low-temperature decoding, $P$ is approximately
+
 $$P(T) \;\approx\; \arg\max_{T' \in \mathcal{T}} p_\theta(T' \mid T),$$
+
 i.e., the argmax of the conditional distribution. A fixed point $T^{\ast}$ of $P$ satisfies $T^{\ast} = \arg\max_{T'} p_\theta(T' \mid T^{\ast})$, so $T^{\ast}$ is a mode of its own conditional distribution. Under the Fokker–Planck view from last post, modes of the output distribution correspond to basin minima of the effective potential $U(h)$ on the residual stream. If the map from input text to final-layer residual state is smooth enough (this is the assumption), output-space fixed points of $P$ are traces of residual-stream basin minima of $U$. Limit cycles are pairs of basin minima that route into each other under the full forward-pass operator.
 
 Carson's paper makes this parallel uncomfortably literal. The depth-axis picture from last post is a Fokker–Planck equation for $p(h, \ell)$ with an effective potential $U(h)$. Carson's iteration-axis picture is a Fokker–Planck equation for $P(x, t)$ with an effective potential $V(x) = -\int \mu(x)\,dx$. Two axes, same PDE, same objects (drift, diffusion, stationary distribution, first-passage time). If the shadow hunch holds, there should be a projection $\pi: \mathcal{H} \to [0,1]$ (severity read-out from residual state) such that Carson's $(\mu, \sigma^2, V)$ is what you get by pushing the depth-axis $(U, T)$ forward through $\pi$ and composing across iterations. That is a concrete, checkable object, not a philosophical claim.
@@ -155,12 +169,17 @@ If the shadow hunch holds even loosely, these are two views of the same operator
 The empirical result that intrinsic self-correction degrades reasoning ({{< cite "huang2024selfcorrect" >}}, {{< cite "kamoi2024selfcorrection" >}}) has not, as far as I can tell, been written down as a clean theorem. It is a one-page consequence of the data-processing inequality. Stating it makes precise what those papers are observing, and what loophole the rare positive results (e.g., {{< cite "madaan2023selfrefine" >}}) are exploiting.
 
 **Setup.** Fix a model $\theta$ and a query $q$. Let $A^{\ast}$ denote the correct answer, modeled as a random variable on the joint probability space of $(q, A^{\ast})$. The model defines a generation kernel $p_\theta(T \mid q)$ over text outputs. We consider an iterative refinement procedure
+
 $$T_0 \sim p_\theta(\cdot \mid q),\qquad T_{n+1} \sim K_\theta(\cdot \mid q,\, T_n),$$
+
 where $K_\theta$ is **any** kernel derived from $\theta$ alone — self-critique, "let me reconsider", verifier-rerank against the same model, multi-agent debate among copies of $\theta$, chain-of-thought ensembling, plan-execute-review. The defining property is that $K_\theta$ does not depend on $A^{\ast}$ except through $T_n$ and $q$.
 
 **Theorem (DPI on intrinsic refinement).** *For every $n \ge 0$,*
+
 $$I(A^{\ast};\, T_{n+1} \mid q) \;\le\; I(A^{\ast};\, T_n \mid q). \qquad (*)$$
+
 *Consequently, for any loss $\ell(\cdot, A^{\ast})$, the Bayes risk of recovering $A^{\ast}$ from $T_{n+1}$ is at least the Bayes risk of recovering it from $T_n$:*
+
 $$\inf_{\hat{A}}\, \mathbb{E}\!\left[\ell\bigl(\hat{A}(T_{n+1}), A^{\ast}\bigr)\right] \;\ge\; \inf_{\hat{A}}\, \mathbb{E}\!\left[\ell\bigl(\hat{A}(T_n), A^{\ast}\bigr)\right]. \qquad (\dagger)$$
 
 **Proof.** By construction, conditional on $q$, the sequence $A^{\ast} \to T_n \to T_{n+1}$ is a Markov chain: $K_\theta$ depends on $A^{\ast}$ only through $T_n$. The data-processing inequality for conditional mutual information (Cover & Thomas, Thm. 2.8.1) gives $(\ast)$ directly.
@@ -172,7 +191,9 @@ For $(\dagger)$: any predictor $\hat{A}$ that is $\sigma(T_{n+1})$-measurable ca
 **Where the loophole sits, and why Self-Refine sometimes works.** The theorem bounds **Bayes** risk, not the user's actual extractor. If the user reads $T_n$ with a fixed naive readout — "take the last sentence", "extract the boxed number" — there is no contradiction in $T_{n+1}$ being easier to read for that readout than $T_n$. Refinement can move information from latent positions to surface positions without creating it. This is exactly the regime where Self-Refine reports gains: open-ended generation with format-fix critiques on strong frontier models. It is not the regime in which Huang and Kamoi found degradation: hard reasoning, where the user's extractor is already close to optimal and any randomness added by $K_\theta$ strictly hurts.
 
 **A rate-explicit version is the next theorem to write.** $(\ast)$ is a $\le$ inequality and allows mutual information to stay constant. In practice, every empirical result in this post — Wang's 2-cycle, Perez's contraction, Carson's stationary distribution, the Markov-chain framing of {{< cite "zekri2024markov" >}} — predicts a stronger statement: mutual information **contracts** at a geometric rate. The right form should read
+
 $$I(A^{\ast};\, T_{n+1} \mid q) \;\le\; e^{-\lambda} \cdot I(A^{\ast};\, T_n \mid q),$$
+
 where $\lambda > 0$ is the kernel $K_\theta$'s log-Sobolev (or Poincaré) constant, controllable from the kernel's spectral gap and the Doeblin minorization implied by low-temperature decoding. That is the version worth proving carefully — and is what would turn this short note into a real paper.
 
 **Why this matters for agentic loops.** Self-refinement, multi-agent debate, plan-execute-review, chain-of-thought ensembling are all special cases of an intrinsic kernel $K_\theta$. The theorem says none of them can extract more correctness signal than was already in the first sample. Diversity, calibration, format, *legibility* of the answer can all change. Bayes risk against an external truth cannot. If you want to do better than the first sample, your kernel must be a function of something the model does not already encode — external retrieval, a stronger verifier, a tool call, a human in the loop. Anything else just walks the attractor.
