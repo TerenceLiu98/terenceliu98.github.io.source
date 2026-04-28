@@ -1,5 +1,5 @@
 ---
-title: "🤓 Humans do Marginalia, Ai does Zettelkasten - 构建科研民工的第二大脑"
+title: "🤓 Humans do Marginalia, AIs doe Zettelkasten - 构建科研民工的第二大脑"
 date: 2026-04-28T00:12:00+01:00
 draft: false
 math: true
