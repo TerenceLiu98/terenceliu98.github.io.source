@@ -8,6 +8,16 @@ math: true
 
 {{< research_card
     status="working"
+    title="Sapientia: A Human-Centric KnowledgeBase for Bibliography"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu"
+    image="https://32cf906.webp.li/2026/04/sapientia.png"
+    post="/post/sapientia-development"
+>}}
+
+{{< research_card
+    status="working"
     title="Differential Transfer Lenses for Residual Dynamics in Transformers"
     conference="Working in progress"
     year="2026"
