@@ -3,7 +3,7 @@ title: "🤓 Humans do Marginalia, AIs doe Zettelkasten - 构建科研民工的�
 date: 2026-04-28T00:12:00+01:00
 draft: false
 math: true
-tags: ['vibe-coding', '开发日记']
+tags: ['vibe-coding', '开发日记', '第二大脑', 'note-taking']
 comment: true
 ---
 
