@@ -14,6 +14,7 @@ math: true
     authors="Junjie Liu"
     image="https://32cf906.webp.li/2026/04/sapientia.png"
     post="/post/sapientia-development"
+    github="https://github.com/TerenceLiu98/Sapientia"
 >}}
 
 {{< research_card
