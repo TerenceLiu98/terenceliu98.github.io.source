@@ -30,10 +30,10 @@ comment: true
 
 ### 两个范式都不完整
 
-问题就出在这里：**marginalia 缺合成层，Zettelkasten 缺执行力**。两条路都已经走了不止半个世纪，问题不在于工具不够好——它们各自的弱点都是**结构性的**，不是再做一个更漂亮的 UI 就能修好的，任何只在某一边再加一层皮的产品，都没法真正解决这件事。
+问题就出在这里：**marginalia 缺合成层，Zettelkasten 缺执行力**。两条路都已经走了不止半个世纪，它们各自的弱点都是**结构性的**，不是再做一个更漂亮的 UI 就能修好的，任何只在某一边再加一层皮的产品，都没法真正解决这件事。
 
 
-## Humans do Marginalia, AIs doe Zettelkasten
+## Humans do Marginalia, AIs do Zettelkasten
 
 这就是 Sapientia 的核心 bet，一句话：**人做 marginalia 该做的，AI 做 Zettelkasten 该做的**。用户该干的事，跟打开 Acrobat 没什么两样——读、划线、在旁边写一两句感想，不学新方法论、不维护一套新系统，也不会被工具逼着给每条笔记起标题、编号；AI 在背后把那些人类长期撑不下来的活接过去：
 
