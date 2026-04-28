@@ -24,7 +24,7 @@ math: true
     year="2026"
     authors="Junjie Liu, Yuhui Deng"
     image="https://32cf906.webp.li/2026/04/mechanistic-interpretability.png"
-    post="/scientia/llm-from-scratch/"
+    post="/scientia/llm-mechanistic-interpretability/"
 >}}
 
 
