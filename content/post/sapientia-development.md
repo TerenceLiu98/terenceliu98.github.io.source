@@ -7,6 +7,9 @@ tags: ['vibe-coding', '开发日记', '第二大脑', 'note-taking']
 comment: true
 ---
 
+<center>
+    <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="65%" alt="Sapientia Reading Mode">
+</center>
 
 ## Before 
 
