@@ -35,7 +35,7 @@ comment: true
 ## Humans do Marginalia, AIs do Zettelkasten
 
 <center>
-    <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="65%" alt="Sapientia Reading Mode">
+    <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="80%" alt="Sapientia Reading Mode">
 </center>
 
 这就是 Sapientia 的核心 bet，一句话：**人做 marginalia 该做的，AI 做 Zettelkasten 该做的**。用户该干的事，跟打开 Acrobat 没什么两样——读、划线、在旁边写一两句感想，不学新方法论、不维护一套新系统，也不会被工具逼着给每条笔记起标题、编号；AI 在背后把那些人类长期撑不下来的活接过去：
