@@ -7,10 +7,6 @@ tags: ['vibe-coding', '开发日记', '第二大脑', 'note-taking']
 comment: true
 ---
 
-<center>
-    <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="65%" alt="Sapientia Reading Mode">
-</center>
-
 ## Before 
 
 笔者作为一名科研民工，在尝试过各种“第二大脑”以后 {{< sidenote >}}实则一个都没尝试过{{</ sidenote >}}，准备开始构建自己的第二大脑。那么，我们需要的是随时可以捕捉成百上千条随机笔记的地方，然后根据需要随时找到他们的关系？还是说是一个 todo-list/get-thing-done 的工作流？亦或是 PARA 工作框架？笔者认为，对于科研民工来说，最重要的是读文章、读博客、做实验，那么第一步就从读文章开始。
@@ -37,6 +33,10 @@ comment: true
 
 
 ## Humans do Marginalia, AIs do Zettelkasten
+
+<center>
+    <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="65%" alt="Sapientia Reading Mode">
+</center>
 
 这就是 Sapientia 的核心 bet，一句话：**人做 marginalia 该做的，AI 做 Zettelkasten 该做的**。用户该干的事，跟打开 Acrobat 没什么两样——读、划线、在旁边写一两句感想，不学新方法论、不维护一套新系统，也不会被工具逼着给每条笔记起标题、编号；AI 在背后把那些人类长期撑不下来的活接过去：
 
