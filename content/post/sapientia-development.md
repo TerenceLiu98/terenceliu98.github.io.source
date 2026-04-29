@@ -34,13 +34,6 @@ comment: true
 
 ## Humans do Marginalia, AIs do Zettelkasten
 
-<center>
-    <figure>
-        <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="100%" alt="Sapientia Reading Mode">
-        <figcaption> Sapientia 真机展示，GPT-Image-2 将两张图进行拼接</figcaption>
-    <figure>
-</center>
-
 这就是 Sapientia 的核心 bet，一句话：**人做 marginalia 该做的，AI 做 Zettelkasten 该做的**。用户该干的事，跟打开 Acrobat 没什么两样——读、划线、在旁边写一两句感想，不学新方法论、不维护一套新系统，也不会被工具逼着给每条笔记起标题、编号；AI 在背后把那些人类长期撑不下来的活接过去：
 
 - **把边注理解成原子想法**：从一句“诶？”或“重要”里抽出它真正指向的那个概念
@@ -49,6 +42,13 @@ comment: true
 - **把累积的 marginalia 长成 wiki 与图谱**：一个跟着阅读自动生长、不需要手动维护的个人知识库
 
 产物因此是两份：当下你拿到的是一条 marginalia 流，连续、贴位、即时，跟你在纸上写边注没什么差别；时间一拉长，从这些 marginalia 里慢慢浮出来的，是一套结构化的 wiki 页面和概念图，可以按概念查、按问题查。用户从头到尾不必在两边里挑一个，两份都是他的。
+
+<center>
+    <figure>
+        <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="100%" alt="Sapientia Reading Mode">
+        <figcaption> Sapientia 真机展示，GPT-Image-2 将两张图进行拼接</figcaption>
+    <figure>
+</center>
 
 ### 两条边界
 
