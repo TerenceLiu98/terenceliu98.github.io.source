@@ -36,7 +36,7 @@ comment: true
 
 <center>
     <figure>
-        <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="80%" alt="Sapientia Reading Mode">
+        <img src="https://32cf906.webp.li/2026/04/sapientia-development-example-1.png" width="100%" alt="Sapientia Reading Mode">
         <figcaption> Sapientia 真机展示，GPT-Image-2 将两张图进行拼接</figcaption>
     <figure>
 </center>
