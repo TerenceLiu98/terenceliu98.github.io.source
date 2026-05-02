@@ -1,20 +1,2 @@
-  {{- $comments := .Site.Params.comments -}}
-  {{- $provider := "" -}}
-  {{- $repo := "" -}}
-  {{- if and $comments $comments.utteranc $comments.utteranc.enable -}}
-    {{- $provider = "utterances" -}}
-    {{- $repo = $comments.utteranc.repo -}}
-  {{- else if and $comments $comments.giscus $comments.giscus.enable -}}
-    {{- $provider = "giscus" -}}
-    {{- $repo = $comments.giscus.repo -}}
-  {{- end -}}
-
-  {{- if $provider -}}
-  <script>
-    window.__SENTENCE_COMMENTS__ = {
-      provider: {{ $provider | jsonify }},
-      repo: {{ $repo | jsonify }}
-    };
-  </script>
-  {{- end -}}
+  <!-- Sentence-level comments support -->
   <script defer src="{{ "js/sentence-comments.js" | relURL }}"></script>
