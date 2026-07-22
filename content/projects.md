@@ -8,12 +8,23 @@ math: true
 
 {{< research_card
     status="working"
+    title="Kubecode: Agentic Workflow for Cloud-Native Scientific Research"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu"
+    image="https://32cf906.webp.li/2026/07/kubecode.png"
+    post="/post/kubecode-1"
+    github="https://github.com/Bayes-Cluster/kubecode"
+>}}
+
+{{< research_card
+    status="working"
     title="Sapientia: A Human-Centric KnowledgeBase for Bibliography"
     conference="Working in progress"
     year="2026"
     authors="Junjie Liu"
     image="https://32cf906.webp.li/2026/04/sapientia.png"
-    post="/post/sapientia-development"
+    post="/post/sapientia-development-1"
     github="https://github.com/TerenceLiu98/Sapientia"
 >}}
 
