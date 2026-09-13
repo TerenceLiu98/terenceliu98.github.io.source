@@ -18,6 +18,7 @@ math: true
 >}}
 
 {{< research_card
+    status="working"
     title="Sapientia: A Human-Centric KnowledgeBase for Bibliography"
     conference="Working in progress"
     year="2026"
