@@ -32,7 +32,7 @@ math: true
     title="	Differential Transfer Lenses: What Behavioural Contrasts Miss in the Residual Stream"
     conference="The 5th Asia-Pacific Chapter of the Association for Computational Linguistics & the 15th International Joint Conference on Natural Language Processing"
     year="2026"
-    authors="Junjie Liu, Yuhui Deng"
+    authors="Junjie Liu, Yuhui Deng, Guoxin Wang"
     image="https://32cf906.webp.li/2026/04/mechanistic-interpretability.png"
     post="/scientia/llm-mechanistic-interpretability/"
 >}}
