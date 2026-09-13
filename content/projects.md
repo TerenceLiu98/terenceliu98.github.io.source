@@ -40,12 +40,11 @@ math: true
 
 {{< research_card
     status="working"
-    title="The Optimisation Trap: How Algorithmic Workflows reshape Bureaucratic Discretion"
+    title="The Optimisation Trap: From Discretion to Ratification: Self-Sealing Oversight in AI-Assisted Street-Level Bureaucracy"
     conference="Working in progress"
     year="2026"
-    authors="Junjie Liu, Thomas Chadefaux"
+    authors="Junjie Liu, Mingqiu Zheng, Yufeng Zheng, Yun Yang"
     image="https://32cf906.webp.li/2026/04/optimisation-trap.png"
-    post="/scientia/llm-from-scratch/"
 >}}
 
 {{< research_card
