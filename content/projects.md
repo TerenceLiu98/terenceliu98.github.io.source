@@ -8,6 +8,24 @@ math: true
 
 {{< research_card
     status="working"
+    title="Beyond Point Parties: Phase Transitions and Institutional Selection in Multiparty Spatial Competition"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu, Wencheng Lin"
+    image="https://32cf906.webp.li/2026/09/beyond_point_parties.png"
+>}}
+
+{{< research_card
+    status="working"
+    title="LatticeSplats: Joint Visibility Sampling\\with Efficient Batch Evaluation"
+    conference="Working in progress"
+    year="2026"
+    authors="Junjie Liu$^{†}$, Yupeng Zhang, Wencheng Lin, Gengchen Sun, Guoxin Wang"
+    image="https://32cf906.webp.li/2026/09/latticesplats.png"
+>}}
+
+{{< research_card
+    status="working"
     title="Kubecode: Agentic Workflow for Cloud-Native Scientific Research"
     conference="Working in progress"
     year="2026"
@@ -40,7 +58,7 @@ math: true
 
 {{< research_card
     status="working"
-    title="The Optimisation Trap: From Discretion to Ratification: Self-Sealing Oversight in AI-Assisted Street-Level Bureaucracy"
+    title="From Discretion to Ratification: Self-Sealing Oversight in AI-Assisted Street-Level Bureaucracy"
     conference="Working in progress"
     year="2026"
     authors="Junjie Liu, Mingqiu Zheng, Yufeng Zheng, Yun Yang"
