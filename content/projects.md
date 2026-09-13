@@ -18,7 +18,6 @@ math: true
 >}}
 
 {{< research_card
-    status="working"
     title="Sapientia: A Human-Centric KnowledgeBase for Bibliography"
     conference="Working in progress"
     year="2026"
@@ -29,9 +28,8 @@ math: true
 >}}
 
 {{< research_card
-    status="working"
-    title="Differential Transfer Lenses for Residual Dynamics in Transformers"
-    conference="Working in progress"
+    title="	Differential Transfer Lenses: What Behavioural Contrasts Miss in the Residual Stream"
+    conference="The 5th Asia-Pacific Chapter of the Association for Computational Linguistics & the 15th International Joint Conference on Natural Language Processing"
     year="2026"
     authors="Junjie Liu, Yuhui Deng"
     image="https://32cf906.webp.li/2026/04/mechanistic-interpretability.png"
@@ -47,6 +45,14 @@ math: true
     authors="Junjie Liu, Thomas Chadefaux"
     image="https://32cf906.webp.li/2026/04/optimisation-trap.png"
     post="/scientia/llm-from-scratch/"
+>}}
+
+{{< research_card
+    title="🤖 SparseAlign-OOC: Auditing News Image-Text Out-of-Context Detection with Sparse Autoencoders"
+    conference="The 2026 Conference on Empirical Methods in Natural Language Processing"
+    year="2026"
+    authors="Guoxin Wang$^{†}$, Junjie Liu$^{†}$, Shaowu Chen"
+    image="https://32cf906.webp.li/2026/09/sparseAlign.png"
 >}}
 
 {{< research_card
