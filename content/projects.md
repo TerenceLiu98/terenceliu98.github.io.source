@@ -17,7 +17,7 @@ math: true
 
 {{< research_card
     status="working"
-    title="LatticeSplats: Joint Visibility Sampling\\with Efficient Batch Evaluation"
+    title="LatticeSplats: Joint Visibility Sampling with Efficient Batch Evaluation"
     conference="Working in progress"
     year="2026"
     authors="Junjie Liu$^{†}$, Yupeng Zhang, Wencheng Lin, Gengchen Sun, Guoxin Wang"
