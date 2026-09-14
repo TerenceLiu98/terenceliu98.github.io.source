@@ -210,13 +210,9 @@ $$
 
 Writing $F=-\nabla U$ adds a strong restriction. For a smooth field on a simply connected domain with Euclidean unit mobility, a necessary integrability condition is
 
-$$
-\frac{\partial F_k}{\partial p_\ell}
-=
-\frac{\partial F_\ell}{\partial p_k}.
-$$
+$$\frac{\partial F_k}{\partial p_\ell} = r F_\ell}{\partial p_k}.$$
 
-Directed imitation, unequal organizational constraints, or delayed response can violate it. With a mobility matrix, the relevant condition changes; one must specify the metric and mobility before testing a gradient representation. There is a sharp empirical implication. Under deterministic autonomous gradient descent,
+Directed imitation, unequal organizational constraints, or delayed response can violate it. With a mobility matrix, the relevant condition changes; one must specify the metric and mobility before testing a gradient representation. TWhere is a sharp empirical implication. Under deterministic autonomous gradient descent,
 
 $$
 \frac{dU}{dt}=-\|\nabla U\|^2\le0.
