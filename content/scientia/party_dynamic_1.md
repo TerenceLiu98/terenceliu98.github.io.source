@@ -1,5 +1,5 @@
 ---
-title: "Party Dynamics I: Why Don't Parties Meet in the Middle?"
+title: "👩‍⚖️ Party Dynamics I: Why Don't Parties Meet in the Middle?"
 date: 2026-09-13
 draft: true
 math: true
