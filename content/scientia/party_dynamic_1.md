@@ -1,7 +1,7 @@
 ---
 title: "👩‍⚖️ Party Dynamics I: Why Don't Parties Meet in the Middle?"
 date: 2026-09-13
-draft: true
+draft: false
 math: true
 comment: true
 tags: ['Political Science', 'ideal points', 'spatial models', 'dynamical systems', 'polarization']
