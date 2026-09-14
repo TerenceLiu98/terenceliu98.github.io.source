@@ -55,7 +55,6 @@ math: true
     post="/scientia/llm-mechanistic-interpretability/"
 >}}
 
-
 {{< research_card
     status="working"
     title="From Discretion to Ratification: Self-Sealing Oversight in AI-Assisted Street-Level Bureaucracy"
